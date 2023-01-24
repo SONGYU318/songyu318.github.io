@@ -5,7 +5,7 @@
     height: 16px;
     /* 这里改变跟随的底色 */
     /* background: var(--theme-color); */
-    background: rgb(11, 32, 65);
+    background: rgb(138, 172, 226);
     border-radius: 8px;
     opacity: 0.25;
     z-index: 10086;
