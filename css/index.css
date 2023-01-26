@@ -4127,7 +4127,7 @@ h1.page-title + .tag-cloud-list {
   position: absolute;
   top: calc(50% - 7px);
   color: #f47466;
-  content: '\f0c1';
+  content: '\f863';
   line-height: 1;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
@@ -4901,7 +4901,7 @@ span.mathjax-overflow {
 }
 @media screen and (max-width: 800px) {
   #web_bg {
-    background: url(https://s1.ax1x.com/2023/01/26/pSN84bQ.jpg) !important;
+    background: url(https://s1.ax1x.com/2023/01/26/pSNYp1x.png) !important;
     background-attachment: local !important;
     background-position: center !important;
     background-size: cover !important;
