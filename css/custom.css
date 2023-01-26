@@ -122,9 +122,14 @@ div#archive {
   border-radius: 20px;
 }
 
+/* tags和categories的子页 */
+.cardHover, .layout > div:first-child:not(.recent-posts), #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space){
+  background: var(--trans-light);
+}
+
 /* 导航栏  */
 #page-header.nav-fixed #nav { 
-  background: rgba(255, 255, 255, 3);
+  background: rgba(255, 255, 255, 0.158);
   backdrop-filter: var(--backdrop-filter);
 }
 
