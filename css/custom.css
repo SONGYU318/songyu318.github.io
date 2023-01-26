@@ -82,7 +82,7 @@
 
 
 :root { 
-  --trans-light: rgba(255, 255, 255, 0.342);
+  --trans-light: rgba(255, 255, 255, 0.295);
   --trans-dark: rgba(25, 25, 25, 0.178);
   --border-style: 1px solid rgb(169, 169, 169);
   /* --backdrop-filter: blur(5px) saturate(300%); */
@@ -123,9 +123,22 @@ div#archive {
 }
 
 /* tags和categories的子页 */
-.cardHover, .layout > div:first-child:not(.recent-posts), #aside-content .card-widget, .layout > .recent-posts .pagination > *:not(.space){
+.cardHover, .layout > div:first-child:not(.recent-posts) {
   background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border: var(--border-style);
+  border-radius: 20px;
 }
+
+/* searcch */
+.search-dialog {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border: var(--border-style);
+  border-radius: 20px;
+}
+
+
 
 /* 导航栏  */
 #page-header.nav-fixed #nav { 
