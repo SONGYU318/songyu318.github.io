@@ -11,7 +11,7 @@
 } */
 /*侧边卡片的透明度 */
 :root {
---card-bg: rgba(255, 255, 255,.3);
+--card-bg: rgba(255, 255, 255,.7);
 }
 /* 页脚透明 */
 /*#footer {
@@ -45,6 +45,9 @@
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 }
+
+
+
  /* 波浪css */
 .main-hero-waves-area {
   width: 100%;
