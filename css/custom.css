@@ -104,6 +104,20 @@
   border: var(--border-style);
 }
 
+/* 单行透明度 */
+.recent-posts .recent-post-item .recent-post-content {
+  background: rgba(255, 255, 255, 0.068);
+}
+
+/* 单行侧边三角颜色 */
+/* .recent-posts .recent-post-item .recent-post-content .article-content {
+  background: rgba(48, 65, 223, 0.24);
+} */
+.recent-posts .recent-post-item .recent-post-content.left .recent-post-cover-shadow {
+  background: rgba(255, 255, 255, 0.068);
+}
+
+
 /* 首页侧栏卡片 */
 #aside-content .card-widget {
   background: var(--trans-light);
@@ -132,12 +146,11 @@ div#archive {
 
 /* searcch */
 .search-dialog {
-  background: var(--trans-light);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: var(--backdrop-filter);
   border: var(--border-style);
   border-radius: 20px;
 }
-
 
 
 /* 导航栏  */
@@ -157,7 +170,7 @@ div#archive {
 [data-theme="dark"] div#archive,
 [data-theme="dark"] div#page,
 [data-theme="dark"] .cardHover, 
-[data-theme="dark"] .layout > div:first-child:not(.recent-posts)  {
+[data-theme="dark"] .layout > div:first-child:not(.recent-posts) {
   background: var(--trans-dark);
 }
 
