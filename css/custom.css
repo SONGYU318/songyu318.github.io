@@ -126,12 +126,6 @@
   border: var(--border-style);
 }
 
-
-
-.wl-panel {
-  background: rgba(255, 255, 255, 0.068);
-}
-
 /* 文章页、归档页、普通页面 */
 div#post,
 div#page,
