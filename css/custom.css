@@ -126,6 +126,12 @@
   border: var(--border-style);
 }
 
+
+
+.wl-panel {
+  background: rgba(255, 255, 255, 0.068);
+}
+
 /* 文章页、归档页、普通页面 */
 div#post,
 div#page,
@@ -146,7 +152,7 @@ div#archive {
 
 /* searcch */
 .search-dialog {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.178);
   backdrop-filter: var(--backdrop-filter);
   border: var(--border-style);
   border-radius: 20px;
