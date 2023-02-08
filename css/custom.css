@@ -152,7 +152,12 @@ div#archive {
   border-radius: 20px;
 }
 
-
+#page-header.not-top-img #nav {
+  background: rgba(255, 255, 255, 0.178);
+}
+[data-theme="dark"] #page-header.not-top-img #nav{
+  background: rgba(10, 10, 10, 0.178);
+}
 /* 导航栏  */
 #page-header.nav-fixed #nav { 
   background: rgba(255, 255, 255, 0.158);
@@ -596,3 +601,11 @@ h6::before {
 .rightMenu-group.hide {
   display: none;
 }
+
+
+#web_bg ~ .page:has(#about-page){
+  background-color: rgba(255, 255, 255, 0);
+}
+
+
+
