@@ -59,3 +59,5 @@ var anzhiyu = {
 };
 
 addRightMenuClickEvent();
+
+
