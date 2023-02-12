@@ -321,7 +321,7 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
   /* 控制按键和进度条 */
   #anMusic-page .aplayer-info .aplayer-controller {
     width: 100%;
-    bottom: 100px;
+    bottom: 400px;
   }
   #anMusic-page .aplayer-info .aplayer-controller .aplayer-bar-wrap {
     margin: 0 30px;
