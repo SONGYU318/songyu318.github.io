@@ -6885,8 +6885,8 @@ blockquote.pullquote.right {
   }
   
   .author-content-item.map {
-    /* background: url() no-repeat center; */
-    background: var(--trans-light);
+    background: url(https://s1.ax1x.com/2023/02/08/pS2cQVs.jpg) no-repeat center;
+    /* background: var(--trans-light); */
     min-height: 160px;
     max-height: 400px;
     position: relative;
@@ -6896,9 +6896,10 @@ blockquote.pullquote.right {
     background-size: 100%;
     transition: 1s ease-in-out;
   }
+
   [data-theme="dark"] .author-content-item.map {
-    /* background: url() no-repeat center; */
-    background: var(--trans-light);
+    background: url(https://s1.ax1x.com/2023/02/08/pS2cQVs.jpg) no-repeat center;
+    /* background: var(--trans-light); */
     background-size: 100%;
   }
   
