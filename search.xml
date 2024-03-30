@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Verilog之JEPG_DECODER</title>
+      <link href="/2024/03/31/FPGA_JEPG_DECODER/"/>
+      <url>/2024/03/31/FPGA_JEPG_DECODER/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言">前言</h2><p>这是一个长期更新的项目，一开始找不到现成的代码，只能说国内的生态环境太差了。一方面是对于去年FPGA创新赛没写出来代码的不甘心，另一方面是这个学期的通关项目老师不满足于我对去年项目的更新，他并不认为画电路板是有什么创新的事，而事实也确实如此。在此基础下，就开始了新建文件夹的工程。既然要开始写，那就要先知其所以然。不得不说，在看完jpeg的编码过程后，不得不感慨前人的智慧。接下来一点点更新吧。</p><h2 id="原理">原理</h2><p>jpeg其主要是采用预测编码（DPCM）、离散余弦变换（DCT）以及熵编码的联合编码方式，以去除冗余的图像和彩色数据，属于有损压缩格式，它能够将图像压缩在很小的储存空间，一定程度上会造成图像数据的损伤。尤其是使用过高的压缩比例，将使最终解压缩后恢复的图像质量降低，如果追求高品质图像，则不宜采用过高的压缩比例。</p><h2 id="基本过程">基本过程</h2><ul><li>rgb到ycbcr转换</li><li>8 × 8 DCT 变换</li><li>量化 + 熵编码（一般使用霍夫曼编码）+ RLE 游程编码</li></ul><p>JPEG文件以segment为数据流的组织形式，定义了一系列的标记（Marker）放在每个segment的开头。<br>Marker均以0xFF开始，后跟1字节的标记标识符和2字节的标记长度以及该标记所对应payload。标记长度部分高位在前，低位在后，不包含该标记头两个字节 。<br>常见Maker如下：</p><table><thead><tr><th>Name</th><th>Bytes</th><th>Payload</th><th>Comments</th></tr></thead><tbody><tr><td>SOI (Start of Image)</td><td>0xFFD8</td><td>none</td><td>文件开头</td></tr><tr><td>SOF0 (Start of Image Baseline DCT)</td><td>0xFFC0</td><td>variable size</td><td>Baseline DCT所用的开头</td></tr><tr><td>SOF2(Start of Image Progressive DCT)</td><td>0xFFC2</td><td>variable size</td><td>Progressive DCT所用的开头</td></tr><tr><td>DHT(Define Huffman Table)</td><td>0xFFC4</td><td>variable size</td><td>指定Huffman表</td></tr><tr><td>DQT(Define Quantization Table)</td><td>0xFFDB</td><td>variable size</td><td>指定量化表</td></tr><tr><td>DRI (Define Restart Interval)</td><td>0xFFDD</td><td>2 bytes</td><td>RST中的marker</td></tr><tr><td>SOS(Start of Scan)</td><td>0xFFDA</td><td>variable size</td><td>扫描的开头</td></tr><tr><td>RSTn(Restart)</td><td>0xFFDn</td><td>variable size</td><td>插入r个块到DRImarker中</td></tr><tr><td>APPn (Application Specific)</td><td>0xFFEn</td><td>variable size</td><td>Exif JPEG使用APP1，JFIF JPEG使用APP0</td></tr><tr><td>COM (Comment)</td><td>0xFFFE</td><td>variable size</td><td>注释</td></tr><tr><td>EOI(End of Image)</td><td>0xFFD9</td><td>none</td><td>文件结束</td></tr></tbody></table><p>这一部分的输出并不是编码的核心，但是也是必要的一环。还是很需要对这部分进行编写。方便进一步的仿真综合。</p><h2 id="其他">其他</h2><p>后续更新。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+            <tag> FPGA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>千兆以太网PCB模块绘制</title>
       <link href="/2024/03/13/RTL8211_PCB/"/>
       <url>/2024/03/13/RTL8211_PCB/</url>
@@ -107,11 +134,11 @@
             
             <tag> 技术 </tag>
             
+            <tag> FPGA </tag>
+            
             <tag> 电子 </tag>
             
             <tag> 竞赛 </tag>
-            
-            <tag> FPGA </tag>
             
         </tags>
       
