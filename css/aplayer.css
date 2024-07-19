@@ -1,0 +1,65 @@
+#anMusic .aplayer.aplayer-narrow .aplayer-body,
+#anMusic .aplayer.aplayer-narrow .aplayer-pic {
+  height: 66px;
+  width: 66px;
+  border-radius: 10px;
+}
+
+#anMusic .aplayer .aplayer-pic {
+  height: 66px;
+  width: 66px;
+  border-radius: 10px;
+}
+
+#anMusic .aplayer.aplayer-fixed .aplayer-info{
+  /* border-radius: 0 10px 10px 0; */
+  background: var(--trans-light);
+  display: none;
+}
+#anMusic .aplayer.aplayer-fixed .aplayer-body {
+  margin: 10px;
+  border-radius: 10px;
+
+  background: var(--trans-light);
+}
+
+#anMusic .aplayer.aplayer-fixed {
+  margin: 10px;
+  max-width: 400px;
+  /* bottom: -6px; */
+  border-radius: 10px;
+  /* border-radius: 10px 0 0 10px; */
+  background: #ffffffc0;
+  /* background: linear-gradient(180deg,  white 248px, #029cef23 0, #029cef00); */
+  overflow: auto;
+}
+#anMusic .aplayer .aplayer-list ol li.aplayer-list-light {
+  background: #e9e9e938;
+}
+/* div.aplayer .aplayer-list-title{
+  background: #e9e9e9;
+} */
+
+#anMusic .aplayer svg {
+  border-radius: 10px;
+  background: var(--btn-bg);
+}
+#anMusic .aplayer .aplayer-miniswitcher {
+  border-radius: 0 10px 10px 0;
+  background: var(--btn-bg);
+}
+
+#anMusic .aplayer .aplayer-icon {
+  /* border-radius: 0 10px 10px 0; */
+  background: #e9e9e900;;
+}
+
+[data-theme="dark"] #anMusic .aplayer.aplayer-fixed .aplayer-info,
+[data-theme="dark"] #anMusic .aplayer.aplayer-fixed .aplayer-body{
+  background: rgba(32, 33, 36, 0.4);
+}
+
+[data-theme="dark"] #anMusic .aplayer.aplayer-fixed {
+  background: rgb(26 3 3 / 84%);
+}
+
