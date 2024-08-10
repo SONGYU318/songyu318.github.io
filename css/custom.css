@@ -20,20 +20,20 @@
   
   #cursor.hover {
     opacity: 0.1;
-    transform: scale(2.5);
+    -o-transform: scale(2.5);
     -webkit-transform: scale(2.5);
     -moz-transform: scale(2.5);
     -ms-transform: scale(2.5);
-    -o-transform: scale(2.5);
+    transform: scale(2.5);
   }
   
   #cursor.active {
     opacity: 0.5;
-    transform: scale(0.5);
+    -o-transform: scale(0.5);
     -webkit-transform: scale(0.5);
     -moz-transform: scale(0.5);
     -ms-transform: scale(0.5);
-    -o-transform: scale(0.5);
+    transform: scale(0.5);
   }
 
 
@@ -219,7 +219,7 @@ div#archive {
 
 
 .loading-img {
-  background: url(https://s1.ax1x.com/2023/04/27/p9Mvv4g.png) no-repeat center center;
+  background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/blog_logo.png) no-repeat center center;
   background-size: cover;
 }
 

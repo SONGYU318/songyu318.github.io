@@ -6726,7 +6726,7 @@ blockquote.pullquote.right {
   #about-page .about-statistic {
     min-height: 380px;
     width: 39%;
-    background: url(https://s1.ax1x.com/2023/02/08/pS2cQVs.jpg) no-repeat top;
+    background: url(https://fastly.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191529.png) no-repeat top;
     background-size: cover;
     color: var(--anzhiyu-white);
     overflow: hidden;
@@ -6885,7 +6885,7 @@ blockquote.pullquote.right {
   }
   
   .author-content-item.map {
-    background: url(https://s1.ax1x.com/2023/02/08/pS2cQVs.jpg) no-repeat center;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191529.png) no-repeat center;
     /* background: var(--trans-light); */
     min-height: 160px;
     max-height: 400px;
@@ -6898,7 +6898,7 @@ blockquote.pullquote.right {
   }
 
   [data-theme="dark"] .author-content-item.map {
-    background: url(https://s1.ax1x.com/2023/02/08/pS2cQVs.jpg) no-repeat center;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191529.png) no-repeat center;
     /* background: var(--trans-light); */
     background-size: 100%;
   }
@@ -6914,8 +6914,8 @@ blockquote.pullquote.right {
     width: 100%;
     background: var(--anzhiyu-maskbg);
     padding: 0.5rem 2rem;
-    backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
     transition: 1s ease-in-out;
     font-size: 20px;
   }
@@ -7200,7 +7200,7 @@ blockquote.pullquote.right {
     transition: 2s ease-in-out;
   }
   .author-content-item.game-yuanshen {
-    background: url(https://s1.ax1x.com/2023/02/07/pS21Ywj.jpg) no-repeat top;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191853.png) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
@@ -7239,7 +7239,7 @@ blockquote.pullquote.right {
   
   .author-content-item.comic-content {
     width: 39%;
-    background: url(https://s1.ax1x.com/2023/02/07/pS21j9P.png) no-repeat top;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191634.png) no-repeat top;
     background-size: cover;
     min-height: 300px;
     overflow: hidden;
@@ -7256,14 +7256,15 @@ blockquote.pullquote.right {
   }
   
   .author-content-item.like-technology {
-    background: url(https://s1.ax1x.com/2023/01/26/pSN80De.jpg) no-repeat;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191657.png) no-repeat;
     background-size: cover;
     min-height: 230px;
     color: var(--anzhiyu-white);
   }
   
   .author-content-item.like-music {
-    background: url(https://s1.ax1x.com/2023/02/08/pS2cKbj.jpg) no-repeat top;
+    background: url(https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810191718.png) no-repeat top;
+
     background-size: cover;
     min-height: 400px;
     color: var(--anzhiyu-white);
