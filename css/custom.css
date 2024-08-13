@@ -96,6 +96,11 @@
   background: transparent !important;
 }
 
+
+
+
+
+
 /* 首页文章卡片 */
 #recent-posts > .recent-post-item {
   background: var(--trans-light);
@@ -700,4 +705,13 @@ img{
 /* 
 #article-container img{
   max-width: 1920px;
+} */
+
+
+/* .post-copyright {
+  margin: 2em 0 0;
+  padding: 0.5em 1em;
+  border-left: 3px solid #FF1700;
+  background-color: #f9f9f97c;
+  list-style: none;
 } */
