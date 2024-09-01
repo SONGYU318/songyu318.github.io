@@ -32,8 +32,6 @@
             
             <tag> NUEDC </tag>
             
-            <tag> DDS </tag>
-            
             <tag> -模拟邀请赛 </tag>
             
             <tag> TI </tag>
@@ -45,6 +43,8 @@
             <tag> 压摆率 </tag>
             
             <tag> 增益带宽 </tag>
+            
+            <tag> DDS </tag>
             
         </tags>
       
