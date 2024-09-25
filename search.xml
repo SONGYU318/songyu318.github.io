@@ -4,13 +4,31 @@
   
     
     <entry>
-      <title></title>
-      <link href="/2024/09/10/2024-9-10/"/>
-      <url>/2024/09/10/2024-9-10/</url>
+      <title>重构 X310 &amp; UBX160</title>
+      <link href="/2024/09/25/2024-9-10/"/>
+      <url>/2024/09/25/2024-9-10/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="重构的第-1-步是复刻">重构的第 1 步是复刻</h2><h3 id="原理图">原理图</h3><ul><li>抄就完了，除了阻容感封装不太好确定以外其他的都不是问题。</li></ul><h3 id="EDA-选择">EDA 选择</h3><ul><li>选择 AD 而不是 立创 EDA，为了方便后续维护和师兄师姐们统一。</li><li>封装绘制选择，使用现成的 AD 插件直接转换，具体网址如下：<br><a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a><br>用起来还是很爽的。</li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> PCB绘制 </tag>
+            
+            <tag> 软件无线电 </tag>
+            
+            <tag> 射频电路 </tag>
+            
+            <tag> 毕设 </tag>
+            
+        </tags>
       
     </entry>
     
