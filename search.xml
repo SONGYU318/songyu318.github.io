@@ -4,11 +4,24 @@
   
     
     <entry>
-      <title>重构 X310 &amp; UBX160</title>
-      <link href="/2024/09/25/2024-9-10/"/>
-      <url>/2024/09/25/2024-9-10/</url>
+      <title>风景旧曾谙</title>
+      <link href="/2024/10/02/2024-10-02/"/>
+      <url>/2024/10/02/2024-10-02/</url>
       
-        <content type="html"><![CDATA[<h2 id="重构的第-1-步是复刻">重构的第 1 步是复刻</h2><h3 id="原理图">原理图</h3><ul><li>抄就完了，除了阻容感封装不太好确定以外其他的都不是问题。</li></ul><h3 id="EDA-选择">EDA 选择</h3><ul><li>选择 AD 而不是 立创 EDA，为了方便后续维护和师兄师姐们统一。</li><li>封装绘制选择，使用现成的 AD 插件直接转换，具体网址如下：<br><a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a><br>用起来还是很爽的。</li></ul>]]></content>
+        <content type="html"><![CDATA[<p><meting-jsname="风景旧曾谙"artist="韦礼安.郭静"url="https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VlQWtXeWMzajExUGprS2FXVll4NU53QkZqenBnR1NlT1cxNWlPNUZBVlRpanc.mp"cover="https://y.qq.com/music/photo_new/T002R300x300M0000019ClpK0chNzA_3.jpg?max_age=2592000"><br></meting-js></p><hr><p>女：</p><ul><li>向时间 讨一味 初色的美</li><li>夜如水 风如泪 爱如碑</li><li>从不害怕 梦推向谁</li><li>偏离后迂回</li><li>今生也把 你我成像 温柔以对</li></ul><p>男：</p><ul><li>等等风景等等来时的仓促</li><li>旧时相识今生顾</li><li>款款烟雨款款乱红千秋</li><li>只与你朝朝暮暮</li></ul><p>女：</p><ul><li>未知又何妨</li></ul><p>合：</p><ul><li>再看一眼 再看一遍 你怀中的梦</li><li>浪迹的风 是你给的承诺</li><li>还以为 习惯孤单 习惯不安</li><li>却道芳时 情如雨纠缠</li><li>与你点阑珊</li></ul><p>女：</p><ul><li>用一生相爱</li></ul><p>合：</p><ul><li>仿佛一夜 带露的光 映射成墙</li><li>如果回忆无伤</li><li>就握紧我 等风吹来</li><li>轻轻地 轻轻地 痴痴的念旧着</li><li>梦见了 被遗忘的</li></ul><p>女：</p><ul><li>向时间 讨一味 初色的美</li><li>夜如水 风如泪 爱如碑</li><li>从不害怕 梦推向谁 偏离后迂回</li><li>今生也把 你我成像 温柔以对</li></ul><p>男：</p><ul><li>等等风景等等来时的仓促</li><li>旧时相识今生顾</li><li>款款烟雨款款乱红千秋</li><li>只与你朝朝暮暮</li></ul><p>女：</p><ul><li>未知又何妨</li></ul><p>合：</p><ul><li>再看一眼 再看一遍 你怀中的梦</li><li>浪迹的风 是你给的承诺</li><li>还以为 习惯孤单 习惯不安</li><li>却道芳时 情如雨纠缠</li><li>与你点阑珊</li></ul><p>女：</p><ul><li>用一生相爱</li></ul><p>合：</p><ul><li>仿佛一夜 带露的光 映射成墙</li><li>如果回忆无伤</li><li>就握紧我 等风吹来</li><li>再多一年 再多一眼 故事别搁浅</li><li>太多情节 在你梦的那边</li><li>就这样 一生流浪 一生徜徉</li><li>某年某月 你心之所往</li><li>会处处留香</li><li>是我们的爱</li><li>城内的光 城外的疆 风景怎样</li><li>情深久如初漾</li><li>又是一朝 新的春光</li><li>轻轻地 轻轻地 痴痴的还爱着</li><li>梦见了 未盛开的</li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>重构 X310 &amp; UBX160</title>
+      <link href="/2024/09/25/2024-09-25/"/>
+      <url>/2024/09/25/2024-09-25/</url>
+      
+        <content type="html"><![CDATA[<h2 id="重构的第-1-步是复刻">重构的第 1 步是复刻</h2><h3 id="原理图">原理图</h3><ul><li>抄就完了，除了阻容感封装不太好确定以外其他的都不是问题。</li></ul><h3 id="EDA-选择">EDA 选择</h3><ul><li>选择 AD 而不是 立创 EDA，为了方便后续维护和师兄师姐们统一。</li><li>封装绘制选择，使用现成的 AD 插件直接转换，具体网址如下：<br><a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a><br>用起来还是很爽的。</li><li>K7 的 900pin 封装，只能自己画，没办法。</li></ul>]]></content>
       
       
       <categories>
