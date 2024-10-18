@@ -4,12 +4,47 @@
   
     
     <entry>
+      <title>AD 插件</title>
+      <link href="/2024/10/18/2024-10-17_AD_plug_in/"/>
+      <url>/2024/10/18/2024-10-17_AD_plug_in/</url>
+      
+        <content type="html"><![CDATA[<h2 id="为了方便画板子找封装开的记录">为了方便画板子找封装开的记录</h2><p>先丢个链接<br><a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AD </tag>
+            
+            <tag> PCB </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>art&amp;design task</title>
       <link href="/2024/10/16/2024-10-16_art/"/>
       <url>/2024/10/16/2024-10-16_art/</url>
       
         <content type="html"><![CDATA[<h2 id="task">task</h2><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241016153308.png" width = "80%" /></div><center>图0 task </center><h2 id="end">end</h2><p>选择 NFC卡片丢了 4 个 link 进去，分别是：</p><ul><li><strong>音乐</strong></li><li><strong>图片</strong></li><li><strong>文字</strong></li><li><strong>本人 blog link，凑数</strong></li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810173251.png" width = "60%" /></div><center>图1 NFC card </center><h3 id="音乐">音乐</h3><p><meting-jsname="Stay With Me"artist="CHANYEOL&Punch[韩]"url="https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VhYUJaMDladlRsT3RQTy14el8xUlFrQjJyS3dMMTBJYjU4U2E2ODB0TlBFc0E.mp3"cover="https://y.qq.com/music/photo_new/T002R300x300M0000046l5AB1E0FwV_1.jpg?max_age=2592000"><br></meting-js></p><h3 id="图片">图片</h3><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/9a39c9fb90158254a5935ac4025ef41c.jpg" width = "25%" /></div><center>图2 heart </center><h3 id="文字">文字</h3><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/1729063125_809046.png" width = "60%" /></div><center>图3 那一世 </center>]]></content>
       
+      
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
       
       
     </entry>
@@ -24,6 +59,18 @@
         <content type="html"><![CDATA[<h2 id="前言">前言</h2><p>旧版工程太臃肿了，加了很多冗余的东西，而且版本有些落后了，故此更新。新博客很清爽。</p><h2 id="未改动">未改动</h2><ul><li>域名不变，仍是 <a href="http://sococo.cn">sococo.cn</a></li><li>文章未做大改，无清理</li></ul><h2 id="改动">改动</h2><h3 id="版本变动">版本变动</h3><p>首先是 package 更新，Hexo 版本更新到了 7.3.0，这需要更高版本的 Node.js，笔者版本为 v20.18.0。具体插件以及版本如下。</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;7.3.0&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;dependencies&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;cheerio&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.3.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-butterfly-tag-plugins-plus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.18&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-deployer-git&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-filter-mathjax&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^0.9.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-archive&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-category&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-index&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^4.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-search&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.4.3&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-generator-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-math&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^5.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-ejs&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-markdown-it&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^7.1.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-pug&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-renderer-stylus&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-server&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^3.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-solitude-tag&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.13&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-theme-landscape&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^1.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-theme-solitude&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^2.1.4&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;hexo-wordcount&quot;</span><span class="punctuation">:</span> <span class="string">&quot;^6.0.1&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line"></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>其中 hexo-butterfly-tag-plugins-plus 是为了旧版兼容的暂时，预计将文章改完后即可 uninstall。</p><h3 id="主题变动">主题变动</h3><p>抛弃了 Butterfly 主题为基础，换成了 Solitude，在此基础上进行了简单的修改。文档不是很完善，部分链接寄了，但是总体还好。</p><ul><li>github: <a href="https://github.com/everfu/hexo-theme-solitude">https://github.com/everfu/hexo-theme-solitude</a></li><li>doc: <a href="https://solitude.js.org/">https://solitude.js.org/</a></li></ul><h3 id="essay">essay</h3><p>Solitude 主题兼容笔者旧版魔改的 essay，倒不如说用的是一套模板，但是还是对于 aplayer 播放器的部分，笔者添加了自定义的部分，而不是只能解析服务商的歌单。<br>在 theme/layout/page/says 中仿照格式添加如下代码，注意对齐和缩进。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">if item.aplayer2 </span><br><span class="line">.bber-music </span><br><span class="line">meting-js(name=item.aplayer2.name, artist=item.aplayer2.artist, url=item.aplayer2.url, cover=item.aplayer2.cover)</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>此时在 essay.yml 中添加如下格式的内容即可添加自定义音乐了。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="bullet">-</span> <span class="attr">content:</span> <span class="string">以及别离不知从何时起</span> <span class="string">已渐渐并肩而行了</span></span><br><span class="line">  <span class="attr">date:</span> <span class="number">2024-03-22 22:38:58</span></span><br><span class="line">  <span class="attr">aplayer2:</span> </span><br><span class="line">    <span class="attr">name:</span> <span class="string">Pray</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VSNVBVc3dhYmtsTHB6dW9zVWhZSlgwQjdKYThEclg1UllSQ2FkNWI3c1Mza3c.mp3</span></span><br><span class="line">    <span class="attr">cover:</span> <span class="string">https://y.qq.com/music/photo_new/T002R300x300M0000021UZUx1h0MHf_1.jpg?max_age=2592000</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><h3 id="latex">latex</h3><p>这一部分官方文档说明中有插件用 npm 找不到文件无法下载，故出此解决方法，目前使用 mathjax。<br>插件见上， config.yml 中添加如下配置。</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">math:</span></span><br><span class="line">  <span class="attr">mathjax:</span></span><br><span class="line">    <span class="attr">css:</span> <span class="string">&#x27;https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css&#x27;</span></span><br><span class="line">    <span class="attr">options:</span></span><br><span class="line">      <span class="attr">conversion:</span></span><br><span class="line">        <span class="attr">display:</span> <span class="literal">false</span></span><br><span class="line">      <span class="attr">tex:</span></span><br><span class="line">      <span class="attr">svg:</span></span><br></pre></td></tr></table></figure><p>Front Matter 前将 mathjax 配置为 true 即可。已知存在问题会和外挂标签的 audio 冲突，以及最好每个公式都用 &lt;span&gt; 嵌套来避免 md 错误解析。</p><figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;span&gt;</span><br><span class="line"></span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"><span class="keyword">\frac</span>&#123;x<span class="built_in">^</span>Td&#125;&#123;<span class="keyword">\sqrt</span>&#123;x<span class="built_in">^</span>Tx+d<span class="built_in">^</span>Td&#125;&#125;<span class="keyword">\approx</span> 0</span><br><span class="line"><span class="built_in">$</span><span class="built_in">$</span></span><br><span class="line"></span><br><span class="line">&lt;span&gt;</span><br></pre></td></tr></table></figure><h3 id="album">album</h3><p>旧版魔改和新版底层的 main.js 框架不一样，没法直接去改 img 的解析，暂时空着了。<br>之前的相册之后再迁移。</p><h3 id="charts">charts</h3><p>参考链接：<a href="https://blog.eurkon.com/post/1213ef82.html">https://blog.eurkon.com/post/1213ef82.html</a><br>需要注意是的尽管 Soltude 不会报错，但是仍然要安装 cheerio，不然 chart 是不会显示的。</p>]]></content>
       
       
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
       
     </entry>
     
@@ -37,6 +84,18 @@
         <content type="html"><![CDATA[<p><meting-jsname="风景旧曾谙"artist="韦礼安.郭静"url="https://dlink.host/musics/aHR0cHM6Ly9vbmVkcnYtbXkuc2hhcmVwb2ludC5jb20vOnU6L2cvcGVyc29uYWwvc3Rvcl9vbmVkcnZfb25taWNyb3NvZnRfY29tL0VlQWtXeWMzajExUGprS2FXVll4NU53QkZqenBnR1NlT1cxNWlPNUZBVlRpanc.mp"cover="https://y.qq.com/music/photo_new/T002R300x300M0000019ClpK0chNzA_3.jpg?max_age=2592000"><br></meting-js></p><hr><p>女：</p><ul><li>向时间 讨一味 初色的美</li><li>夜如水 风如泪 爱如碑</li><li>从不害怕 梦推向谁</li><li>偏离后迂回</li><li>今生也把 你我成像 温柔以对</li></ul><p>男：</p><ul><li>等等风景等等来时的仓促</li><li>旧时相识今生顾</li><li>款款烟雨款款乱红千秋</li><li>只与你朝朝暮暮</li></ul><p>女：</p><ul><li>未知又何妨</li></ul><p>合：</p><ul><li>再看一眼 再看一遍 你怀中的梦</li><li>浪迹的风 是你给的承诺</li><li>还以为 习惯孤单 习惯不安</li><li>却道芳时 情如雨纠缠</li><li>与你点阑珊</li></ul><p>女：</p><ul><li>用一生相爱</li></ul><p>合：</p><ul><li>仿佛一夜 带露的光 映射成墙</li><li>如果回忆无伤</li><li>就握紧我 等风吹来</li><li>轻轻地 轻轻地 痴痴的念旧着</li><li>梦见了 被遗忘的</li></ul><p>女：</p><ul><li>向时间 讨一味 初色的美</li><li>夜如水 风如泪 爱如碑</li><li>从不害怕 梦推向谁 偏离后迂回</li><li>今生也把 你我成像 温柔以对</li></ul><p>男：</p><ul><li>等等风景等等来时的仓促</li><li>旧时相识今生顾</li><li>款款烟雨款款乱红千秋</li><li>只与你朝朝暮暮</li></ul><p>女：</p><ul><li>未知又何妨</li></ul><p>合：</p><ul><li>再看一眼 再看一遍 你怀中的梦</li><li>浪迹的风 是你给的承诺</li><li>还以为 习惯孤单 习惯不安</li><li>却道芳时 情如雨纠缠</li><li>与你点阑珊</li></ul><p>女：</p><ul><li>用一生相爱</li></ul><p>合：</p><ul><li>仿佛一夜 带露的光 映射成墙</li><li>如果回忆无伤</li><li>就握紧我 等风吹来</li><li>再多一年 再多一眼 故事别搁浅</li><li>太多情节 在你梦的那边</li><li>就这样 一生流浪 一生徜徉</li><li>某年某月 你心之所往</li><li>会处处留香</li><li>是我们的爱</li><li>城内的光 城外的疆 风景怎样</li><li>情深久如初漾</li><li>又是一朝 新的春光</li><li>轻轻地 轻轻地 痴痴的还爱着</li><li>梦见了 未盛开的</li></ul>]]></content>
       
       
+      <categories>
+          
+          <category> 生活 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -107,14 +166,6 @@
             <tag> 模拟邀请赛 </tag>
             
             <tag> TI </tag>
-            
-            <tag> 运算放大器 </tag>
-            
-            <tag> 静态功耗 </tag>
-            
-            <tag> 压摆率 </tag>
-            
-            <tag> 单位增益带宽 </tag>
             
         </tags>
       
