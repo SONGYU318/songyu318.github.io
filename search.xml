@@ -4,11 +4,11 @@
   
     
     <entry>
-      <title>AD 插件</title>
-      <link href="/2024/10/18/2024-10-17_AD_plug_in/"/>
-      <url>/2024/10/18/2024-10-17_AD_plug_in/</url>
+      <title>AD 插件使用教程</title>
+      <link href="/2024/10/19/2024-10-17_AD_plug_in/"/>
+      <url>/2024/10/19/2024-10-17_AD_plug_in/</url>
       
-        <content type="html"><![CDATA[<h2 id="为了方便画板子找封装开的记录">为了方便画板子找封装开的记录</h2><p>先丢个链接<br><a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a></p>]]></content>
+        <content type="html"><![CDATA[<h2 id="为了方便画板子找封装开的教程">为了方便画板子找封装开的教程</h2><p>PCB 绘制不可避免遇到少库情况，为了避免造轮子，开此教程。</p><h2 id="插件下载-Library-loader">插件下载 Library loader</h2><p>下载链接：<a href="https://ms.componentsearchengine.com/ga/downloads.php">https://ms.componentsearchengine.com/ga/downloads.php</a><br>正常安装就好</p><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019143613.png" width = "80%" /></div><center>图1 下载链接 </center><h2 id="账号注册-Electronic-Component-Search-Engine">账号注册 Electronic Component Search Engine</h2><p>注册链接：<a href="https://componentsearchengine.com/signin">https://componentsearchengine.com/signin</a><br>邮箱需求：qq 网易云一类不行，可以用微软的 @outlook.com</p><p>ps：贸泽那边注册网站有问题</p><h2 id="元件选择">元件选择</h2><ul><li><p>查找链接：</p><ul><li><a href="https://componentsearchengine.com/">https://componentsearchengine.com/</a></li><li><a href="https://www.mouser.cn/">https://www.mouser.cn/</a></li><li>…</li></ul></li><li><p>下载后，直接把压缩包里面的 .epw文件解压。</p></li><li><p>点开任意 .SchDoc，左上角会显示插件快捷键，或是在工具（T）</p></li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019144343.png" width = "50%" /></div><center>图2 插件图标 </center><ul><li>登陆，选择路径，默认会有两个库，可以自定义。</li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019144606.png" width = 30%" /></div><center>图3 插件页面1 </center><ul><li>直接导入解压的 .epw 文件</li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019145025.png" width = "30%" /></div><center>图4 插件页面2 </center><ul><li>后会在 .SchDoc 生成刚才导入的元件，但是不少元件的原理图比较艹，笔者选择直接复制，自己重新布局方便绘制原理图。比如某逆天 900pin K7 封装，起码不用命名引脚了。</li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019150043.png" width = "13%" /></div><center>图5 逆天 900pin K7 封装</center><ul><li>根据引脚功能重构。</li></ul><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241019150937.png" width = "40%" /></div><center>图6  自改封装</center><ul><li>压缩文件中其实是有 AD 的库文件的，不过一个个转移太麻烦了，故直接使用插件转换。</li></ul>]]></content>
       
       
       <categories>
