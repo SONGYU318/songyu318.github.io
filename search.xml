@@ -13,14 +13,12 @@
       
       <categories>
           
-          <category> 随笔 </category>
+          <category> 生活 </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> 生活 </tag>
             
             <tag> 原则 </tag>
             
@@ -42,16 +40,14 @@
           
           <category> 学习 </category>
           
-          <category> 技术 </category>
-          
       </categories>
       
       
         <tags>
             
-            <tag> AD </tag>
-            
             <tag> PCB </tag>
+            
+            <tag> AD </tag>
             
         </tags>
       
@@ -73,6 +69,12 @@
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> art </tag>
+            
+        </tags>
       
     </entry>
     
@@ -120,7 +122,7 @@
       
         <tags>
             
-            <tag> 生活 </tag>
+            <tag> music </tag>
             
         </tags>
       
@@ -145,7 +147,7 @@
       
         <tags>
             
-            <tag> PCB绘制 </tag>
+            <tag> PCB </tag>
             
             <tag> 软件无线电 </tag>
             
@@ -175,10 +177,6 @@
       
       
         <tags>
-            
-            <tag> 技术 </tag>
-            
-            <tag> 竞赛 </tag>
             
             <tag> 电子设计 </tag>
             
@@ -221,10 +219,6 @@
             
             <tag> 朋友 </tag>
             
-            <tag> QQ </tag>
-            
-            <tag> 微信 </tag>
-            
             <tag> 重逢 </tag>
             
         </tags>
@@ -249,10 +243,6 @@
       
       
         <tags>
-            
-            <tag> 技术 </tag>
-            
-            <tag> 竞赛 </tag>
             
             <tag> 电子设计 </tag>
             
@@ -291,10 +281,6 @@
       
         <tags>
             
-            <tag> 生活 </tag>
-            
-            <tag> 竞赛 </tag>
-            
             <tag> 大学 </tag>
             
         </tags>
@@ -313,8 +299,6 @@
       
       <categories>
           
-          <category> 技术 </category>
-          
           <category> 竞赛 </category>
           
       </categories>
@@ -324,19 +308,17 @@
             
             <tag> python </tag>
             
-            <tag> 技术 </tag>
-            
-            <tag> 竞赛 </tag>
-            
             <tag> 电子设计 </tag>
             
-            <tag> agent </tag>
+            <tag> Agent </tag>
             
             <tag> 语音识别 </tag>
             
             <tag> 手势识别 </tag>
             
             <tag> 电子测量 </tag>
+            
+            <tag> 竞赛 </tag>
             
             <tag> intel </tag>
             
@@ -345,8 +327,6 @@
             <tag> ESDC </tag>
             
             <tag> LLM </tag>
-            
-            <tag> MediaPipe </tag>
             
             <tag> Paraformer </tag>
             
@@ -375,8 +355,6 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> FPGA </tag>
             
             <tag> 图像压缩 </tag>
@@ -385,7 +363,9 @@
             
             <tag> DCT </tag>
             
-            <tag> Huffman 熵编码 </tag>
+            <tag> Huffman </tag>
+            
+            <tag> 熵编码 </tag>
             
         </tags>
       
@@ -409,8 +389,6 @@
       
       
         <tags>
-            
-            <tag> 技术 </tag>
             
             <tag> FPGA </tag>
             
@@ -439,8 +417,6 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
             <tag> FPGA </tag>
             
             <tag> UART </tag>
@@ -468,13 +444,9 @@
       
         <tags>
             
-            <tag> 技术 </tag>
-            
-            <tag> FPGA </tag>
-            
             <tag> 电子 </tag>
             
-            <tag> 竞赛 </tag>
+            <tag> FPGA </tag>
             
             <tag> Gowin </tag>
             
@@ -494,18 +466,12 @@
       
       <categories>
           
-          <category> 生活 </category>
-          
           <category> 技术 </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> 生活 </tag>
-            
-            <tag> 技术 </tag>
             
             <tag> 电子 </tag>
             
@@ -533,8 +499,6 @@
       
       
         <tags>
-            
-            <tag> 学习 </tag>
             
             <tag> FDAF </tag>
             
@@ -567,8 +531,6 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
             <tag> DSP </tag>
             
         </tags>
@@ -594,8 +556,6 @@
       
         <tags>
             
-            <tag> 学习 </tag>
-            
             <tag> 去雾算法 </tag>
             
             <tag> python </tag>
@@ -616,14 +576,12 @@
       
       <categories>
           
-          <category> 随笔 </category>
+          <category> 生活 </category>
           
       </categories>
       
       
         <tags>
-            
-            <tag> 随笔 </tag>
             
             <tag> Stellarium </tag>
             
@@ -649,8 +607,6 @@
       
       
         <tags>
-            
-            <tag> 生活 </tag>
             
             <tag> 杂谈 </tag>
             
@@ -680,8 +636,6 @@
       
       
         <tags>
-            
-            <tag> 生活 </tag>
             
             <tag> 杂谈 </tag>
             
