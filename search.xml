@@ -122,9 +122,9 @@
       
         <tags>
             
-            <tag> PCB </tag>
-            
             <tag> AD </tag>
+            
+            <tag> PCB </tag>
             
         </tags>
       
@@ -495,9 +495,9 @@
       
         <tags>
             
-            <tag> 电子 </tag>
-            
             <tag> FPGA </tag>
+            
+            <tag> 电子 </tag>
             
             <tag> Gowin </tag>
             
