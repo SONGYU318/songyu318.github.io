@@ -444,8 +444,6 @@
       
         <tags>
             
-            <tag> python </tag>
-            
             <tag> 电子设计 </tag>
             
             <tag> Agent </tag>
@@ -461,6 +459,8 @@
             <tag> 嵌入式 </tag>
             
             <tag> ESDC </tag>
+            
+            <tag> python </tag>
             
         </tags>
       
@@ -682,9 +682,9 @@
       
         <tags>
             
-            <tag> 去雾算法 </tag>
-            
             <tag> python </tag>
+            
+            <tag> 去雾算法 </tag>
             
         </tags>
       
@@ -702,7 +702,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 杂谈 </category>
           
       </categories>
       
@@ -727,7 +727,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 杂谈 </category>
           
       </categories>
       
@@ -756,7 +756,7 @@
       
       <categories>
           
-          <category> 生活 </category>
+          <category> 杂谈 </category>
           
       </categories>
       
