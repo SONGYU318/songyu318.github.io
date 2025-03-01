@@ -1,0 +1,990 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>5ds黑历史搬运 | SoCoco's Blog</title><noscript>Please enable JavaScript to view the site</noscript><link rel="icon" href="/images/blog_logo.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=2.1.15"><!-- inject head--><link rel="canonical" href="https://songyu318.github.io/2023/02/20/2023-02-20_5ds_black_history/"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="上古老贴，可惜少了一部分。"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="SoCoco's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/images/blog_logo.png"><link rel="apple-touch-icon" href="/images/blog_logo.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '2.1.15' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><link rel="stylesheet" href="/css/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2022-01-21 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"Dark","light":"Light"},"copy":{"success":"Copied","error":"Copy failed"},"backtop":"Back to top","time":{"day":" days ago","hour":" hours ago","just":"just","min":" minutes ago","month":" months ago"},"day":" days","f12":"Developer mode is turned on, please follow the GPL.","totalk":"You don't need to delete blank lines, just type in your comments.","search":{"empty":"No results found","hit":"Found ${query} results for you","placeholder":"Enter keywords to search","count":"Total <b>${count}</b> results.","loading":"Loading..."}},
+    aside: {
+        sayhello: {
+            morning: "✨ Good morning. It's a new day",
+            noon: "It's time for a midday break",
+            afternoon: "Tea time. 🍵",
+            night: "early bedtime",
+            goodnight: "Good night 😴",
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: 'Long time no see, ',
+            back: 'Welcome back again,',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'mediumZoom',
+    post_ai: false,
+    right_menu: false,
+    translate: false,
+    lure: false,
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><div id="global_bg"></div><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fa-solid fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">Tags</div><div class="author-content-item-title">Find interesting areas</div></div><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">2025/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">2024/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">2024/10</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">2024/09</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">2024/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">2024/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">2023/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">2023/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">2023/06</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">2023/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">2023/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/"><span class="card-archive-list-date">All posts</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">29</span><span class="card-archive-list-count-unit">Posts</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="Day and night mode"><i class="solitude fa-solid fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="Sidebar display control"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="Music switch"><i class="solitude fa-solid fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Archives</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">44</div></a></div></div></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fa-solid fa-circle-half-stroke"></i><span>Display mode</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div><span class="sidebar-menu-item-title">Tags</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">Site information</span><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude fa-solid fa-file-word"></i><div class="item-name">Word count:</div></div><div class="item-count">51.5k</div></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="mode" type="button" title="Mode" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="Sidebar" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="Settings" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="Toc" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="Comment" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="Top" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div></div><a id="site-name" href="/" title="Back to home"><span class="title">SoCoco</span><i class="solitude fa-solid fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">5ds黑历史搬运</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="Search"><i class="solitude fa-solid fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="Console" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fa-solid fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810171130.png" alt="5ds黑历史搬运"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="This article is a Original article, pay attention to the copyright.">Original</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>杂谈</span></a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>游戏王</span></a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>游戏王 5D's</span></a></div></div></div></div><h1 class="post-title">5ds黑历史搬运</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="Posted on 2023-02-20 00:00:00"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2023-02-19T16:00:00.000Z">2023-02-19T16:00:00.000Z</time></span><span class="post-meta-date" title="Last updated on 2023-02-20 00:00:00"><i class="post-meta-icon solitude fa-solid fa-arrows-rotate"></i><time datetime="2023-02-19T16:00:00.000Z">2023-02-19T16:00:00.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fa-solid fa-file-word" title="Word count"></i><span class="word-count">11.8k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fa-solid fa-clock" title="Reading time"></i><span>39 min</span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h2 id="1-前情提要">1 前情提要</h2>
+<p>由于是2015年的帖子还是对更旧的贴子（已经无了）搬运，所以存在了几处被吞的楼层。<br>
+本人凭借记忆尽可能补充一点情节上去。<br>
+就是 怀旧吧</p>
+<p><a target="_blank" rel="noopener" href="https://tieba.baidu.com/p/4002436213?pn=1"><img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240810171059.png" alt=""></a></p>
+<a class="tag-link" href="https://tieba.baidu.com/p/4002436213?pn=1" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">超魔导狼的“5DS黑历史重演</div>
+            <div class="tag-link-sitename">贴吧</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<h2 id="2">2</h2>
+<p>翔：个！<br>
+十代：十！！<br>
+明日香：百！！！<br>
+扰乱三兄弟：千！！！！<br>
+万——丈目 闪电！！！！！<br>
+万丈目闪电闪亮登场<br>
+闪电放下手上的NDS：谜团终于解开了，请你们把所有人集中到这里来吧</p>
+<h2 id="3">3</h2>
+<p>名侦探闪电：真相只有一个，凶手就在我们当中。<br>
+名侦探闪电抬起头，犀利的目光扫视着所有人，所有人都屏住了呼吸。<br>
+名侦探闪电：凶手——就是你！【用手指着螃蟹】不动游星！！！<br>
+众人： 纳尼！？<br>
+不，不对！<br>
+在角落处一个声音响起，大家寻声望去，这人正是名侦探柯南。<br>
+只见名侦探柯南轻轻抬起头，眼镜闪过一道智慧的光。<br>
+名侦探柯南：手势不对，食指是我的专利，你应该伸中指。</p>
+<h2 id="4">4</h2>
+<p>名侦探闪电换用中指指着螃蟹：你，，，不是人！！！<br>
+螃蟹发动招牌的嘲笑光环：你倒是说说看，我怎么个不是人。<br>
+扰乱绿：如果游星不是人，那他会是什么？<br>
+扰乱黄：我知道！<br>
+所有人都把目光集中在这个黄色内裤侠身上，期盼着它的答案<br>
+扰乱黄：他是螃蟹。<br>
+扰乱黑：而游戏就是海星，十代就是水母，有码是龙虾••••••<br>
+扰乱绿：bingo！加10分！！！<br>
+“不，不对！！！”名侦探闪电马上否定了这个答案，“游星真的不是人。”</p>
+<h2 id="5">5</h2>
+<p>名侦探闪电开始了他的分析，“我们来看一下未来四人组，第一个，阿波利亚，他是人吗？”<br>
+聋哑：不，不是，他是一个喜欢插自己的机器人。<br>
+名侦探闪电：那第二个，布鲁诺，他是人吗？<br>
+众人表示茫然<br>
+名侦探闪电：你们见过人类会变身吗？其实布鲁诺的真正身份是••••••圣斗士！！！<br>
+名侦探闪电：第三个，帕拉多克斯，十代，你说他是人吗？<br>
+旧呆：我怎么知道？他又没说过。<br>
+“不，”王样，“他一开始就说了。”</p>
+<p>--------------------------镜头切换---------------------------------<br>
+剧场版：<br>
+帕拉多克斯：人是什么？只会不断破坏环境、引起纠纷，互相仇恨、歧视的丑恶生物！这种世界必须纠正！</p>
+<p>名侦探闪电：由此可以判断，游星也不是人。<br>
+杰克：那也只能够证明zone不是人，而不是游星。<br>
+名侦探闪电：可是你看过人会变身吗？<br>
+十代：那就是说，游星是黄金圣斗士？<br>
+名侦探闪电：不，他也是一个机器人。<br>
+秋酱不敢相信自己的耳朵：不，不可能的，你胡说！<br>
+“那个••••••”角落处一个弱弱的声音响起，那是龙可酱</p>
+<p>龙可：如果游星是机器人的话，是不是会•••更硬一点？</p>
+<p>众人石化</p>
+<h2 id="6">6</h2>
+<p>名侦探闪电：请问未来四人组，世界灭亡的原因是什么？<br>
+阿波利亚：同调和过快的进化<br>
+帕拉多克斯：决斗怪兽的神秘力量<br>
+zone：人类的负面情感<br>
+布鲁诺：游星的话，一定可以创造奇迹，改变未来的<br>
+名侦探闪电：⊙﹏⊙b，我是问你未来灭亡的原因<br>
+布鲁诺：•••我不记得了。<br>
+名侦探闪电：证供不统一，那也就是说，有人，在，撒，谎！不过有一样是可以确定的，你们的目的是什么？<br>
+阿波利亚：修正历史，拯救未来<br>
+帕拉多克斯：修正历史，拯救未来<br>
+布鲁诺：修正历史，拯救未来<br>
+zone：修正历史，拯救未来<br>
+名侦探闪电：那我们就把还没被修正的黑历史案件重演一遍，重现当年的真相</p>
+<h2 id="7">7</h2>
+<p>名侦探闪电：我们从最早的历史修正开始说起——零点反转，zone，你为什么要发动零点反转？<br>
+Zone：为了毁灭moment，修正历史，拯救未来。<br>
+名侦探闪电：那你为什么不直接在不动博士制造moment之前把他杀了？<br>
+Zone：那是因为••••••<br>
+名侦探闪电：看来你还是不肯告诉我们真相，让当年的幸存者——雷克斯•歌德温来为我们揭露当年所发生的事情吧。</p>
+<h2 id="8">8</h2>
+<p>L叔的回忆：</p>
+<p>当L叔破门而入的时候看到R叔已经断臂，血流不止•••<br>
+L叔：哥哥，你怎么了？<br>
+R叔把断臂交到L叔之手：快，他就要来了，拿着龙头痣走得越远越好，千万不要让龙头痣落到他的手里。</p>
+<p>L叔拿着断臂流着泪驾着D轮拼命地跑，背后是不断爆炸的城市。<br>
+难道说是零点反转？哥哥他••••••<br>
+L叔冲上断桥，飞向天空<br>
+哥哥，你放心吧，我不会让你失望的•••</p>
+<h2 id="9">9</h2>
+<p>他，那个他指的是谁？<br>
+名侦探闪电：这个恐怕要当事人——鲁格斯•歌德温来告诉我们。</p>
+<p>R叔的回忆：</p>
+<p>当L叔走了以后，那个他终于来了，他就是——不动博士！<br>
+不动博士震惊了：你，你的手•••<br>
+R叔：想不到吧，我就算把手切掉也不会把龙头痣交给你！<br>
+不动博士的语气带着威胁：龙头痣在哪？交出来！<br>
+R叔：我吃了。虽然有点狐臭味，不过还挺好吃的<br>
+不动博士：看来你是一定要跟我作对了！</p>
+<h2 id="10">10</h2>
+<p>R叔 VS 不动博士<br>
+R叔&amp;不动博士：决斗！！！<br>
+R叔：······<br>
+不动博士：·············<br>
+R叔：··························<br>
+不动博士：你丫倒是抽卡给我看看啊<br>
+R叔：手里握多卡？<br>
+不动博士：纳尼？<br>
+R叔按下了一个按键，所有的门窗全部被关上。<br>
+不动博士：你要干什么？<br>
+R叔：这个你应该认得吧<br>
+不动博士：你要发动零点反转？你疯了？这样你也会死在这里的<br>
+R叔微微一笑，按下了零点反转的启动按钮<br>
+八嘎！！<br>
+不动博士一拳打倒R叔，R叔自断一臂，已经失血过多，加上受了不动博士奋力一击，视线逐渐模糊，看不动博士已经出现了重影了••••••</p>
+<h2 id="11">11</h2>
+<p>螃蟹：不可能，你在胡说，我爸爸不是那样的人。<br>
+名侦探闪电：是吗？那让你爸来亲自告诉我们真相好了</p>
+<p>不动博士的回忆：</p>
+<p>其实当时R叔看到的并不是重影，而是2个不动博士<br>
+不动博士：原来是你在幕后操纵<br>
+不动博士：你收手吧，你已经没机会了<br>
+不动博士：不，我们不能就这样放弃希望<br>
+啊~~~~~~~<br>
+一道光芒开始凝聚两人的力量，把两人包围在一道光圈当中，带光芒散去，两人之间多了一个•••婴儿<br>
+不动博士把这个婴儿放到发射器里面，从天花板上喷出去：未来就靠你了<br>
+不动博士：那我们怎么办？<br>
+不动博士：moment是我们毕生的研究心血，就让我们和它生死与共吧</p>
+<h2 id="12">12</h2>
+<p>幸运杯的黑历史：</p>
+<p>因为没有发生前面的那些事，这是螃蟹和L叔第一次见面，他们都各怀鬼胎<br>
+L叔心想：他怎么那么像那个人，但是我从来没听说过不动博士有过妻儿啊<br>
+螃蟹心想：原来他还没死，那么他哥的龙头痣应该在他手上</p>
+<p>L叔因此在比赛中特别留意螃蟹的一举一动，希望看出一些端倪。而相应地，螃蟹也刻意隐藏自己的实力。</p>
+<p>但是因为一个人，僵局被打破了，那就是当时除了暗痣者以外的唯一反派——红毛，的手下——魔女秋！！！<br>
+所有人看到她的破坏力，无不胆颤心惊。但是螃蟹却看到了她的另一面，如此惊人的破坏力，足可以与零点反转相媲美啊，而且他还看到了她对红毛的那种忠心，他就明白了，这个女人表面上很凶悍，她的内心其实很孤独，她需要一个可以依赖的人，而且一旦你取得了她的信任，她可以跟你站在一起对抗全世界。</p>
+<p>所以游星决定征服这个女人，终于，游星和秋的决斗开始了。但是魔女秋不同于一般的决斗者，游星即使在用尽全力的情况下也打得非常吃力，就在最关键的时候，游星的力量觉醒了，他的手臂上发出一道耀眼的光芒，龙尾痣浮现于其上。<br>
+L叔震惊了：龙尾痣？难道真的是他？可是为什么会变小了呢？你以为是柯南啊？<br>
+游星：**的祈愿将化成新的希望，化作光芒闪耀的道路吧，同调召唤，飞翔吧，星辰龙！<br>
+星辰龙VS黑蔷薇龙！！！<br>
+游星：星辰龙攻击黑蔷薇龙<br>
+魔女秋LP100——》0</p>
+<h2 id="13">13</h2>
+<p>当然，魔女不是杰克，不是一两场决斗就可以征服的，更何况还有红毛把关。<br>
+所以螃蟹的第一步是解决红毛，至于红毛金蝉脱壳我们容后再谈，第二步就是要打开秋酱的心结，让她放松戒备，以便发动攻势，所以螃蟹拜访了未来岳父——某议院议员十六夜 英雄<br>
+螃蟹：解铃还须系铃人，只有你才可以挽救秋啊<br>
+十六夜 英雄终于道出了当年把秋酱逐出家门的真相：想当年，她不过是一个小女孩，但是却已经有纹身了，我说如果她不把那个纹身弄掉就不要回这个家，其实那不过是气话，有哪个父母愿意自己的孩子离开自己的身边啊，没想到她竟然当真了••••••<br>
+螃蟹：其实现在的年轻人弄个纹身什么的很正常，你看我脸上手上都有，如果有机会，我还想在背上弄一个呢<br>
+十六夜 英雄：过了这么多年，我都已经把这些看得很淡了，只要她能回来，什么都可以••••••不过我有一个要求，你们•••可不可以换一个纹身，你看就只有这么几笔简单的线条，难看死了<br>
+螃蟹：(⊙o⊙)…这个，，，我考虑考虑吧•••【内心真实想法：靠，这可是我的外挂商标啊】</p>
+<p>就这样，他们谈了一个下午，很是聊得来，临走的时候螃蟹想起了点什么，回头说道：那个，好像新童实野市的长官对我印象不是很好••••••</p>
+<h2 id="14">14</h2>
+<p>名侦探闪电：接下来的剧情很显然，秋酱被彻底证服，游星成功进入她的心里<br>
+杰克：那接下来就是地缚神篇的剧情了吗？<br>
+阿波利亚：不，是撞车镇的剧情</p>
+<p>龙亚：为什么会是獞车镇的剧情？<br>
+名侦探闪电：那是因为······</p>
+<p>度娘：不好意思，你知道的太多了</p>
+<p>名侦探闪电：好吧，没有为什么</p>
+<h2 id="15">15</h2>
+<p>撞车镇的秘密<br>
+由于罗顿并没有获得神秘的力量，所以满足同盟很轻而易举地就拿下了撞车镇，而因为没有幽灵等外在因素的干扰，所以螃蟹等人毫无后顾之忧地留在这里，同时螃蟹也解方了矿场里的所有工人，为的是自己一个人来调茶这里所埋藏着的秘密。另一方面，螃蟹和长官之间也进行着各种明真暗斗，终于有一天•••••••</p>
+<p>龙亚破门而入：游星，出大事了！咦？游星呢？<br>
+秋酱：不知道，从今天早上就没见过他<br>
+杰克：好像鬼柳也不知道去哪了<br>
+龙可：他们两个一起不见了，难道说•••<br>
+秋酱和杰克同时面露怒容：不行，他们不见了，我们快点去找！<br>
+他们俩话音未落已经夺门而出了，乌鸦才问龙亚：你刚才慌慌张张的是什么事啊？<br>
+龙亚：听说长官昨天夜里被人暗沙了，而且手都被人砍了下来<br>
+乌鸦：纳尼？难道他已经开始行动了？<br>
+然后乌鸦也很紧张地出去了<br>
+龙亚：怎么一个个都奇奇怪怪的？<br>
+龙可打着哈欠：大人们的事我们是不懂的了<br>
+说完龙可就躺在沙发上打盹了</p>
+<h2 id="16">16</h2>
+<p>螃蟹带着魔法之石和龙头痣来到了矿场中的第十三号墓地<br>
+螃蟹：终于等到这一天了，我的理想很快就要实现了<br>
+突然背后闪过一个黑影<br>
+螃蟹：谁？出来！<br>
+黑影渐渐清晰，这个人是•••子弹乌鸦！<br>
+乌鸦：我是卧底！<br>
+螃蟹开始谈判：你是个聪明人<br>
+乌鸦：我只想做一个好人<br>
+螃蟹拿出了决斗盘：那你就是要我死</p>
+<p>乌鸦VS螃蟹<br>
+乌鸦是用卡奇才，螃蟹的计算毫无破绽；乌鸦用的是带着meta均性质的黑羽卡组，螃蟹用的是同调能力十分强大的星骸废品二重身卡组，二者都是主流卡组。但是乌鸦算漏了一样东西！<br>
+螃蟹：你挂了吗？<br>
+乌鸦：我没挂！<br>
+螃蟹：那你就挂了！<br>
+乌鸦挂了，因为他没挂！乌鸦挂了，因为他没挂！因为他没挂！他没挂！他没挂！没挂······</p>
+<p>遥远的地方，帕拉多克斯站在高处注视着这座暗藏杀机的城市，一阵秋风吹过几片叶子，帕拉多克斯轻轻抓住其中一片叶子，叶子的背后是一根黑色的羽毛</p>
+<p>乌鸦出事了吗？</p>
+<p>黑暗之门渐渐打开，千百年来一直埋藏于此的秘密终于要重见天日了•••</p>
+<h2 id="17">17</h2>
+<p>回到推理现场<br>
+龙亚：为什么？游星你为什么要这样做？宝藏难道比伙伴更重要吗？<br>
+螃蟹无言以对<br>
+名侦探闪电：因为下面埋藏的并不是宝藏，而是一个不为人知的秘密<br>
+罗顿：那是一个能够让一个镇的人争个你死我活的秘密<br>
+芭芭拉：为了解开这个秘密，两个家族世代为仇<br>
+Zone：没错，为此即使牺牲一个城市也在所不惜<br>
+牛尾：到底是什么秘密能让人如此丧心病狂<br>
+名侦探闪电：这回由高桥来说吧<br>
+高桥大神稍稍有点震惊：让我来说不是让我公布答案吗？<br>
+名侦探闪电笑了：你不是已经给了我们提示了吗？<br>
+高桥大神笑了，把一样物品放在桌上：答案就在这里<br>
+那是一个NDS<br>
+旧呆：难道是•••2011的终极攻略？<br>
+名侦探闪电：不，不是，答案隐藏在暗线剧情当中，而且我想龙可，你应该知道答案<br>
+龙可有点茫然：我？我不知道啊•••<br>
+突然一道灵光闪过，龙可慌了：难道？不！不可能的！游星哥哥，你告诉我，他们说的都不是真的，你说啊，你说这一切都不是真的••••••<br>
+螃蟹把头扭到一边，不敢面对龙可的质问，但这反应代表他默认了<br>
+不，这不是真的！龙可有点失控地跑了出去<br>
+龙亚赶紧追了出去：龙可，龙可••••<br>
+旧呆看到这阵势有点不明所以：那到底是什么秘密啊？我都弄糊涂了<br>
+名侦探闪电：是龙可最关心的——精灵世界！<br>
+众人都震惊了：精灵世界！？</p>
+<h2 id="18">18</h2>
+<p>说回那墓场之上，古老而黑暗的精灵之门缓缓打开，展现在眼前的是一道耀眼的白光，螃蟹走进白光之中，渐渐连同白光消失在我们的眼前<br>
+出现在螃蟹眼前的是一片和谐安详的景象，蓝蓝的天空，绿色的草原和森林，美丽的小精灵在飞舞，螃蟹曾经多么渴望能够有这样的生活啊<br>
+不过眼前有一个不和谐的物体挡在他的前面，那是精灵世界的忠诚守护者——狮子<br>
+狮子龇牙咧嘴，目露凶光，两个前爪已经挖入泥里，身体向前倾斜，随时准备扑向螃蟹<br>
+但是螃蟹面不改色，依然气定神闲，右手伸进怀里，似乎是要拔出什么<br>
+一个是蓄势待发<br>
+一个是箭在弦上<br>
+整个气氛变得十分紧张，依稀可以听到秒针跳动的声音<br>
+各就位——<br>
+预备——<br>
+砰——<br>
+游星以迅雷不及掩耳盗铃的速度拿出一个飞盘扔向远处，狮子撒开腿就跑去捡</p>
+<h2 id="19">19</h2>
+<p>龙可，龙可~~~<br>
+龙可睡得正甜，忽然听见古代妖精龙悠悠的呼唤•••••••</p>
+<p>森林的深处，龙可为了守护精灵世界，正集中精神防备着神秘入侵者的来袭；远处一个神秘的身影渐走渐近，到近处时，迷雾散去，这个人是•••••••<br>
+龙可：游星哥哥，怎么是你？<br>
+游星：龙可酱，这么巧啊，你怎么在这？<br>
+龙可：我是来打酱油的，你呢？<br>
+游星：我也是，这里风景还不错，我想到前面走走<br>
+古代妖精龙：喂喂，你们够了= =<br>
+游星：古代妖精龙，你应该知道我这么做也是为了全人类的幸福<br>
+古代精灵龙：但是精灵世界怎么办？人类自己所犯下的过错为什么要牵扯到精灵世界<br>
+游星黯然道：草命总得有所牺牲<br>
+龙可醒觉过来：我肩负着守护精灵世界的重任，即使是游星哥哥你，也不可以从这里过去</p>
+<p>龙可VS游星<br>
+这实力的差距••••••你懂的，于是就出现了以下的一幕<br>
+龙可：55555555，游星哥哥你欺负人<br>
+游星：不要怕，很快就过去了，不疼的</p>
+<h2 id="20">20</h2>
+<p>龙亚正在玩电动，心口忽然一阵疼痛<br>
+糟了，龙可有危险！</p>
+<p>游星：星辰龙直接攻击，音速射击！<br>
+啊~~~~~~~~~~~~<br>
+眼看眼前的攻击波就要吞噬自己，龙可吓得尖叫起来<br>
+就在这千钧一发之间，突然有一道光化解了眼前的攻击，待光芒褪去，出现在眼前的是电动工具龙<br>
+龙亚：我是不会让任何人伤害龙可的，就算是游星哥哥你也不可以<br>
+游星：龙亚，别闹了</p>
+<p>龙亚VS游星<br>
+这实力的差距••••••你懂的，于是就出现了以下的一幕<br>
+龙亚：古代精灵龙，守护龙可就拜托你了<br>
+啊~~~~~~~~~~~~<br>
+龙亚挡下了星尘龙的攻击，LP——》0，龙亚，倒下了<br>
+龙可：哥哥，哥哥•••<br>
+无论龙可叫得多么凄惨，但龙亚静静地躺在那里，就好像睡着了一样<br>
+古代妖精龙：龙亚，你不能死，你还有没完成的使命，必须由你自己来完成<br>
+古代妖精龙的圣光庇佑照耀着龙亚<br>
+手电筒转起来<br>
+心脏痣亮起来<br>
+BGM响起来<br>
+灵魂燃起来<br>
+龙可：手电筒的效果好像是•••<br>
+龙亚LP——》100<br>
+龙亚复活了<br>
+信春哥，满血满状态原地复活<br>
+龙亚：将1星的手电筒和7星的电动工具龙同调，为了保护世界的未来，勇气与力量唤起草命！同步召唤！进化吧！生命洪流龙！<br>
+真正的第五龙出现！！！</p>
+<h2 id="21">21</h2>
+<p>这就是真相，黄龙觉醒，没有乌鸦龙，OP和ED一直在暗示历史被修正的事实</p>
+<p>我们再回到故事当中<br>
+当秋酱和杰克找到游星的时候，发现游星已经晕倒在地上，另一边躺着的是乌鸦<br>
+秋酱：游星，游星~<br>
+杰克：游星，游星~<br>
+可怜的乌鸦静静地躺在一边，没人理会<br>
+游星悠悠地醒来<br>
+游星：我怎么了？<br>
+秋酱：你晕倒了<br>
+杰克：你和乌鸦怎么会在这里？鬼柳呢？<br>
+游星：鬼柳突然发了疯似的攻击我，然后乌鸦赶来救我，后面的事情我就不记得了。对了，乌鸦呢？<br>
+螃蟹：乌鸦！乌鸦！！<br>
+乌鸦····他挂了</p>
+<p>咦？乌鸦的耳环呢？<br>
+秋酱发现有点不对劲，乌鸦的拳头紧紧地握着，手里好像揣着什么<br>
+秋酱偷偷地用力掰开乌鸦的手<br>
+那是一对耳环<br>
+不对，那不是乌鸦的螺母耳环，是一对星星耳环<br>
+难道说······<br>
+秋酱突然有一种不好的感觉···</p>
+<p>医院<br>
+双子的父母从美国匆匆赶回来<br>
+双子他妈：医生，我的孩子们怎么样了？<br>
+医生：我们替他们做了全面的检查，他们一切都很正常<br>
+双子他爸：那他们什么时候会醒？<br>
+医生：不知道，我们检查不出任何问题，但是他们的潜意识里好像不愿意醒来，他们似乎在逃避着某种东西<br>
+双子他妈：我们只有这一对孩子，你无论如何要救醒他们<br>
+医生：对不起，我们已经尽力了<br>
+病房内，双子安详地睡着；病房外，双子父母欲哭无泪</p>
+<h2 id="22">22</h2>
+<p>鬼柳失踪，乌鸦阵亡，双子昏迷<br>
+现场的人都沉默了，这个事实实在太难接受了<br>
+名侦探闪电：有谁还敢继续听下去的就留下来吧<br>
+大家面面相觑，但是谁也没有离开的意思<br>
+乌鸦：龙可，龙亚，这些东西儿童不宜<br>
+双子和几个孩子出去了，卢齐亚诺没有出去的意思，蓝毛想了想最后还是没有出去<br>
+蓝毛：游星和龙亚的决斗怎么样了，他们在精灵世界到底发生了什么事情？<br>
+名侦探闪电：你们问当事人吧<br>
+游星：我从手牌发动了次元幽闭<br>
+纳尼！？<br>
+所有人的头上都划下了几道阴影<br>
+秋酱：那然后呢？精灵世界里到底隐藏了什么秘密？<br>
+名侦探闪电：现在不方便说，我们先看下一季的剧情吧</p>
+<h2 id="23">23</h2>
+<p>就在这里，曾经一天发生了很多不愉快的事，历历在目，不堪回首<br>
+一个不速之客打断了游星的思绪<br>
+游星：你是谁？<br>
+帕拉多克斯：帕拉多克斯，星之民，太一的领袖<br>
+游星：你找我什么事？<br>
+帕拉多克斯：加入我们，征服地球，怎么样？<br>
+游星拒绝了：对不起，我是一个好人<br>
+帕拉多克斯拿出了那根黑色的羽毛：那这个你怎么解释？<br>
+游星：乌鸦是你的人？<br>
+帕拉多克斯不答：你应该拿到了那禁忌的力量了吧<br>
+游星：不，我还没有，你走吧<br>
+帕拉多克斯：打扰了。<br>
+帕拉多克斯走了几步突然站住了：去看看你朋友的比赛吧，也许比赛不是很顺利哦<br>
+游星心头一颤<br>
+等游星赶到比赛现场的时候，秋酱已经躺在医院里了</p>
+<h2 id="24">24</h2>
+<p>秋酱受伤退赛，替补队员游星顶上，中途遭受了点挫折，但毫无疑问地，游星和杰克，横越美国金牌组队淘汰赛优胜<br>
+就在他们领到金牌的时候，天色忽然变得异常的深沉</p>
+<p>暗痣者篇开始了，只不过这一次的暗痣者多了一个人——子弹乌鸦。<br>
+子弹乌鸦，冥王，带着暗痣者们不灭的灵魂从冥界归来了</p>
+<p>杰克：鬼柳，乌鸦，你们复活了？这到底是怎么回事？<br>
+鬼柳：这恐怕要问游星他自己了。<br>
+游星黯然道：鬼柳，乌鸦，对不起，我没有选择<br>
+杰克惊讶地回头看着游星：是你杀了他们？<br>
+游星不语<br>
+乌鸦：你们慢聊，我们在前面等你<br>
+暗痣者们走了，只留下游星、杰克，还有秋酱<br>
+他们并没有看到乌鸦脸上滑落的泪痕，那对星星耳环，秋酱没有戴</p>
+<p>杰克：游星，你为什么要这样做？他们可是我们的伙伴啊！！！<br>
+游星：他们挡了我的路<br>
+杰克：如果现在我也要挡在你的前面呢？<br>
+游星：杀你</p>
+<h2 id="25">25</h2>
+<p>游星VS杰克<br>
+两人都期待已久的宿命之战，但谁也没想到会以这样的局面出现<br>
+秋酱现在的心情很迷茫<br>
+决斗开始了。打得很激烈。天地变色，风起云动，雷电大作，山崩地裂，洪水泛滥，你死我活，难舍难分，不分高下，精彩纷呈。<br>
+决斗到了最高潮的部分，就在最关键的时候，即将见分晓的时候，杰克翻车了。<br>
+杰克翻车了。<br>
+游星：秋，是你干的吧？<br>
+秋酱：答应我，你一定要回来</p>
+<h2 id="26">26</h2>
+<p>游星VS暗痣者•••们<br>
+乌鸦亮出了他的乌鸦痣：游星，这回我也有挂了，你还能打败我吗？<br>
+乌鸦：召唤乌鸦地缚神<br>
+鬼柳：召唤巨人地缚神<br>
+L叔：召唤老鹰地缚神<br>
+R叔：召唤蜘蛛地缚神<br>
+··········</p>
+<p>画外音<br>
+A：场上不是只能有一个地缚神吗？<br>
+B：黑历史是这样的啦</p>
+<p>游星一个人面对众多的地缚神，他再也没有同伴的支持，此时此刻，他是一个人在战斗，下一回合他就要被地缚神们的直接攻击群殴致死，难道他真的要在这里倒下了吗？</p>
+<p>就在这时候，游星想起了在精灵世界的情景</p>
+<p>森林的尽头，失乐园，上面写着“人类与狗不得入内”<br>
+园内，生命树，树上结着很多···石板</p>
+<h2 id="27-原文被吞了">27 (原文被吞了)</h2>
+<p>石板上，时蟹神默默的看着一切。<br>
+游星：你是神吗<br>
+时蟹神：我是一面镜子<br>
+游星：你这镜子怎么这么脏<br>
+时蟹神：我能倒映人的内心，你心有杂念<br>
+游星：我想借助你的力量，拯救这个世界，需要什么条件<br>
+时蟹神：明镜止水心</p>
+<h2 id="28（原文被吞了）">28（原文被吞了）</h2>
+<p>为了未来<br>
+聚集的祈愿即将化成新生的希望<br>
+加速同调！流星龙，五连击<br>
+地缚神们纷纷爆炸</p>
+<p>画外音<br>
+A：地缚神不是不能选为攻击对象吗？<br>
+B：黑历史是这样的啦</p>
+<h2 id="29（原文被吞了）">29（原文被吞了）</h2>
+<p>乌鸦：你为什么不惜代价都要这么做<br>
+游星：为了世界<br>
+暗痣者消失<br>
+场外，一辆带着巨大三个轮子的车出现<br>
+杰克：游星，这次我不会翻车了！</p>
+<h2 id="30">30</h2>
+<p>游星VS杰克<br>
+游星：星尘龙<br>
+杰克：红莲魔龙<br>
+游星：爆裂模式，星尘龙•爆裂体<br>
+杰克：爆裂模式，红莲魔龙•爆裂体<br>
+相杀<br>
+游星：星尘龙•爆裂体被破坏时从墓地特殊召唤星尘龙<br>
+杰克：红莲魔龙•爆裂体被破坏时从墓地特殊召唤红莲魔龙<br>
+游星：抽卡，救世龙，救世星龙<br>
+杰克：抽卡，救世龙，救世魔龙<br>
+游星：回合结束，救世星龙返回额外，从墓地特殊召唤星尘龙<br>
+杰克：回合结束，救世魔龙返回额外，从墓地特殊召唤红莲魔龙<br>
+游星：明镜止水，加速同调，流星龙<br>
+杰克：燃烧之魂，双重同调，真红莲新星龙<br>
+游星：发动XX陷阱卡，这样我们的攻击力就一样了<br>
+杰克：只要能打败你，即使同龟于尽我也在所不惜<br>
+游星：雅蠛碟！</p>
+<h2 id="31">31</h2>
+<p>等等，这个马达声是······<br>
+是秋酱！<br>
+不，那是魔女！！<br>
+雅蠛碟！！！<br>
+魔女暴走中<br>
+冰冷的火焰将吞噬世间的一切，漆黑的花朵，绽放吧！同步召唤！出现吧！黑蔷薇龙！<br>
+黑蔷薇龙挡在流星龙的前面，以自己微弱的2400冷眼面对真红莲新星龙的6000</p>
+<p>即使全世界都抛弃了你，我也不忍离开，只盼有天你能读懂我的心<br>
+朦胧的情结聚成灿烂的爱，化成真挚的祝福，结合吧，宇宙耀变龙<br>
+花龙和流星龙结合了，他们的结合闪耀着灿烂的光芒，丝丝光辉洒落在枫林中，染黄了那一片片叶子</p>
+<p>杰克：你真的爱他吗？<br>
+魔女：我不知道<br>
+杰克：我祝你们幸福<br>
+决斗中断，杰克黯然离开<br>
+杰克：游星，你好自为之</p>
+<p>游星，你一定要幸福</p>
+<h2 id="32">32</h2>
+<p>议员十六夜•英雄的家里<br>
+英雄：游星，你们两个发生了什么事情？秋已经把自己关在房里很多天了<br>
+游星：让我去看看她吧<br>
+节子：对不起，她说她谁也不想见，尤其是你<br>
+秋酱出来了：妈，，，让他上来吧</p>
+<p>秋酱的闺房<br>
+两人静静地坐在床边<br>
+秋酱看起来憔悴了很多，脸上依稀可以看到两道泪痕<br>
+游星突然有种保护秋酱的欲望，平日看起来强势的秋酱此刻看起来是那么的柔弱，让人怜惜<br>
+秋酱开口了：游星···我们分手吧<br>
+游星心头一震<br>
+秋酱居然说要跟他分手，但是，，，<br>
+他们还没开始谈恋爱啊<br>
+游星：打扰了<br>
+游星站起来，走到门边，却不舍离开<br>
+游星：秋，，，我们结婚吧<br>
+秋愣住了<br>
+她的泪水再也没忍住，哗啦哗啦地往下流</p>
+<h2 id="33">33</h2>
+<p>教堂<br>
+神父：不动游星先生，你是否愿意娶十六夜 秋女士为妻，按照圣经的教训与他同住，在神面前和她结为一体，爱她、安慰她、尊重她、保护他，像你爱自己一样。不论她健康或是疾病、富有或贫穷，始终忠於她，直到离开世界？<br>
+游星：我愿意<br>
+神父：十六夜 秋女士，你是否愿意嫁不动游星先生为妻，按照圣经的教训与他同住，在神面前和她结为一体，爱她、安慰她、尊重她、保护他，像你爱自己一样。不论他是多么的无耻，多么的虚伪，多么的残暴······<br>
+秋酱打断了神父：等等，你怎么说得······<br>
+神父拿下了自己的帽子，那是大家都久违了的红毛<br>
+红毛：秋，你不能嫁给他，他害过我，他不是好人<br>
+秋酱懵了<br>
+游星：秋，你不要听他说<br>
+红毛突然拖着秋酱的手跑了<br>
+游星D轮追</p>
+<p>当游星追上来的时候，他看到的是红毛的尸体和发呆了的秋酱，，还有帕拉多克斯<br>
+帕拉多克斯：不动游星，好久不见，你欠我一个人情<br>
+游星：你想怎么样<br>
+帕拉多克斯：我们最近研发了一批大杀伤力武器，我取了个名字，叫机皇帝，攻防合一，各部件可升级可组装，不过研发现在到了瓶颈阶段，我们需要你的帮助<br>
+秋酱挽着游星的手，看着游星的眼神，摇了摇头<br>
+游星自然懂得：对不起，我们需要度蜜月，帮不了你<br>
+帕拉多克斯：看来你为了这女人已经忘记了你的理想，我们后会有期</p>
+<h2 id="34">34</h2>
+<p>贝卡斯・J・克罗佛多杯骑乘决斗大赛即将开幕<br>
+雪莉：游星，我认可你的实力，加入我的队伍吧<br>
+游星：对不起，我已经退出江湖了<br>
+雪莉：这一次的大赛背后其实有一个叫太一的邪恶阻止在操纵着，我爸爸就是被他们杀害的，所以我希望你务必帮助我<br>
+游星震惊了：是太一？这是怎么回事？<br>
+雪莉拿出了一张卡：他们就是为了这张卡而杀害了我的父亲<br>
+这张卡是···Z-ONE！<br>
+游星：我想我应该认识你的父亲<br>
+雪莉：这怎么可能？我父亲在我很小的时候就已经死了，你怎么会认识他？<br>
+游星的确认识雪莉的父亲，二十年前的龙爪痣拥有者<br>
+游星把那张卡还给了雪莉：对不起，我帮不了你，你自己小心点，太一不容易对付</p>
+<p>这几天游星一直闷闷不乐，秋酱做出了一个艰难的决定<br>
+秋酱：亲爱的，我们参赛吧<br>
+游星：我说过，我不愿意再回忆起那痛苦的经历，我现在只希望能和你一起好好地生活<br>
+秋酱：可是你还是放不下，是时候做一个了断了<br>
+游星：可是我们只有2个人······</p>
+<p>游星，好久不见了<br>
+背后传来一个熟悉的声音，炎城骸——被原王打败的一个跑龙套，第三个队员集齐</p>
+<h2 id="35">35</h2>
+<p>游星打败了太一队，获得了贝卡斯・J・克罗佛多杯骑乘决斗大赛优胜<br>
+就在游星等人夺冠的时候，新童实野市遭到了机皇帝的袭击<br>
+游星、秋酱、炎城骸分别开着自己的D轮开始了大逃亡<br>
+游星：我们分开走，我来引开它们的火力<br>
+真正的战斗，现在才开始</p>
+<p>代达洛斯桥上，谈判<br>
+帕拉多克斯：不动游星，游戏开始了，怎么样？这个游戏好玩吗？<br>
+游星：这个游戏你玩不起，结束吧<br>
+帕拉多克斯：既然游戏已经开始了，那就别停下来<br>
+游星：那我一定奉陪到底<br>
+帕拉多克斯：既然你不能为我所用，那么我也不能容你</p>
+<p>游星VS帕拉多克斯<br>
+决斗！！！<br>
+帕拉多克斯拔出了左轮手枪<br>
+游星：我以为只有撞车镇才会有这种决斗盘<br>
+帕拉多克斯：不，这是真正的手枪<br>
+砰！<br>
+游星倒下了<br>
+他倒下之前看到的是匆忙赶来、惊慌失措的秋酱</p>
+<h2 id="36-（原文被吞了）">36 （原文被吞了）</h2>
+<p>秋：游星你不要走啊，没有你了，这个世界还有什么意义呢<br>
+秋开始暴走，花龙出现，疯狂的破坏着一切</p>
+<h2 id="37-（原文被吞了）">37 （原文被吞了）</h2>
+<p>帕拉多克斯抵挡不住，先撤退了</p>
+<h2 id="38">38</h2>
+<p>炎城骸赶到<br>
+炎城骸抱起了游星：游星，游星，你怎么样了<br>
+游星突然睁开了双眼，吓了炎城骸一跳<br>
+不过游星接下来的动作更是让炎城骸呆住了<br>
+游星掰开了自己的脑壳，里面的线路板闪过电光，游星从里面拿出了一块芯片<br>
+游星：我的芯片已经严重损坏了，找个修电器的帮我修理好它<br>
+炎城骸：游星，你······<br>
+游星：嘘，别告诉秋，让她找个好人就嫁了吧</p>
+<h2 id="39">39</h2>
+<p>第三次世界大战爆发，战火迅速在全球范围内蔓延</p>
+<p>一位青年男子带着一个公文箱，带着妻儿正在逃亡<br>
+一轮轰炸，当男子再次站起来的时候，他的妻儿已经倒在血泊中了<br>
+男子丧失了理智，他拿起一把机关枪对着机皇帝疯狂扫射<br>
+帕拉多克斯：看到没有，背叛我就是这样的下场<br>
+男子：对不起，我不能背叛我的家乡和祖国<br>
+帕拉多克斯：你知道你的下场会是什么？<br>
+男子：我知道，动手吧</p>
+<p>当卢齐亚诺从血泊中醒来的时候，他经历了丧失亲人的绝望</p>
+<p>卢齐亚诺从此成为了一个孤儿，他能在战火当中生存下来，多亏自卫军救了他<br>
+酋长：你是否愿意加入自卫军，忠于祖国，忠于人民<br>
+卢齐亚诺：我愿意<br>
+酋长：好！！！从今天开始，你的名字就叫做何塞，终身编号9527</p>
+<h2 id="40">40</h2>
+<p>基地外<br>
+普拉西多：你好，我叫普拉西多，酋长是我爸<br>
+卢齐亚诺，不，是何塞，他并不愿意答话，耷拉着脑袋<br>
+普拉西多：还在想你的父母吗？这么小就成了孤儿，对于一个女孩子来说真的是一个很大的打击<br>
+何塞生气了：我是男孩子！！！<br>
+普拉西多：对不起，我以为······<br>
+何塞：没关系，我很少见有男孩子像你这么体贴人的<br>
+普拉西多生气了：我是女孩子！！！<br>
+何塞：对不起，我以为······</p>
+<p>从那以后，何塞和普拉西多成了生死与共的战友，但他们又不只是战友，他们之间渐渐萌生了一种莫名的情愫。何塞似乎忘记了卢齐亚诺所背负的绝望，重新获得了希望，直到那一天······<br>
+一颗炮弹与他擦肩而过，他的幸福就这样离他而去，希望再次离他而去<br>
+他丧失了理智，拿起机关枪对着机皇帝疯狂扫射<br>
+帕拉多克斯：他怎么那么像当年的那个人</p>
+<p>就这样，机皇帝莫名地撤退了，留下他一个人咀嚼着痛失恋人的绝望</p>
+<h2 id="41">41</h2>
+<p>抗战二十年，山河破碎，民不聊生</p>
+<p>一位穿白衣的科学家站在电脑前，通过打字的方式和一块芯片对话<br>
+科学家：你好，我需要你的帮助<br>
+芯片：请把我的芯片放回我的体内<br>
+科学家：对不起，你的身体已经严重生锈，彻底成为了一堆废铁<br>
+芯片：那我需要找一个新的寄居体<br>
+科学家：我现在去哪给你找寄主<br>
+芯片：你看过我的资料了吧，你想成为救世主吗？<br>
+科学家：想，但我怕疼<br>
+芯片：不用怕，我采用的是韩国整形手术，无痛无副作用，成功率百分之九十九，程序已经设好了，马上可以开始</p>
+<p>雷电击中大楼，系统受到干扰，手术搞砸了<br>
+啊~~~~~~<br>
+疼吧，这就是那百分之一</p>
+<h2 id="42">42</h2>
+<p>一道激光炮击碎了正在下坠的碎石，救世主游星华丽登场<br>
+帕拉多克斯：不动游星，没想到你居然还没死<br>
+游星：我有信念<br>
+帕拉多克斯：信春哥吗？<br>
+游星：游戏已经开始了，我正式向你宣战<br>
+帕拉多克斯：你觉得你一个人斗得过我吗？<br>
+游星：现在才是第一回合，我们走着瞧</p>
+<h2 id="43">43</h2>
+<p>游星就像一个救世主那样到处去打救世人，并组织他们反击。有一天他遇到了一位老人<br>
+老人：不动游星？<br>
+游星：你是？<br>
+老人：炎城骸<br>
+游星：是你？秋在哪里？快告诉我!<br>
+老人：你睡了很久很久，秋说她等不及了，她不希望你醒来的时候看到她已经人老珠黄<br>
+游星：她知道我还没死？<br>
+老人：她懂一点医学，她早就知道你不是人类，她让我把这个交给你，让你醒了就去找她<br>
+那是魔法之石<br>
+游星走了，突然回头：那个，雪莉呢<br>
+老人：我对不起你，当初芯片被太一的人抢走了，雪莉为了夺回芯片，已经······<br>
+游星：我知道了<br>
+游星走了，从此一个人走</p>
+<h2 id="44">44</h2>
+<p>失落园里，生命树下，游星找到了秋酱<br>
+自挂东南枝，此物最相思<br>
+秋酱依然是那么年轻，那么美丽，微风轻轻拂动她的裙摆，春光乍泄<br>
+秋，我想你了，你听得到吗？</p>
+<p>血债血偿！！！</p>
+<h2 id="45">45</h2>
+<p>游星一出手，就知有没有<br>
+部下向帕拉多克斯报告：报告，紧急军情，我们的机皇帝感染病毒，正倒戈相向，向我们攻来，而且病毒还在迅速扩散<br>
+帕拉多克斯：立刻切断病毒来源，动作要快！！！<br>
+部下：额~恐怕不行，病毒是通过永动机传播的，如果切断的话，不但机皇帝，我们的一切防御系统都将停止运作<br>
+帕拉多克斯：不动游星，你好狠啊<br>
+部下：那我们应该怎么办？<br>
+帕拉多克斯：继续让他们抢<br>
+部下：纳尼？继续让他们抢？<br>
+帕拉多克斯：没错，不过要给机皇帝们传输爆破指令。不动游星，我要你吃不了兜着走</p>
+<h2 id="46">46</h2>
+<p>代达洛斯桥上两人正在谈判，周围爆炸声不断<br>
+游星：我们似乎闹大了<br>
+帕拉多克斯：是有点，你有办法让它停下来吗？<br>
+游星：来不及了，永动机有自动防御系统，一旦遭受严重威胁，就会强制启动零点反转<br>
+帕拉多克斯：纳尼？<br>
+游星启动了D轮：跟我走吧，我想我们要逃了</p>
+<p>精灵世界<br>
+游星：只有这里是不会受到零点反转的波动的，你就先躲在这里吧<br>
+帕拉多克斯：你为什么要救我？而且还带我来精灵世界，你不怕我···<br>
+游星：随你吧，我们都曾经犯下了太多太多的罪行，现在是时候赎罪了<br>
+游星要走了，还有很多人等着他去救<br>
+帕拉多克斯叫住了他：游星，，我错了！<br>
+帕拉多克斯拿下了他的面具<br>
+游星：你是······<br>
+帕拉多克斯点了点头，没错，他父亲是龙翼痣的拥有者，一生正直，却背上了一个莫须有的罪名被钉在了十字架上</p>
+<h2 id="47">47</h2>
+<p>游星走了，帕拉多克斯在这里找到了失乐园，找到了生命树，也找到了能读懂人心的食蟹神<br>
+帕拉多克斯：你就是神吗？<br>
+食蟹神：不，我只是一面镜子，一面能读懂人心的镜子<br>
+帕拉多克斯：那你能读懂我的心吗？<br>
+食蟹神：你自己看<br>
+帕拉多克斯哭了<br>
+他看到的不是一个面目狰狞的大魔头，而是一个···可怜虫</p>
+<p>他自己所犯下的过错他要自己去弥补，用他罪的力量。<br>
+剧场版开始<br>
+被三大主角完虐</p>
+<h2 id="48">48</h2>
+<p>当他醒来的时候，看到的是带壳的不动游星和一个蓝发的少年<br>
+帕拉多克斯：是你救了我？<br>
+游星：下次别这样了<br>
+帕拉多克斯：游星，你的手？<br>
+游星苦笑：这零点反转的威力大了点，我没事，不过是少了几个零件而已</p>
+<h2 id="49">49</h2>
+<p>未来四人组集结，修正历史行动开始<br>
+游星：事情进展如何？<br>
+阿波利亚：我们成功地收编了原王<br>
+游星：那未来发展怎么样？<br>
+阿波利亚：游星又把他收编回去了<br>
+游星：事情进展如何？<br>
+阿波利亚：我们成功地收编了鬼柳<br>
+游星：那未来发展怎么样？<br>
+阿波利亚：鬼柳便当了<br>
+游星：事情进展如何？<br>
+阿波利亚：乌鸦觉醒了，不过龙头痣被游星抢了，只拿到龙尾痣，龙亚没有觉醒<br>
+游星：那未来发展怎么样？<br>
+阿波利亚：制作组正在着手改OP和ED</p>
+<h2 id="50">50</h2>
+<p>游星：看来我们得亲自出马了<br>
+帕拉多克斯：我负责做什么？<br>
+游星：你要留在这里，如果我们回不来，你要作为人类最后的希望好好活下去</p>
+<p>安提米诺：zone，如果我们打败了游星，你是不是也会消失<br>
+游星：···是<br>
+安提米诺：那让我去感化游星吧，这样也许你们就不用死了<br>
+游星：不行，去游星身边实在是太危险了<br>
+安提米诺：不，我不要你走</p>
+<p>安提米诺执意如此，不过他时空穿梭的时候不小心头先着陆了</p>
+<h2 id="51">51</h2>
+<p>终于要到最终战了<br>
+Zone VS游星<br>
+游星：聚集而来的群星合而为一时，全新的羁绊将照亮未来，化为闪耀之路吧！超越极限加速同步！进化的光芒，流天类星龙！<br>
+当光芒散去，出现在场上的依然是那5只龙<br>
+游星：纳尼？<br>
+Zone：你心有杂念，又如何能达到顶点净心境界<br>
+大屏幕上出现的画面是鬼柳被狂殴，乌鸦遭杀害，双子被虐，杰克翻车，秋酱自杀••••••<br>
+5DS的队员们震惊了，全世界的人民都震惊了<br>
+游星伪善的假面具被活生生地披露在世人的面前<br>
+打倒游星！打倒游星！打倒游星！<br>
+这就是群众的呼声<br>
+游星开始慌了，众叛亲离的感觉，孤独的感觉，太可怕了</p>
+<p>游星手上的龙头痣消失了<br>
+5DS的龙痣都寄托在了zone的身上<br>
+全世界人民的希望都寄托在zone的身上<br>
+黄金蜗牛蟹！！！<br>
+Zone：发动速攻魔法卡——SP-超同调，把场上所有的怪兽进行同调，出来吧，红龙<br>
+红龙现世<br>
+曾经是自己的外挂商标，现在竟然成了自己的敌人<br>
+红龙犀利的眼神洞穿了游星内心深处的所有想法<br>
+从不落泪的游星眼角滑过一道悔悟的泪水<br>
+连红龙都要背叛自己了吗？</p>
+<p>游星：我明白了<br>
+游星：发动调律，把速攻同调士加入手牌，然后把卡组上面的5张卡送去墓地<br>
+最上面的那张是星爆，你懂的<br>
+游星：丢弃等级盗窃虫特殊召唤速攻同调士，等级盗窃虫把速攻同调士降为4星特殊召唤，4+1=5，同调召唤，废品战士。废品战士攻击红龙<br>
+这结局···你懂的</p>
+<h2 id="52">52</h2>
+<p>游星：你动手吧<br>
+Zone：不，你死了，有人会伤心的<br>
+游星顺着zone的眼神看过去，那是秋酱，她的眼神是那么的复杂，那么的深邃<br>
+也许自己真的伤害了很多人，尤其是某些人<br>
+旧永动机亮起一道光，飞到了游星这里来<br>
+是爸爸···们！<br>
+Zone递给游星一张卡：给你！<br>
+游星接过那张卡：聚集的祈愿？<br>
+zone：记住，进化未必就是好，有时候本质的才是最真的</p>
+<p>游星看着他们<br>
+Zone鼓励地点了点头，不动博士···们也点了点头<br>
+游星笑了：你不怕我死不悔改吗？<br>
+Zone笑了：你心有杂念的话，是无法达到顶点净心的境界的<br>
+游星看了看秋酱：我明白了</p>
+<p>时光倒流，151集重拍</p>
+<h2 id="53">53</h2>
+<p>名侦探闪电：故事讲完了，大家洗洗睡吧<br>
+大家陆陆续续都散了</p>
+<h2 id="54">54</h2>
+<p>有人觉得很乱，我想还是解释一下吧</p>
+<p>本文主要通过YY了一个未来蟹爸攻略未来蟹爸，未来蟹怎样攻略蟹以及未来蟹为什么要攻略蟹的故事，满足了大家黑化蟹和各种CP的美好愿望，在填坑的同时也挖了比较多的坑，既满足了大家的好奇心又引起了大家的好奇心，而本文选择在4月1发布，除了因为那天刚好看完字幕以外，更是为了突出男人的欺骗与谎言的中心思想，而选择在今天挖上来，是因为有人今天才放假</p>
+<p>如果你还是看不懂，恭喜你，你很单纯，知道的太多对你没什么好处</p>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/Avatar.jpg"></a><div class="post-copyright__author_name">SoCoco's Blog</div><div class="post-copyright__author_desc">Record some useless things</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">This piece of writing is an original article, utilizing the<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>Agreement. For complete reproduction, please acknowledge the source as Courtesy of<a href="/">SoCoco's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%9D%82%E8%B0%88/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>杂谈<span class="tagsPageCount">7</span></span></a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>游戏王<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>游戏王 5D's<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/26/2023-03-26_Stellarium/"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Stellarium</div></div></a></div><div class="next-post pull-right"><a href="/2023/01/30/2023-01-30_Ideal/"><div class="pagination-info"><div class="label">Next</div><div class="next_info">理想是每个人现实的共同映射</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fa-solid fa-star"></i>
+                <span>Behold, those who found delight in this piece also perused</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">Random</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/2025/01/27/2025-1-27_5ds_Yosei_history/" title="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来">
+                    <img class="cover" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250127202529.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/2025/01/01/2025-01-01/" title="记 2024">
+                    <img class="cover" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/IMG20250101000057.jpg" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">记 2024</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span>  Comment</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="Avatar" src= "/img/loading.avif" data-lazy-src="/images/avatar.jpg"></div><div class="author-info__description_group"><div class="author-info__description">All TRAGEDY ERASED, I SEE ONLY WONDER.</div><div class="author-info__description2"></div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">SoCoco</div><div class="author-info__desc">Record some useless things</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/songyu318" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/382230215" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fa-solid fa-bars"></i><span>Table of contents</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%89%8D%E6%83%85%E6%8F%90%E8%A6%81"><span class="toc-text">1 前情提要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2"><span class="toc-text">2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3"><span class="toc-text">3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4"><span class="toc-text">4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5"><span class="toc-text">5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6"><span class="toc-text">6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7"><span class="toc-text">7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8"><span class="toc-text">8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9"><span class="toc-text">9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10"><span class="toc-text">10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11"><span class="toc-text">11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12"><span class="toc-text">12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13"><span class="toc-text">13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14"><span class="toc-text">14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15"><span class="toc-text">15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16"><span class="toc-text">16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17"><span class="toc-text">17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18"><span class="toc-text">18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19"><span class="toc-text">19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20"><span class="toc-text">20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21"><span class="toc-text">21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22"><span class="toc-text">22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23"><span class="toc-text">23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24"><span class="toc-text">24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25"><span class="toc-text">25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26"><span class="toc-text">26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-%E5%8E%9F%E6%96%87%E8%A2%AB%E5%90%9E%E4%BA%86"><span class="toc-text">27 (原文被吞了)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28%EF%BC%88%E5%8E%9F%E6%96%87%E8%A2%AB%E5%90%9E%E4%BA%86%EF%BC%89"><span class="toc-text">28（原文被吞了）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29%EF%BC%88%E5%8E%9F%E6%96%87%E8%A2%AB%E5%90%9E%E4%BA%86%EF%BC%89"><span class="toc-text">29（原文被吞了）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30"><span class="toc-text">30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31"><span class="toc-text">31</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#32"><span class="toc-text">32</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#33"><span class="toc-text">33</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#34"><span class="toc-text">34</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#35"><span class="toc-text">35</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#36-%EF%BC%88%E5%8E%9F%E6%96%87%E8%A2%AB%E5%90%9E%E4%BA%86%EF%BC%89"><span class="toc-text">36 （原文被吞了）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#37-%EF%BC%88%E5%8E%9F%E6%96%87%E8%A2%AB%E5%90%9E%E4%BA%86%EF%BC%89"><span class="toc-text">37 （原文被吞了）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#38"><span class="toc-text">38</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#39"><span class="toc-text">39</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#40"><span class="toc-text">40</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#41"><span class="toc-text">41</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#42"><span class="toc-text">42</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#43"><span class="toc-text">43</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#44"><span class="toc-text">44</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#45"><span class="toc-text">45</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#46"><span class="toc-text">46</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#47"><span class="toc-text">47</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#48"><span class="toc-text">48</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#49"><span class="toc-text">49</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#50"><span class="toc-text">50</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#51"><span class="toc-text">51</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#52"><span class="toc-text">52</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#53"><span class="toc-text">53</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#54"><span class="toc-text">54</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fa-solid fa-map"></i><span>New posts</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/01/27/2025-1-27_5ds_Yosei_history/" title="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来"><div class="thumbnail"><img alt="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250127202529.png"></div><div class="content"><span class="title" href="/2025/01/27/2025-1-27_5ds_Yosei_history/" title="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来">宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</span><span class="article-recent_post_categories" href="/2025/01/27/2025-1-27_5ds_Yosei_history/">杂谈</span></div></a><a class="aside-list-item" href="/2025/01/27/2025-2-28_SelectMAP/" title="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全"><div class="thumbnail"><img alt="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250301212039.png"></div><div class="content"><span class="title" href="/2025/01/27/2025-2-28_SelectMAP/" title="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全">Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</span><span class="article-recent_post_categories" href="/2025/01/27/2025-2-28_SelectMAP/">学习</span></div></a><a class="aside-list-item" href="/2025/01/23/2025-01-23_blog_init/" title="hexo 搭建博客"><div class="thumbnail"><img alt="hexo 搭建博客" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241014203011.png"></div><div class="content"><span class="title" href="/2025/01/23/2025-01-23_blog_init/" title="hexo 搭建博客">hexo 搭建博客</span><span class="article-recent_post_categories" href="/2025/01/23/2025-01-23_blog_init/">学习</span></div></a><a class="aside-list-item" href="/2025/01/01/2025-01-01/" title="记 2024"><div class="thumbnail"><img alt="记 2024" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/IMG20250101000057.jpg"></div><div class="content"><span class="title" href="/2025/01/01/2025-01-01/" title="记 2024">记 2024</span><span class="article-recent_post_categories" href="/2025/01/01/2025-01-01/">生活</span></div></a><a class="aside-list-item" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/" title="记 2024_UESTC 新工科展"><div class="thumbnail"><img alt="记 2024_UESTC 新工科展" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241123145038.png"></div><div class="content"><span class="title" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/" title="记 2024_UESTC 新工科展">记 2024_UESTC 新工科展</span><span class="article-recent_post_categories" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/">学习</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "/img/loading.avif" data-lazy-src="/images/blog_logo.png">SoCoco</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" alt="Theme">Theme</a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.15"></script><script src="/js/main.js?v=2.1.15"></script><script src="/js/third_party/waterfall.min.js?v=2.1.15"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script><script src="/js/third_party/universe.min.js?v=2.1.15"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/meting/2.0.1/Meting.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.6.0/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=2.1.15"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script src="/js/schedule.js"></script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.sococo.cn/',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.sococo.cn/',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+        
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        false && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.40/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || false) {
+        if (false) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>mermaid.run();</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><button class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter keywords to search"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=2.1.15"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">Paused</div><meting-js id="8093053263" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/01/27/2025-1-27_5ds_Yosei_history/","2025/01/27/2025-2-28_SelectMAP/","2025/01/23/2025-01-23_blog_init/","2025/01/01/2025-01-01/","2024/11/23/2024-11-23_Emerging_Engineering_Education/","2024/11/09/2024-11-09_courage/","2024/11/02/2024-11-02_emoj/","2024/10/20/2024-10-20/","2024/10/19/2024-10-19_AD_plug_in/","2024/10/16/2024-10-16_art/","2024/10/15/2024-10-15_Blog_react/","2024/10/02/2024-10-02/","2024/09/25/2024-09-25/","2024/08/29/2024-08-20_2024_NUEDC_AESDC/","2024/08/12/2024-08-13_Life_is_full_of_miracles/","2024/08/05/2024-08-05_2024_NUEDC/","2024/07/23/2024-07-23/","2024/07/19/2024-07-19_2024_ESDC/","2024/03/31/2024-03-31_FPGA_JEPG_DECODER/","2024/02/20/2024-02-20_FPGA_POSEDGE_TO_PULSE/","2024/01/20/2024-01-20_FPGA_UART/","2023/11/17/2023-11-17_Gowin_FPGA/","2023/08/21/2023-08-21_NFC_ADD/","2023/06/06/2023-06-06_FDAF_ACE/","2023/05/20/2023-05-20_DSP_3PROVE/","2023/04/01/2023-04-01_Dark Channel Prior/","2023/03/26/2023-03-26_Stellarium/","2023/02/20/2023-02-20_5ds_black_history/","2023/01/30/2023-01-30_Ideal/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

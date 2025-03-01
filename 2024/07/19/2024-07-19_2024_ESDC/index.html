@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>2024_ESDC 陪跑——关于我和intel杯的那些事 | SoCoco's Blog</title><noscript>Please enable JavaScript to view the site</noscript><link rel="icon" href="/images/blog_logo.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=2.1.15"><!-- inject head--><link rel="canonical" href="https://songyu318.github.io/2024/07/19/2024-07-19_2024_ESDC/"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="2024 年大学生电子设计竞赛嵌入式系统专题邀请赛（英特尔杯）国一"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="SoCoco's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/images/blog_logo.png"><link rel="apple-touch-icon" href="/images/blog_logo.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '2.1.15' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><link rel="stylesheet" href="/css/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2022-01-21 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"Dark","light":"Light"},"copy":{"success":"Copied","error":"Copy failed"},"backtop":"Back to top","time":{"day":" days ago","hour":" hours ago","just":"just","min":" minutes ago","month":" months ago"},"day":" days","f12":"Developer mode is turned on, please follow the GPL.","totalk":"You don't need to delete blank lines, just type in your comments.","search":{"empty":"No results found","hit":"Found ${query} results for you","placeholder":"Enter keywords to search","count":"Total <b>${count}</b> results.","loading":"Loading..."}},
+    aside: {
+        sayhello: {
+            morning: "✨ Good morning. It's a new day",
+            noon: "It's time for a midday break",
+            afternoon: "Tea time. 🍵",
+            night: "early bedtime",
+            goodnight: "Good night 😴",
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: 'Long time no see, ',
+            back: 'Welcome back again,',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'mediumZoom',
+    post_ai: false,
+    right_menu: false,
+    translate: false,
+    lure: false,
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: true,
+    is_page: false,
+    is_home: false,
+    page: '',
+    toc: true,
+    comment: true,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body id="body"><!-- universe--><canvas id="universe"></canvas><!-- background img--><div id="global_bg"></div><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fa-solid fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">Tags</div><div class="author-content-item-title">Find interesting areas</div></div><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">2025/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">2024/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">2024/10</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">2024/09</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">2024/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">2024/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">2023/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">2023/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">2023/06</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">2023/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">2023/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/"><span class="card-archive-list-date">All posts</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">29</span><span class="card-archive-list-count-unit">Posts</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="Day and night mode"><i class="solitude fa-solid fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="Sidebar display control"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="Music switch"><i class="solitude fa-solid fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Archives</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">44</div></a></div></div></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fa-solid fa-circle-half-stroke"></i><span>Display mode</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div><span class="sidebar-menu-item-title">Tags</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">Site information</span><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude fa-solid fa-file-word"></i><div class="item-name">Word count:</div></div><div class="item-count">51.5k</div></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="mode" type="button" title="Mode" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="Sidebar" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="Settings" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="mobile toc" type="button" title="Toc" onclick="document.querySelector('#card-toc').classList.toggle('open')"><i class="fas fa-list"></i></button><button class="comment" type="button" title="Comment" onclick="sco.scrollTo('post-comment')"><i class="fas fa-comment"></i></button><button class="top" type="button" title="Top" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div></div><a id="site-name" href="/" title="Back to home"><span class="title">SoCoco</span><i class="solitude fa-solid fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">2024_ESDC 陪跑——关于我和intel杯的那些事</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="Search"><i class="solitude fa-solid fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="Console" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fa-solid fa-bars"></i></a></div></div></div></nav><div class="coverdiv" id="coverdiv"><img class="nolazyload" id="post-cover" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241228124709.png" alt="2024_ESDC 陪跑——关于我和intel杯的那些事"></div><div id="post-info"><div id="post-firstinfo"><div class="meta-firstline"><a class="post-meta-original" title="This article is a Original article, pay attention to the copyright.">Original</a><span class="post-meta-categories"><a class="post-meta-categories" href="/categories/%E7%AB%9E%E8%B5%9B/">竞赛</a></span><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>python</span></a><a class="post-meta__tags" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>电子设计</span></a><a class="post-meta__tags" href="/tags/Agent/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>Agent</span></a><a class="post-meta__tags" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>语音识别</span></a><a class="post-meta__tags" href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>手势识别</span></a><a class="post-meta__tags" href="/tags/%E7%AB%9E%E8%B5%9B/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>竞赛</span></a><a class="post-meta__tags" href="/tags/intel/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>intel</span></a><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>嵌入式</span></a><a class="post-meta__tags" href="/tags/ESDC/"><span class="tags-name tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>ESDC</span></a></div></div></div></div><h1 class="post-title">2024_ESDC 陪跑——关于我和intel杯的那些事</h1><div id="post-meta"><div class="meta-secondline"><span class="post-meta-date" title="Posted on 2024-07-19 10:53:48"><i class="post-meta-icon solitude fas fa-calendar-days"></i><time datetime="2024-07-19T02:53:48.000Z">2024-07-19T02:53:48.000Z</time></span><span class="post-meta-date" title="Last updated on 2024-07-19 10:53:57"><i class="post-meta-icon solitude fa-solid fa-arrows-rotate"></i><time datetime="2024-07-19T02:53:57.000Z">2024-07-19T02:53:57.000Z</time></span><span class="post-meta-wordcount"><i class="post-meta-icon solitude fa-solid fa-file-word" title="Word count"></i><span class="word-count">6.5k</span><span class="post-meta-separator"></span><i class="post-meta-icon solitude fa-solid fa-clock" title="Reading time"></i><span>22 min</span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content article-container"><h2 id="前言">前言</h2>
+<!-- 在此之前，先放出海报以供读者欣赏。
+
+
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/26-电子科技大学-沉浸式智能仪器控制系统.jpg" width = "70%" />
+</div>
+<center>图0 海报 </center> -->
+<p>详细内容见官网：</p>
+<a class="tag-link" href="https://nuedc.sjtu.edu.cn/CN/show.aspx?info_lb=8&info_id=1271&flag=7" target="_blank">
+    <div class="tag-link-tips">引用站外链接</div>
+    <div class="tag-link-bottom">
+        <div class="tag-link-left">
+          <i class="solitude fas fa-link"></i>
+        </div>
+        <div class="tag-link-right">
+            <div class="tag-link-title">2024 年英特尔杯嵌入式系统专题邀请赛</div>
+            <div class="tag-link-sitename">电赛 & 嵌赛</div>
+        </div>
+        <i class="solitude fas fa-chevron-right"></i>
+    </div></a>
+<p>笔者在大三发现要没书读了，开始疯狂打竞赛，索性运气较好，取得了不错的成绩。属于是输了大二，赢了大三，从此开始大四躺平。作品虽然开发时间不是很长，不过也是熬的筋疲力尽，作品完整性也有待商榷，但胜在创新性以及可展示性。果然嵌入式和电子设计还是不太一样（）。下为报告灌水。</p>
+<h2 id="摘要">摘要</h2>
+<p>如今嵌入式芯片系统设计开发领域正迅猛发展，电子工程师对于系统自动化测试、提高生产力和测试测量效率的需求迅速增加。为解决电子工程师对于系统和芯片自动测试、仪器自动化运作需求，本项目将借助 Intel 强大的算力和丰富的接口，以哪吒开发套件为中心设备，配合其他通用VISA接口的仪器设备，以语音交互为操作方式，利用　Agent 将工程师请求解析成系统标准命令流，实现控制各类仪器；同时利用手势识别代替传统机械按键，实现仪器的“去按键化”，提升操作的便利性和灵活性。该项目提供一站式的系统和芯片调试测量、仪器使用帮助，极大的简化了仪器操作方式以适应不同的测试需求，为工程师提供及时和准确的测试结果。</p>
+<p><strong>关键词</strong>：仪器控制，数据分析，语音交互，手势识别，大语言模型，开放平台</p>
+<h2 id="项目背景">项目背景</h2>
+<h3 id="立项背景和意义">立项背景和意义</h3>
+<p>在当今，嵌入式芯片系统设计开发领域正以惊人的速度迅猛发展。据预测，从 2021 年到 2025 年，我国嵌入式系统市场规模的年复合增长率将达到 21%，智能硬件系列更是呈现出 25% 的增长趋势。在这一背景下，电子工程师对于系统自动化测试、提高生产力和测试测量效率的需求迅速增加、选型和参数调整愈加复杂，但常用仪器软件的迭代更新速度缓慢，计算和存储性能不足，功能单一集约，难以实现自动化测量，个人在系统开发当中进行迅捷测试的需求重要性不断凸显。部分个人开发者对于仪器高级使用仍未完全熟悉，有时难以捕获重要信息波形，造成信息延误。<br>
+随着科技的发展，诸如 GPT3.5、文心一言、ChatGLM、Google Bard 等通用大模型的涌现，以及新发展的 AI Agent 技术，已经为解决这一问题提供了新的可能性。这些通用大模型拥有庞大的知识储备，能够从自主决策走向自主行动，丰富了应用场景，提升了用户体验。自 AutoGPT 火爆以来，AI Agent 热度一路飙涨。落地应用离不开 Agent，开会活动聚焦 Agent，创业项目也在走向A gent。<br>
+回顾近几年来智能设备的设计发展，其实体按键和接口逐渐减少，在整体尺寸大小不变的情况下，通过将机械按键改为虚拟按键，尽可能增加屏幕屏占比以致于增加信息量。然而，使用传统的 QWERTY 键盘或是触摸屏界面，都将不可避免地导致设备磨损。此外，触摸屏界面在潮湿的环境中、用户戴着手套或者很难接触控制面板的情况下都不能使用，为提升用户操作的便利性和灵活性，基于手势识别的虚拟按键应运而生。动作识别技术在控制这方面展现出了广阔的应用前景。<br>
+在本次项目中，我们将借助 Intel 强大的算力和丰富的接口，一方面让 Intel AI Box 能够运行通用大模型，让非智能仪器接入模型，实现智能测量。使个人能够轻松获得科学合理完整统一的测试测量报告，降低了对于芯片、系统测试的使用门槛，另一方面，本项目致力于仪器“去按钮化”，通过手势识别来实现无接触控制仪器，进一步提升用户操作的便利性和灵活性。同时，本项目能够在任意仪器间轻松放置和迁移，降低仪器使用门槛，实现了从“学习仪器”到“仪器主动展示其功能”的转变。本项目将为新手入门到老手调试提供一站式的系统和芯片调试测量、仪器使用帮助或简化操作服务。</p>
+<h3 id="国内外发展现状">国内外发展现状</h3>
+<p>国内外对于芯片或系统测试的发展，主要集中于两个类别当中，一是：集中于生产环境当中对于芯片出厂时测试的专业设备，二是：个人使用针对小器件的测试设备。这两种设备中，专业设备主要的服务场景并非以开发为核心的工程师，同时价格高、难以获取、需要专人操作，而且专业设备自身整合了部分实验室设备，与嵌入式工程师现有设备功能存在重合；但专业性操作较多、个人工程师学习曲线陡峭。体积较大、功能受限，并非适用于实验室的设备。同时存在售价高昂、调整测试项目不便等问题。<br>
+而个人使用的设备，存在算力低、功能有限、功能分散的特点。在构建一套完整的测试体系时，除了接入整个电路之外，还需要进行手工的反复调整、机械劳动才能获得较为规整的数据。而这些调节过程，都可以通过一套完整的远程协议（如VISA）进行控制。</p>
+<p>除此之外，目前的手势控制仅能实现比较简单的功能，即便如此，在真正的用户体验过程中还是会出现一些问题。不管是采用 ToF、结构光还是毫米波雷达识别手势，都要求手势指令必须在特定的区域内操作，所有手势还必须要符合系统对动作的标准要求；现有的识别多为单次按键类操作，对于连续的操作控制还处于发展阶段。</p>
+<h3 id="项目特点及优势">项目特点及优势</h3>
+<ol>
+<li>通用性强：与上述示波器等个人设备相比，我们的项目着重于解决系统和芯片自动测试、仪器自动化运作的需求，而不仅仅局限于单一测试功能。我们的系统提供全面的智能且自动化测试解决方案，还涵盖了信号生成、数据采集、分析和报告等方面的功能。提供更加综合和全面的测试、内容讲解支持。</li>
+<li>场景灵活：与专业设备相比，我们的设备功能可以随着连接的设备不同而达到不同的连接形态。自主生成解决方案，采用通用的测试方法和硬件设备，以中心 + 分布的形式，不仅能够提供全流程的决策支持，还能够适应不同的测试需求，自主生成解决方案实现高效的数据提取和分析，为用户提供更加及时和准确的测试结果。通过语音识别和手势识别的方式，提升操作的便利性和灵活性。</li>
+<li>价格优势：我们的项目采用通用的算法和硬件设备，降低用户终端设备成本，能够连接现有设备转化为测试节点和智能测试设备，无需另购置测试仪器，降低了系统总造价。这在市场推广和服务方面具有更好的竞争力。目前大模型加持下的嵌入式Agent设备，还处于“蓝海”阶段。</li>
+</ol>
+<h2 id="项目概述">项目概述</h2>
+<h3 id="研究开发内容">研究开发内容</h3>
+<p>本项目聚焦于开发一套用于协助电子工程师解决系统和芯片自动测试、仪器自动化运作的需求的智能辅助系统。系统整体主要有 4 个模块组成：一是语音识别模块。该模块部署 AI 处理算法实现语言识别，进行语音到自然语言转换和语义完善修正；二是 Agent 智能体系模块。该模块进行语义提炼和测试方案的生成决策，进而进行仪器控制标准命令流生成；三是手势识别模块。该模块利用手势识别代替传统机械按键来控制仪器，实现仪器的去“按键化”，提升操作的便利性和灵活性。四是仪器控制模块。该模块执行 Agent 生成的标准命令流，实现控制各类仪器。通过标准接口进行仪器设备的操作，输出激励信号到待测系统，并读取输出信号进一步分析，以及进行最终测试报告的书写。<br>
+工程师只需连接系统，提出需求并进行手势操作，即可立即获得测试结果。这一简化流程大大提高了交互性，让工程师享受到智能调试带来的沉浸式体验，进而有利于提高工作效率。整个交互过程更贴近人类的自然行为，实现了更智能、更自然、更高效的用户体验。</p>
+<h3 id="系统工作流程">系统工作流程</h3>
+<p>系统工作时，工程师使用语音输入，在说出唤醒词前，系统进入低功耗阻塞等待；确认唤醒后开始语音识别进行内容提取，确认后再进行以大模型 + Agent 生成测试方案并；在主程序中，不断检查解决方案进程是否存在，保证服务质量。通过“无需必要，勿增实体”的设计方式，增加系统鲁棒性和当前执行任务时的性能。也方便构建易用、简洁的用户界面。<br>
+同时工程师可以下达调节仪器参数命令，系统将识别工程师的手势动作对仪器进行细微调节，方便细致的观察实际波形和调节参数。当整个测试方案生成后，Agent 将采用完整的工具链来输出控制仪器的标准命令流，实时追踪方案实施情况并输出。当整个测试结束后，系统整合测试数据生成测试报告以便工程师调取或阅读。</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719105727.png" width = "80%" />
+</div>
+<center>图1 系统硬件架构 </center>
+<h3 id="2-4软件流程">2.4	软件流程</h3>
+<p>本系统采用中心分布式的设计，终端各部分有各自的运行逻辑与进程，进程之间相互配合，共同完成整个测试过程。具体过程如下图 3，图 4 所示:</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719110023.png" width = "60%" />
+</div>
+<center>图2 软件主程序运行流程 </center>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719110029.png" width = "60%" />
+</div>
+<center>图3 软件子程序运行流程 </center>
+<p>由上图可知，系统启动后保持待机状态，待收到关键词唤醒后，进行语音识别，根据用户指令判断当前任务。<br>
+如果为测试要求，则系统进行解决方案的子流程的调用。通过 LLM-Agent 将用户请求解析成系统可以理解的标准命令流，进而进行规范性工具链函数的调用来控制仪器完成测量并输出结果和分析报告，最后结束调用并转移至主程序。<br>
+如果为修改仪器参数，则系统进行手势识别子流程的调用。通过摄像头进行手势捕捉，进而进行手势动作变化分析，当调节至合适时，结束调用并转移至主程序。</p>
+<h2 id="关键技术和特色">关键技术和特色</h2>
+<h3 id="基于Agent体系的IVI命令流">基于Agent体系的IVI命令流</h3>
+<p>在这个部分，我们使用 LLM-Agent 将用户请求解析成系统可以理解的标准命令流，进而调用工具链来实现控制各类仪器。</p>
+<h4 id="Agent的概念">Agent的概念</h4>
+<p>在日常工作中，我们通常将一项任务拆解成几个步骤：制定计划、执行计划、检查结果，然后将成功的作为标准，未成功的则留待下一次循环解决，这种方法已经被证明是高效完成任务的经验总结。而 Agent 的执行过程与人做事的方式类似，以 LLM（大语言模型）作为其核心构建Agent是一个很酷的概念，AutoGPT、GPT-Engineer 和 BabyAGI 等几个概念验证演示都是很不错的示例，可以简单的将 Agent 视为一个强大的通用问题解决器。对于一个标准的 Agent 系统，可以由以下核心组件组成： 用户请求、Agent、规划、记忆、工具集。<br>
+在 LLM 驱动的 Agent 系统中，LLM 充当代理的大脑，处理交互信息；规划模块将用户需求的大型任务分解为更小的、可管理的子目标，从而能够有效处理复杂的任务，同时对过去的行为进行自我批评和自我反思，从错误中吸取教训，并针对未来的步骤进行完善，从而提高最终结果的质量；记忆模块记录着过去的思考、行动及对环境的观察，涵盖了 Agent 和用户之间所有交互；工具集学习调用外部 API 来获取模型权重中缺失的额外信息，包括当前信息、代码执行能力、对专有信息源的访问等。</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719110920.png" width = "50%" />
+</div>
+<center>图4 Agent 系统组成 </center>
+<h4 id="大语言模型">大语言模型</h4>
+<p>在 LLM-Agent 选择方面，采用开源的 ChatGLM 模型作为核心引擎，该模型在自然语言处理领域表现优异，能够理解和生成高质量文本内容；同时基于 AgentTuning 技术，利用多个 Agent 任务交互轨迹对 LLM 进行指令调整，以强大泛化能力适应各种仪器调试场景；而且 ChatGLM 原生对中文的强大支持，也便于 Agent 理解我们的需求。同时我们采用嵌入式设备和计算中心两套模型的本地运行和 API 接口整合，确保了其在复杂环境下的稳健性，使其更加高效、精准。</p>
+<h4 id="规划模块">规划模块</h4>
+<p>而对于规划模块，通常可分为无反馈规划和有反馈规划两种类型。常见的无反馈规划技术包括思维链（COT）和思维树（TOT）；而常见的有反馈规划技术则包括 ReAct 和 Reflexion 。本项目采用 ReAct 提示词策略，旨在为每一步操作提供详尽的思维链，以深入理解模型的决策过程。我们采用LangChain来构建整个规划模块，它需要处理用户原始的需求，给出一条完整的思维链。这条思维链的格式为：<br>
+Thought: …<br>
+Action: …<br>
+Observation: …<br>
+同时为了防止无休止的“思考”下去，我们需要加入 AgentFinish 结束整条链。接着在后面加上一个 parser 解析出每个 Action 传递给 Tools 模块。如此一来，将调试仪器的过程具体化和规范化，同时保证调试过程安全性和正确性。</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719111055.png" width = "100%" />
+</div>
+<center>图5 不同策略的规划模块 </center>
+<h4 id="记忆模块">记忆模块</h4>
+<p>一般而言，记忆模块存储 Agent 的内部日志，其中包括过去的思考、行动及对环境的观察，涵盖了 Agent 和用户之间所有交互。主要两种记忆类型是短期记忆和长期记忆。本项目选用混合记忆，综合短期记忆和长期记忆，一方面保证不同场景下调试仪器灵活性，另一方面提高 Agent 长期推理和经验积累能力，让 Agent 记住一些用户指导的仪器调试操作步骤。我们需要实现消息存储与历史记录管理、限制十条上下文长度、消息格式化和输出。规划和记忆模块允许 Agent 在动态环境中操作，并使其能够有效地回忆过去的行为和计划未来的行动。</p>
+<h4 id="工具模块">工具模块</h4>
+<p>工具集使 LLM-Agent 能够与仪器进行交互。通过工作流执行任务，这些工作流帮助工具利用方面我们采用 Function Calling，定义一组工具 API 并将其作为请求的一部分提供给模型，使模型能够将规划好的抽象过程转变为现实仪器的操作。我们定义本系统的工具规范为：</p>
+<ol>
+<li>name=name：这是函数的名称</li>
+<li>func=func：这是函数的实际执行体</li>
+<li>coroutine=coroutine：是否为协程</li>
+<li>description=description：这是函数的描述或说明</li>
+<li>return_direct=return_direct：是否直接返回</li>
+<li>args_schema=args_schema：用于验证和描述函数所需的参数结构。</li>
+<li>kwargs：这个是用来接收额外的关键字参数</li>
+</ol>
+<h4 id="Agent整个系统">Agent整个系统</h4>
+<p>本次项目中，首先通过语音识别获取用户请求同时将工具集传入 LLM-Agent，再通过规划模块决策整个调试过程，工具利用后返回现实仪器的操作和测试的结果，同时在整个系统中都通过记忆模块来储存 Agent 和用户之间的所有交互。本项目工具集采用 Python 的 PyVISA 库控制设备。IVI 驱动程序标准定义了一个开放的驱动程序架构、一组仪器类和共享软件组件。这些共同提供了仪器互换性所需的关键元素。使用 IVI 驱动程序设计的系统享有标准化代码的好处，这些代码可以互换到其他系统中。该代码还支持测量设备的互换，有助于防止硬件过时。在三个级别上支持可互换性： IVI 架构规范允许架构可互换性——这是可以重复使用的标准驱动程序架构。类规范提供语法互换性，支持以最少的代码更改进行仪器交换。通过使用 IVI 信号规范实现了最高水平的互换性。<br>
+Agent整体工作流程如下所示：</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719111227.png" width = "100%" />
+</div>
+<center>图6 Agent 工作流程图 </center>
+<p>我们使用 PyVISA 作为 Python IVI 的通讯接口的封装驱动程序来连接仪器设备。在此基础上进行规范性工具链函数库的封装，以便 Agent 生成的方案转换进一步的调用控制仪器来输出信号以及读取信号，并将信息进行反馈进一步分析后输出分析报告。</p>
+<h3 id="智能语音识别">智能语音识别</h3>
+<p>在这部分，我们主要完成对用户语音的识别，以获取用户指令，满足与用户交互的需求。</p>
+<p>我们将用户的下达的语音指令通过 AI 处理算法，实现语言识别，进行从语音到自然语言的转换。为指令解析做准备。我们使用阿里巴巴开源的 Paraformer 语音模型和 CT-Transformer 标点模型来进行高性能推理。该模型大大加快了识别速度，同时针对x86下的AI新架构，采用对 x86 架构的 AVX 支持，适合 N97 神经网络芯片。</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719111405.png" width = "50%" />
+</div>
+<center>图7 Paraformer 模型 </center>
+<p>Paraformer 模型结构如上图所示，由 Encoder、Predictor、Sampler、Decoder 与 Loss function 五部分组成。Encoder 可以采用不同的网络结构，例如 self-attention，conformer，SAN-M 等。Predictor 为两层FFN，预测目标文字个数以及抽取目标文字对应的声学向量。Sampler 为无可学习参数模块，依据输入的声学向量和目标向量，生产含有语义的特征向量。Decoder 结构与自回归模型类似，为双向建模（自回归为单向建模）。Loss function 部分，除了交叉熵（CE）与 MWER 区分性优化目标，还包括了 Predictor 优化目标 MAE。<br>
+其核心点主要有：</p>
+<ol>
+<li>Predictor 模块：基于 Continuous integrate-and-fire (CIF) 的 预测器 (Predictor) 来抽取目标文字对应的声学特征向量，可以更加准确的预测语音中目标文字个数。</li>
+<li>Sampler：通过采样，将声学特征向量与目标文字向量变换成含有语义信息的特征向量，配合双向的 Decoder 来增强模型对于上下文的建模能力。</li>
+<li>基于负样本采样的 MWER 训练准则。<br>
+Paraformer 属于单轮非自回归模型。院采用一个预测器（Predictor）来预测文字个数并通过 Continuous integrate-and-fire (CIF)机制来抽取文字对应的声学隐变量；并一个基于 GLM 的 Sampler 模块来增强模型对上下文语义的建模。在离线运行测试下，对于长达 10s 的语音命令，识别的时延也只有0.2s左右，这大大提高了交互的效率。</li>
+</ol>
+<h3 id="手势识别">手势识别</h3>
+<p>手势交互是一种更自然、直观的控制方式，在这个部分，我们通过摄像头采集用户的手势动作，通过机器学习模型识别手势动作，来进行进一步的仪器控制和参数精密调节。考虑到用户的手部会在实验桌上大范围活动，我们采用固定放置的广角摄像头来捕捉用户的手势，这样的方案具有更好的可靠性和稳定性。<br>
+我们使用 MediaPipe 机器学习模型来识别摄像头采集的视频流中的手势。MediaPipe 是 Google 推出的一款开源机器学习框架，其中包含了许多预训练的模型，可以直接使用，也可以根据需求进行微调训练。MediaPipe 手部识别模型参数量和计算量小，并且提供量化模型，适合在嵌入式设备上部署。对输入图像进行手势识别大致分为三个步骤：<br>
+(1) 手掌检测：使用基于卷积神经网络的单阶段目标检测模型，检测输入图像中的手掌位置。在此步骤中，完整的输入图像被缩放到   尺寸，由卷积神经网络进行特征提取得到表示锚框位置的特征向量，然后通过非极大值抑制算法得到最终的手掌位置。<br>
+(2) 手部跟踪：将图像中由手掌检测模型得到的手掌位置部分裁切并缩放到   尺寸，输入到基于卷积神经网络的回归模型中，预测 21 个关键点的 3D 坐标与置信度。这 21 个关键点包括手掌中心、手指关节等。在上一帧图像存在手部关键点的情况下，后续的预测将改用参数量更小的轻量级模型，以提高实时性。<br>
+(3) 手势分类：将手部跟踪模型得到的手部关键点坐标输入到带残差模块的全连接神经网络中得到嵌入向量，并使用全连接分类检测头来得到当前帧中手势的分类结果。MediaPipe 的预训练模型能分类包括伸出食指、握拳、张开手掌动作等 8 种手势，通过结合手部跟踪结果和手势分类结果进行判断，我们还实现了对拧旋钮等手势的识别。<br>
+以上的算法流程实现了从单张输入图像中预测其中包含的手势类型。为了实现通过手势控制与系统交互，还需要设计状态机从连续的手势动作中提取出用户的意图，在正确的时机触发系统的相应行为。我们将用户的手势操作分为两类，一是单次交互手势，例如张开手掌、握拳等，我们在一段时间内首次检测到用户做出这类手势时，就触发系统的相应行为，如开始测量、结束测量等；二是连续调节手势，例如拧旋钮、上下滑动等，这类手势允许用户通过手部的运动幅度来连续地调节实验仪器和系统的各项参数，给用户更好的沉浸式交互体验。</p>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240719111536.png" width = "50%" />
+</div>
+<center>图8  旋转手势识别 </center>
+<h2 id="补充">补充</h2>
+<h3 id="Agent-部分">Agent 部分</h3>
+<p>Agent 部分后增加了交互模式，可以进行命令的中断和修改，在执行流程中及时的修正因为 LLM 不稳定带来的问题。</p>
+<p>在交互过程中，首先设置初始上下文信息，包括用户的目标、环境状态、可用资源等。LLM 根据当前上下文信息生成一个行动建议，用户可以对行动建议进行评估，并提供输入，包括同意、修改建议和停止。Agent 阻塞等待用户输入，输入完成后轮询用户输入队列，获取用户反馈，根据用户反馈调整行动计划——若用户接受建议，将生成的行动执行或模拟执行，将行动结果反馈到上下文中，为下一步决策提供信息，重复上述过程，继续生成行动、执行、更新上下文和用户交互；若用户拒绝操作并给出建议，则根据用户建议做出操作；若用户选择停止操作，则直接打断当前操作，等待新的指令。当获得“finish”行动或用户明确表示结束时，停止交互过程。</p>
+<h2 id="系统实物">系统实物</h2>
+<ul>
+<li>丢个实物。</li>
+</ul>
+<div  align="center"> 
+<img src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/系统.jpg" width = "50%" />
+</div>
+<center>图9  旋转手势识别 </center>
+</article><div class="post-copyright"><div class="post-copyright__author_group"><a class="post-copyright__author_img" href="/about/"><img class="post-copyright__author_img_front" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/Avatar.jpg"></a><div class="post-copyright__author_name">SoCoco's Blog</div><div class="post-copyright__author_desc">Record some useless things</div></div><div class="post-tools" id="post-tools"><div class="post-tools-left"><div id="quit-box" onclick="RemoveRewardMask()"></div></div></div><div class="post-copyright__notice"><span class="post-copyright-info">This piece of writing is an original article, utilizing the<a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">CC BY-NC-SA 4.0</a>Agreement. For complete reproduction, please acknowledge the source as Courtesy of<a href="/">SoCoco's Blog</a></span></div></div><div class="post-tools-right"><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/python/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>python<span class="tagsPageCount">2</span></span></a><a class="post-meta__tags" href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>电子设计<span class="tagsPageCount">3</span></span></a><a class="post-meta__tags" href="/tags/Agent/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>Agent<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>语音识别<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>手势识别<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E7%AB%9E%E8%B5%9B/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>竞赛<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/intel/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>intel<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>嵌入式<span class="tagsPageCount">1</span></span></a><a class="post-meta__tags" href="/tags/ESDC/"><span class="tags-punctuation"><i class="solitude fa-solid fa-hashtag"></i>ESDC<span class="tagsPageCount">1</span></span></a></div></div></div><nav class="needEndHide pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/07/23/2024-07-23/"><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">2024-我大学生活的末法时代</div></div></a></div><div class="next-post pull-right"><a href="/2024/03/31/2024-03-31_FPGA_JEPG_DECODER/"><div class="pagination-info"><div class="label">Next</div><div class="next_info">Verilog_JEPG_DECODER</div></div></a></div></nav>
+        <div class="relatedPosts">
+            <div class="headline">
+                <i class="solitude fa-solid fa-star"></i>
+                <span>Behold, those who found delight in this piece also perused</span>
+                <div class="relatedPosts-link">
+                    <a onclick="event.preventDefault(); toRandomPost();" href="javascript:void(0);" rel="external nofollow" data-pjax-state="">Random</a>
+                </div>
+            </div>
+            <div class="relatedPosts-list">
+            <div>
+                <a href="/2024/08/29/2024-08-20_2024_NUEDC_AESDC/" title="2024_NUEDC-模邀 记录">
+                    <img class="cover" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20240820165912.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">2024_NUEDC-模邀 记录</div>
+                    </div>
+                </a>
+            </div>
+            <div>
+                <a href="/2024/08/05/2024-08-05_2024_NUEDC/" title="2024_NUEDC 专业陪跑">
+                    <img class="cover" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241228124307.png" alt="cover">
+                    <div class="content is-center">
+                        <div class="title">2024_NUEDC 专业陪跑</div>
+                    </div>
+                </a>
+            </div>
+            </div>
+        </div><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="solitude fa-solid fa-comment"></i><span>  Comment</span></div></div><div class="comment-wrap"><div id="twikoo-wrap"></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><div class="author-info__top-group"><div class="author-info__sayhi" id="author-info__sayhi" onclick="sco.changeSayHelloText()">sayhello.morning</div></div></div><div class="avatar-img-group"><img class="avatar-img" alt="Avatar" src= "/img/loading.avif" data-lazy-src="/images/avatar.jpg"></div><div class="author-info__description_group"><div class="author-info__description">All TRAGEDY ERASED, I SEE ONLY WONDER.</div><div class="author-info__description2"></div></div><div class="author-info__bottom-group"><a class="author-info__bottom-group-left" href="/about/"><div class="author-info__name">SoCoco</div><div class="author-info__desc">Record some useless things</div></a><div class="card-info-social-icons is-center"><a class="social-icon" target="_blank" rel="noopener" href="https://github.com/songyu318" title="Github"><i class="solitude  fab fa-github"></i></a><a class="social-icon" target="_blank" rel="noopener" href="https://space.bilibili.com/382230215" title="Bilibili"><i class="solitude  fab fa-bilibili"></i></a></div></div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="solitude fa-solid fa-bars"></i><span>Table of contents</span></div><div class="toc-content" id="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%91%98%E8%A6%81"><span class="toc-text">摘要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E8%83%8C%E6%99%AF"><span class="toc-text">项目背景</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AB%8B%E9%A1%B9%E8%83%8C%E6%99%AF%E5%92%8C%E6%84%8F%E4%B9%89"><span class="toc-text">立项背景和意义</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%BD%E5%86%85%E5%A4%96%E5%8F%91%E5%B1%95%E7%8E%B0%E7%8A%B6"><span class="toc-text">国内外发展现状</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E7%89%B9%E7%82%B9%E5%8F%8A%E4%BC%98%E5%8A%BF"><span class="toc-text">项目特点及优势</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE%E6%A6%82%E8%BF%B0"><span class="toc-text">项目概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A0%94%E7%A9%B6%E5%BC%80%E5%8F%91%E5%86%85%E5%AE%B9"><span class="toc-text">研究开发内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%B7%A5%E4%BD%9C%E6%B5%81%E7%A8%8B"><span class="toc-text">系统工作流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4%E8%BD%AF%E4%BB%B6%E6%B5%81%E7%A8%8B"><span class="toc-text">2.4	软件流程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E5%92%8C%E7%89%B9%E8%89%B2"><span class="toc-text">关键技术和特色</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E4%BA%8EAgent%E4%BD%93%E7%B3%BB%E7%9A%84IVI%E5%91%BD%E4%BB%A4%E6%B5%81"><span class="toc-text">基于Agent体系的IVI命令流</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Agent%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">Agent的概念</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B"><span class="toc-text">大语言模型</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%A7%84%E5%88%92%E6%A8%A1%E5%9D%97"><span class="toc-text">规划模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%B0%E5%BF%86%E6%A8%A1%E5%9D%97"><span class="toc-text">记忆模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E6%A8%A1%E5%9D%97"><span class="toc-text">工具模块</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Agent%E6%95%B4%E4%B8%AA%E7%B3%BB%E7%BB%9F"><span class="toc-text">Agent整个系统</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%99%BA%E8%83%BD%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB"><span class="toc-text">智能语音识别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB"><span class="toc-text">手势识别</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-text">补充</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Agent-%E9%83%A8%E5%88%86"><span class="toc-text">Agent 部分</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%89%A9"><span class="toc-text">系统实物</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="solitude fa-solid fa-map"></i><span>New posts</span></div><div class="aside-list"><a class="aside-list-item" href="/2025/01/27/2025-1-27_5ds_Yosei_history/" title="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来"><div class="thumbnail"><img alt="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250127202529.png"></div><div class="content"><span class="title" href="/2025/01/27/2025-1-27_5ds_Yosei_history/" title="宇宙耀变龙以及世界线变动前蟹哥黑历史的由来">宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</span><span class="article-recent_post_categories" href="/2025/01/27/2025-1-27_5ds_Yosei_history/">杂谈</span></div></a><a class="aside-list-item" href="/2025/01/27/2025-2-28_SelectMAP/" title="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全"><div class="thumbnail"><img alt="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250301212039.png"></div><div class="content"><span class="title" href="/2025/01/27/2025-2-28_SelectMAP/" title="Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全">Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</span><span class="article-recent_post_categories" href="/2025/01/27/2025-2-28_SelectMAP/">学习</span></div></a><a class="aside-list-item" href="/2025/01/23/2025-01-23_blog_init/" title="hexo 搭建博客"><div class="thumbnail"><img alt="hexo 搭建博客" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241014203011.png"></div><div class="content"><span class="title" href="/2025/01/23/2025-01-23_blog_init/" title="hexo 搭建博客">hexo 搭建博客</span><span class="article-recent_post_categories" href="/2025/01/23/2025-01-23_blog_init/">学习</span></div></a><a class="aside-list-item" href="/2025/01/01/2025-01-01/" title="记 2024"><div class="thumbnail"><img alt="记 2024" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/IMG20250101000057.jpg"></div><div class="content"><span class="title" href="/2025/01/01/2025-01-01/" title="记 2024">记 2024</span><span class="article-recent_post_categories" href="/2025/01/01/2025-01-01/">生活</span></div></a><a class="aside-list-item" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/" title="记 2024_UESTC 新工科展"><div class="thumbnail"><img alt="记 2024_UESTC 新工科展" src= "/img/loading.avif" data-lazy-src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241123145038.png"></div><div class="content"><span class="title" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/" title="记 2024_UESTC 新工科展">记 2024_UESTC 新工科展</span><span class="article-recent_post_categories" href="/2024/11/23/2024-11-23_Emerging_Engineering_Education/">学习</span></div></a></div></div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "/img/loading.avif" data-lazy-src="/images/blog_logo.png">SoCoco</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" alt="Theme">Theme</a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.15"></script><script src="/js/main.js?v=2.1.15"></script><script src="/js/third_party/waterfall.min.js?v=2.1.15"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script><script src="/js/third_party/universe.min.js?v=2.1.15"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/meting/2.0.1/Meting.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.6.0/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=2.1.15"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script src="/js/schedule.js"></script><div class="js-pjax"><script>(() => {
+    const getCount = () => {
+        const ele = document.querySelectorAll('.twikoo-count')
+        if (!ele) return
+        twikoo.getCommentsCount({
+            envId: 'https://twikoo.sococo.cn/',
+            region: '',
+            urls: [window.location.pathname],
+            includeReply: false
+        }).then(res => {
+            ele.forEach(item => item.textContent = res[0].count)
+        }).catch(err => {
+            console.error(err)
+        })
+    }
+    const init = () => {
+        twikoo.init(Object.assign({
+            el: '#twikoo-wrap',
+            envId: 'https://twikoo.sococo.cn/',
+            region: '',
+            path: window.location.pathname,
+            onCommentLoaded: () => {
+                GLOBAL_CONFIG.lightbox && utils.lightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+            }
+        }, null))
+
+        
+        sco.owoBig({
+            body: '.OwO-body',
+            item: '.OwO-items li'
+        })
+
+        false && barrageTwikoo()
+    }
+
+    const loadTwikoo = () => {
+        if (typeof twikoo === 'object') setTimeout(init,0)
+        else utils.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.40/twikoo.all.min.js').then(init)
+    }
+
+    if ('Twikoo' === 'Twikoo' || false) {
+        if (false) utils.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+        else loadTwikoo()
+    } else {
+        window.loadTwoComment = loadTwikoo
+    }
+})()
+</script><script>mermaid.run();</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><button class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter keywords to search"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=2.1.15"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">Paused</div><meting-js id="8093053263" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/01/27/2025-1-27_5ds_Yosei_history/","2025/01/27/2025-2-28_SelectMAP/","2025/01/23/2025-01-23_blog_init/","2025/01/01/2025-01-01/","2024/11/23/2024-11-23_Emerging_Engineering_Education/","2024/11/09/2024-11-09_courage/","2024/11/02/2024-11-02_emoj/","2024/10/20/2024-10-20/","2024/10/19/2024-10-19_AD_plug_in/","2024/10/16/2024-10-16_art/","2024/10/15/2024-10-15_Blog_react/","2024/10/02/2024-10-02/","2024/09/25/2024-09-25/","2024/08/29/2024-08-20_2024_NUEDC_AESDC/","2024/08/12/2024-08-13_Life_is_full_of_miracles/","2024/08/05/2024-08-05_2024_NUEDC/","2024/07/23/2024-07-23/","2024/07/19/2024-07-19_2024_ESDC/","2024/03/31/2024-03-31_FPGA_JEPG_DECODER/","2024/02/20/2024-02-20_FPGA_POSEDGE_TO_PULSE/","2024/01/20/2024-01-20_FPGA_UART/","2023/11/17/2023-11-17_Gowin_FPGA/","2023/08/21/2023-08-21_NFC_ADD/","2023/06/06/2023-06-06_FDAF_ACE/","2023/05/20/2023-05-20_DSP_3PROVE/","2023/04/01/2023-04-01_Dark Channel Prior/","2023/03/26/2023-03-26_Stellarium/","2023/02/20/2023-02-20_5ds_black_history/","2023/01/30/2023-01-30_Ideal/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>

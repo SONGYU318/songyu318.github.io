@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SoCoco'sitetime | SoCoco's Blog</title><noscript>Please enable JavaScript to view the site</noscript><link rel="icon" href="/images/blog_logo.png"><!-- index.css--><link rel="stylesheet" href="/css/index.css?v=2.1.15"><!-- inject head--><link rel="canonical" href="https://songyu318.github.io/sitetime/"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"><!-- aplayer--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"><!-- swiper--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"><!-- fancybox ui--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css"><!-- katex--><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css"><!-- Open Graph--><meta name="description" content="Sitetime timeline 2024-12-28更新主题版本 2024-12-09修改 about 中顺序 2024-11-18Solitude aside: https:&amp;#x2F;&amp;#x2F;everfu.github.io&amp;#x2F;solitude-demo&amp;#x2F;posts&amp;#x2F;c63b9f20.html"><!-- pwa--><meta name="apple-mobile-web-app-capable" content="SoCoco's Blog"><meta name="theme-color" content="var(--efu-main)"><meta name="apple-mobile-web-app-status-bar-style" content="var(--efu-main)"><link rel="bookmark" href="/images/blog_logo.png"><link rel="apple-touch-icon" href="/images/blog_logo.png" sizes="180x180"><script>console.log(' %c Solitude %c ' + '2.1.15' + ' %c https://github.com/everfu/hexo-theme-solitude',
+    'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
+    'background:#ff9a9a ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
+    'background:unset ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff')
+</script><script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><link rel="stylesheet" href="/css/schedule.css"><script>(()=>{
+        const saveToLocal = {
+            set: function setWithExpiry(key, value, ttl) {
+                if (ttl === 0)
+                    return
+                const now = new Date()
+                const expiryDay = ttl * 86400000
+                const item = {
+                    value: value,
+                    expiry: now.getTime() + expiryDay
+                }
+                localStorage.setItem(key, JSON.stringify(item))
+            },
+            get: function getWithExpiry(key) {
+                const itemStr = localStorage.getItem(key)
+
+                if (!itemStr) {
+                    return undefined
+                }
+                const item = JSON.parse(itemStr)
+                const now = new Date()
+
+                if (now.getTime() > item.expiry) {
+                    localStorage.removeItem(key)
+                    return undefined
+                }
+                return item.value
+            }
+        };
+        window.utils = {
+            saveToLocal: saveToLocal,
+            getCSS: (url, id = false) => new Promise((resolve, reject) => {
+              const link = document.createElement('link')
+              link.rel = 'stylesheet'
+              link.href = url
+              if (id) link.id = id
+              link.onerror = reject
+              link.onload = link.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                link.onload = link.onreadystatechange = null
+                resolve()
+              }
+              document.head.appendChild(link)
+            }),
+            getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+              const script = document.createElement('script')
+              script.src = url
+              script.async = true
+              script.onerror = reject
+              script.onload = script.onreadystatechange = function() {
+                const loadState = this.readyState
+                if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                script.onload = script.onreadystatechange = null
+                resolve()
+              }
+
+              Object.keys(attr).forEach(key => {
+                script.setAttribute(key, attr[key])
+              })
+
+              document.head.appendChild(script)
+            }),
+            addGlobalFn: (key, fn, name = false, parent = window) => {
+                const globalFn = parent.globalFn || {}
+                const keyObj = globalFn[key] || {}
+
+                if (name && keyObj[name]) return
+
+                name = name || Object.keys(keyObj).length
+                keyObj[name] = fn
+                globalFn[key] = keyObj
+                parent.globalFn = globalFn
+            },
+            addEventListenerPjax: (ele, event, fn, option = false) => {
+              ele.addEventListener(event, fn, option)
+              utils.addGlobalFn('pjax', () => {
+                  ele.removeEventListener(event, fn, option)
+              })
+          },
+        }
+    })()</script><!-- theme--><script>initTheme = () => {
+    let isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const cachedMode = utils.saveToLocal.get('theme');
+    if (cachedMode === undefined) {
+        const nowMode =
+            isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', nowMode);
+    } else {
+        document.documentElement.setAttribute('data-theme', cachedMode);
+    }
+    typeof rm === 'object' && rm.mode(cachedMode === 'dark' && isDarkMode)
+}
+initTheme()</script><!-- global head--><script>const GLOBAL_CONFIG = {
+    root: '/',
+    algolia: undefined,
+    localsearch: {"preload":false,"path":"/search.xml"},
+    runtime: '2022-01-21 00:00:00',
+    lazyload: {
+        enable: true,
+        error: '/img/error_load.avif'
+    },
+    copyright: false,
+    highlight: {"limit":200,"expand":true,"copy":true,"syntax":"highlight.js"},
+    randomlink: false,
+    lang: {"theme":{"dark":"Dark","light":"Light"},"copy":{"success":"Copied","error":"Copy failed"},"backtop":"Back to top","time":{"day":" days ago","hour":" hours ago","just":"just","min":" minutes ago","month":" months ago"},"day":" days","f12":"Developer mode is turned on, please follow the GPL.","totalk":"You don't need to delete blank lines, just type in your comments.","search":{"empty":"No results found","hit":"Found ${query} results for you","placeholder":"Enter keywords to search","count":"Total <b>${count}</b> results.","loading":"Loading..."}},
+    aside: {
+        sayhello: {
+            morning: "✨ Good morning. It's a new day",
+            noon: "It's time for a midday break",
+            afternoon: "Tea time. 🍵",
+            night: "early bedtime",
+            goodnight: "Good night 😴",
+        },
+        sayhello2: [],
+        sayhello3: {
+            prefix: 'Long time no see, ',
+            back: 'Welcome back again,',
+        },
+    },
+    covercolor: {
+        enable: true
+    },
+    comment: false,
+    lightbox: 'mediumZoom',
+    post_ai: false,
+    right_menu: false,
+    translate: false,
+    lure: false,
+    expire: false,
+};</script><!-- page-config head--><script id="config-diff">var PAGE_CONFIG = {
+    is_post: false,
+    is_page: true,
+    is_home: false,
+    page: 'sitetime',
+    toc: false,
+    comment: false,
+    ai_text: false,
+    color: false,
+}</script><!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head><body id="body" data-type="sitetime"><!-- universe--><canvas id="universe"></canvas><!-- background img--><div id="global_bg"></div><!-- loading--><!-- console--><div id="console"><div class="close-btn" onclick="sco.hideConsole()"><i class="solitude fa-solid fa-xmark"></i></div><div class="console-card-group"><div class="console-card-group-right"><div class="console-card tags" onclick="sco.hideConsole()"><div class="card-content"><div class="author-content-item-tips">Tags</div><div class="author-content-item-title">Find interesting areas</div></div><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><div class="console-card history" onclick="sco.hideConsole()"><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/01/"><span class="card-archive-list-date">2025/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">4</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/11/"><span class="card-archive-list-date">2024/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/10/"><span class="card-archive-list-date">2024/10</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">5</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/09/"><span class="card-archive-list-date">2024/09</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/08/"><span class="card-archive-list-date">2024/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">3</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/07/"><span class="card-archive-list-date">2024/07</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">2</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">2024/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">2024/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">2024/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/11/"><span class="card-archive-list-date">2023/11</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/08/"><span class="card-archive-list-date">2023/08</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/06/"><span class="card-archive-list-date">2023/06</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/05/"><span class="card-archive-list-date">2023/05</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/04/"><span class="card-archive-list-date">2023/04</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/03/"><span class="card-archive-list-date">2023/03</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/02/"><span class="card-archive-list-date">2023/02</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">2023/01</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">1</span><span class="card-archive-list-count-unit">Posts</span></div></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/"><span class="card-archive-list-date">All posts</span><div class="card-archive-list-count-group"><span class="card-archive-list-count">29</span><span class="card-archive-list-count-unit">Posts</span></div></a></li></ul></div></div></div><div class="button-group"><div class="console-btn-item"><span class="darkmode_switchbutton" onclick="sco.switchDarkMode()" title="Day and night mode"><i class="solitude fa-solid fa-circle-half-stroke"></i></span></div><div class="console-btn-item" id="consoleHideAside"><span class="asideSwitch" onclick="sco.switchHideAside()" title="Sidebar display control"><i class="solitude fas fa-arrows-left-right-to-line"></i></span></div><div class="console-btn-item" id="consoleMusic" onclick="sco.musicToggle()"><span class="music-switch" title="Music switch"><i class="solitude fa-solid fa-compact-disc"></i></span></div></div><div class="console-mask" onclick="sco.hideConsole()"></div></div><!-- sidebar--><div id="sidebar" style="zoom: 1;"><div id="menu-mask" style="display: none;"></div><div id="sidebar-menus"><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Archives</div><div class="length-num">29</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">Tags</div><div class="length-num">44</div></a></div></div></div><span class="sidebar-menu-item-title">Function</span><div class="sidebar-menu-item"><span class="darkmode_switchbutton menu-child" onclick="sco.switchDarkMode()"><i class="solitude fa-solid fa-circle-half-stroke"></i><span>Display mode</span></span></div><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div><span class="sidebar-menu-item-title">Tags</span><div class="card-widget card-tags card-archives card-webinfo card-allinfo"><div class="card-tag-cloud"><a href="/tags/%E6%9D%82%E8%B0%88/">杂谈<sup>7</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王<sup>2</sup></a><a href="/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/">游戏王 5D's<sup>1</sup></a><a href="/tags/DSP/">DSP<sup>1</sup></a><a href="/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/">去雾算法<sup>1</sup></a><a href="/tags/python/">python<sup>2</sup></a><a href="/tags/Stellarium/">Stellarium<sup>1</sup></a><a href="/tags/FDAF/">FDAF<sup>1</sup></a><a href="/tags/ACE/">ACE<sup>1</sup></a><a href="/tags/matlab/">matlab<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90/">电子<sup>2</sup></a><a href="/tags/NFC/">NFC<sup>1</sup></a><a href="/tags/FPGA/">FPGA<sup>5</sup></a><a href="/tags/Gowin/">Gowin<sup>1</sup></a><a href="/tags/UART/">UART<sup>1</sup></a><a href="/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/">脉冲信号转换<sup>1</sup></a><a href="/tags/JPEG/">JPEG<sup>1</sup></a><a href="/tags/DCT/">DCT<sup>1</sup></a><a href="/tags/Huffman/">Huffman<sup>1</sup></a><a href="/tags/%E7%86%B5%E7%BC%96%E7%A0%81/">熵编码<sup>1</sup></a><a href="/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/">电子设计<sup>3</sup></a><a href="/tags/Agent/">Agent<sup>1</sup></a><a href="/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/">语音识别<sup>1</sup></a><a href="/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/">手势识别<sup>1</sup></a><a href="/tags/%E7%AB%9E%E8%B5%9B/">竞赛<sup>1</sup></a><a href="/tags/intel/">intel<sup>1</sup></a><a href="/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/">嵌入式<sup>1</sup></a><a href="/tags/ESDC/">ESDC<sup>1</sup></a><a href="/tags/NUEDC/">NUEDC<sup>2</sup></a><a href="/tags/AM/">AM<sup>1</sup></a><a href="/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/">多径信号<sup>1</sup></a><a href="/tags/%E5%9B%9E%E5%BF%86/">回忆<sup>2</sup></a><a href="/tags/%E9%87%8D%E9%80%A2/">重逢<sup>1</sup></a><a href="/tags/TI/">TI<sup>1</sup></a><a href="/tags/music/">music<sup>1</sup></a><a href="/tags/PCB/">PCB<sup>2</sup></a><a href="/tags/%E8%BD%AF%E4%BB%B6%E6%97%A0%E7%BA%BF%E7%94%B5/">软件无线电<sup>1</sup></a><a href="/tags/%E5%B0%84%E9%A2%91/">射频<sup>1</sup></a><a href="/tags/%E6%AF%95%E8%AE%BE/">毕设<sup>1</sup></a><a href="/tags/hexo/">hexo<sup>2</sup></a><a href="/tags/AD/">AD<sup>1</sup></a><a href="/tags/%E5%8E%9F%E5%88%99/">原则<sup>1</sup></a><a href="/tags/%E8%81%8A%E5%A4%A9/">聊天<sup>1</sup></a><a href="/tags/5DS/">5DS<sup>1</sup></a></div></div><span class="sidebar-menu-item-title">Site information</span><div class="webinfo"><div class="webinfo-item"><div class="webinfo-item-title"><i class="item-icon solitude fa-solid fa-file-word"></i><div class="item-name">Word count:</div></div><div class="item-count">51.5k</div></div></div></div></div><!-- keyboard--><!-- righhtside--><div class="needEndHide" id="rightside"><div class="rs_hide"><button class="mode" type="button" title="Mode" onclick="sco.switchDarkMode()"><i class="fas fa-circle-half-stroke"></i></button><button class="aside pc" type="button" title="Sidebar" onclick="sco.switchHideAside()"><i class="fas fa-arrows-alt-h"></i></button></div><div class="rs_show"><button class="config" type="button" title="Settings" onclick="document.querySelector(&quot;.rs_hide&quot;).classList.toggle(&quot;show&quot;)"><i class="fas fa-gear fa-spin"></i></button><button class="top" type="button" title="Top" onclick="sco.toTop()"><i class="fas fa-arrow-up"></i><span id="percent">0</span></button></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav class="show" id="nav"><div id="nav-group"><div id="blog_name"><div class="back-home-button" tabindex="-1"><i class="back-home-button-icon solitude fas fa-bars-progress"></i><div class="back-menu-list-groups"><div class="back-menu-list-group"><div class="back-menu-list-title">Useful links</div><div class="back-menu-list"><a class="back-menu-item" target="_blank" rel="noopener" href="https://zh.z-lib.gs/" title="Zlibrary"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241021130128.png" alt="Zlibrary"><span class="back-menu-item-text">Zlibrary</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.pixiv.net/" title="Piviv"><img class="nolazyload back-menu-item-icon" src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241020201128.png" alt="Piviv"><span class="back-menu-item-text">Piviv</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://github.com/" title="Github"><img class="nolazyload back-menu-item-icon" src="https://github.com/favicon.ico" alt="Github"><span class="back-menu-item-text">Github</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://bilibili.com/" title="Bilibili"><img class="nolazyload back-menu-item-icon" src="https://bilibili.com/favicon.ico" alt="Bilibili"><span class="back-menu-item-text">Bilibili</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.ti.com.cn/" title="TI"><img class="nolazyload back-menu-item-icon" src="https://www.ti.com.cn/favicon.ico" alt="TI"><span class="back-menu-item-text">TI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://www.analog.com/cn/index.html" title="ADI"><img class="nolazyload back-menu-item-icon" src="https://assets2.analog.com/cms-assets/images/images/adi-favicon.svg" alt="ADI"><span class="back-menu-item-text">ADI</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://componentsearchengine.com/" title="Component Search"><img class="nolazyload back-menu-item-icon" src="https://componentsearchengine.com/favicon.ico" alt="Component Search"><span class="back-menu-item-text">Component Search</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://translate.google.com/" title="Translate Google"><img class="nolazyload back-menu-item-icon" src="https://translate.google.com/favicon.ico" alt="Translate Google"><span class="back-menu-item-text">Translate Google</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://oshwhub.com/" title="OSHWub"><img class="nolazyload back-menu-item-icon" src="https://oshwhub.com/favicon.ico" alt="OSHWub"><span class="back-menu-item-text">OSHWub</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://tieba.baidu.com/" title="Tieba"><img class="nolazyload back-menu-item-icon" src="https://tieba.baidu.com/favicon.ico" alt="Tieba"><span class="back-menu-item-text">Tieba</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://kimi.moonshot.cn/" title="Kimi"><img class="nolazyload back-menu-item-icon" src="https://statics.moonshot.cn/kimi-chat/favicon.ico" alt="Kimi"><span class="back-menu-item-text">Kimi</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://chat.deepseek.com/" title="Deepseek"><img class="nolazyload back-menu-item-icon" src="https://chat.deepseek.com/favicon.svg" alt="Deepseek"><span class="back-menu-item-text">Deepseek</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://ygobbs2.com/" title="MyCard"><img class="nolazyload back-menu-item-icon" src="https://ygobbs.minio.moenext.com/optimized/3X/e/2/e25380078744d8815239e8e2277dbb91faa1128e_2_32x32.png" alt="MyCard"><span class="back-menu-item-text">MyCard</span></a><a class="back-menu-item" target="_blank" rel="noopener" href="https://simpletex.cn/ai/latex_ocr" title="Simpletex"><img class="nolazyload back-menu-item-icon" src="https://simpletex.cn/favicon.ico" alt="Simpletex"><span class="back-menu-item-text">Simpletex</span></a></div></div></div></div><a id="site-name" href="/" title="Back to home"><span class="title">SoCoco</span><i class="solitude fa-solid fa-home"></i></a></div><div id="page-name-mask"><div id="page-name"><a id="page-name-text" onclick="sco.toTop()">SoCoco'sitetime</a></div></div><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Article</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="solitude  fas fa-folder-closed"></i><span>Archives</span></a></li><li><a class="site-page child" href="/categories/"><i class="solitude  fas fa-clone"></i><span>Categories</span></a></li><li><a class="site-page child" href="/tags/"><i class="solitude  fas fa-tags"></i><span>Tags</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>Memory</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/album/"><i class="solitude  fas fa-images"></i><span>Album</span></a></li><li><a class="site-page child" href="/music/"><i class="solitude  fas fa-music"></i><span>Music</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="javascript:void(0);"><span>About</span></a><ul class="menus_item_child"><li><a class="site-page child" href="/links/"><i class="solitude  fas fa-user-group"></i><span>Links</span></a></li><li><a class="site-page child" href="/about/"><i class="solitude  fas fa-user"></i><span>Myself</span></a></li><li><a class="site-page child" href="/sitetime/"><i class="solitude  fas fa-hourglass"></i><span>Sitetime</span></a></li></ul></div></div></div><div id="nav-left"></div><div id="nav-right"><div class="nav-button" id="search-button"><a class="site-page social-icon search" href="javascript:void(0);" title="Search"><i class="solitude fa-solid fa-magnifying-glass"></i></a></div><div class="nav-button" id="nav-console"><a class="console_switchbutton" onclick="sco.showConsole()" title="Console" href="javascript:void(0);"><label><i class="left"></i><i class="center"></i><i class="right"></i></label></a></div><div id="toggle-menu"><a class="site-page"><i class="solitude fa-solid fa-bars"></i></a></div></div></div></nav></header><main class="layout hide-aside" id="content-inner"><div id="page"><div class="article-container"><h2 id="Sitetime">Sitetime</h2>
+<div class="timeline"><span class="timeline-title">timeline</span>
+
+<div class="timenode"><div class="meta"><p>2024-12-28</p></div><div class="body"><ul><li>更新主题版本</li></ul></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-12-09</p></div><div class="body"><ul><li>修改 about 中顺序</li></ul></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-11-18</p></div><div class="body"><ul><li>Solitude aside: <a target="_blank" rel="noopener" href="https://everfu.github.io/solitude-demo/posts/c63b9f20.html">https://everfu.github.io/solitude-demo/posts/c63b9f20.html</a></li></ul></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-11-02</p></div><div class="body"><ul><li>Solitude 主题内置与外挂标签: <a target="_blank" rel="noopener" href="https://blog.hpcesia.com/posts/e5415539/">https://blog.hpcesia.com/posts/e5415539/</a></li></ul></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-10-15</p></div><div class="body"><ul><li>blog 重构，详情见下：</li></ul><a class="tag-link" href="/2024/10/15/2024-10-15_Blog_react/" target="_self">    <div class="tag-link-tips">站内链接</div>    <div class="tag-link-bottom">        <div class="tag-link-left">          <i class="solitude fas fa-link"></i>        </div>        <div class="tag-link-right">            <div class="tag-link-title">记录</div>            <div class="tag-link-sitename">Blog 重置</div>        </div>        <i class="solitude fas fa-chevron-right"></i>    </div></a></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-03-29</p></div><div class="body"><ol><li>blog 底部 foot 而修改参考。<br><a target="_blank" rel="noopener" href="https://hr-insist.github.io/Hexo/%E5%85%B3%E4%BA%8E%E6%88%91%E7%9A%84Butterfly%E4%B8%BB%E9%A2%98%E7%9A%84%E6%89%80%E6%9C%89%E4%BC%98%E5%8C%96/">https://hr-insist.github.io/Hexo/关于我的Butterfly主题的所有优化/</a></li><li>恢复版权信息。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-03-31</p></div><div class="body"><ol><li>图床均迁移到 github，舍弃路过。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-03-30</p></div><div class="body"><ol><li>联立了 VScode + Picgo + github 建立了图床，好玩的是，之前用的路过图床不支持挂梯子访问，新的图床必须挂梯子才能上传，完美不兼容。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-03-29</p></div><div class="body"><ol><li>自定义的 aplayer 改好了，也没什么技术含量，照猫画虎罢了。现在支持自定义外链的音乐了，起因是因为会员歌的外链没法听，但现在也没有支持音乐外链的盘，半好不好的。</li><li>音频外链暂时使用了以下网址：<br><a target="_blank" rel="noopener" href="https://music.gimhoy.com/">https://music.gimhoy.com/</a></li><li>文章 H1~H6 标题小风车转动效果删了。</li></ol></div></div>
+
+
+
+<div class="timenode"><div class="meta"><p>2024-03-10</p></div><div class="body"><ol><li>扒代码，从 main.js 里面找到了点东西，看懂了一点点，虽然不知道那个前缀为什么改了就行了，不过相册的 type2 好了，缺点是无法点开看大图，还得修复一下。</li><li>老是用网易云的 id 也不是很好，有些会员的歌就听不了，准备写一点自定义的。就照着现成的抄，反正 metingjs 的格式是现成的。</li></ol></div></div>
+
+
+
+<div class="timenode"><div class="meta"><p>2024-03-01</p></div><div class="body"><ol><li>音乐播放器在音乐界面由于不能隐藏导致遮挡了按键，外观不是很好，先藏了吧，之后再修理。</li><li>删除了一堆垃圾，变相提高了文章质量。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-02-29</p></div><div class="body"><ol><li>修复了相册的时间，作者把一些函数重新定义重构了，但是两个界面用的标签不一样，在 js 里面加点东西补充一下就好了。然后图标和文字的位置太紧凑了,之前没改好的原因是命名问题.</li><li>但是相册的一些东西和音乐界面的客户端的歌单列表收回冲突了导致列表收不回去了，经过检查发现是作者的函数命名新的和旧的一样，可能作者写在一个里面了但是我复制的时候是分开的所以起冲突了，改了一下名字解决了。</li><li>音乐播放器恢复旧版本<br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/lwk9527/p/17425769.html">https://www.cnblogs.com/lwk9527/p/17425769.html</a><br>简单的修改了一下外观，使用了抽象的适配方式。</li></ol></div></div>
+
+
+
+<div class="timenode"><div class="meta"><p>2024-02-24</p></div><div class="body"><ol><li>添加了即刻瀑布流（相册），款式是直接扒某主题的，不知道什么原因，同样意思不同表达的css语句显示不出来，所以修改了一下。左下角的时间显示很怪，明明和之前的写法是一样的，勉强改了一点，之后再修。</li><li>相册的type2暂时用不了，待修。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-02-22</p></div><div class="body"><ol><li>添加了即刻瀑布流（朋友圈），以后一些没用的简短的就可以直接丢进去了，避免产出低质量文章。参考如下。<br><a target="_blank" rel="noopener" href="https://blog.anheyu.com/posts/c248.html">https://blog.anheyu.com/posts/c248.html</a><br>巴拉巴拉捣鼓半天对齐了主页，有点抽象。</li><li>音乐胶囊坏了，先隐藏了等待修理。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-01-22</p></div><div class="body"><ol><li>重置建设记录，从 _post 转移到 menu。</li><li>更新了控制台样式，参考如下。<br><a target="_blank" rel="noopener" href="https://blog.anheyu.com/posts/3444.html">https://blog.anheyu.com/posts/3444.html</a></li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-01-20</p></div><div class="body"><ol><li>重置友链界面，参考如下。<br><a target="_blank" rel="noopener" href="https://akilar.top/posts/57291286/">https://akilar.top/posts/57291286/</a></li><li>重置文章统计相关部分，参考如下。<br><a target="_blank" rel="noopener" href="https://blog.eurkon.com/post/1213ef82.html">https://blog.eurkon.com/post/1213ef82.html</a></li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2024-01-08</p></div><div class="body"><ol><li>更新域名：<a target="_blank" rel="noopener" href="http://sococo.cn">sococo.cn</a></li><li>更新 twkioo 解析域名。</li></ol></div></div>
+
+
+<div class="timenode"><div class="meta"><p>2023-01-23</p></div><div class="body"><h2 id="魔改">魔改</h2><ul><li>制作更好的透明页面,成功把 head 的深层覆盖去除。</li><li>切换白天夜间模式同时也好切换背景。</li><li>完成一图流效果。</li><li>文章页添加波浪。</li><li>添加4个背景（白天/黑夜 × PC 端/移动端）。</li><li>添加切换白天黑夜特效过渡。</li><li>添加了一键到底，页面百分比有点小问题先注释了。</li><li>鼠标改成小红点 符合烟花点击特效（乐</li><li>置顶轮播图顺序。</li><li>将导航栏居中。</li><li>添加了视频界面，兼容了 b 站方便给我的视频引流（不是）。</li><li>添加了加载动画。</li><li>添加了本地搜索引擎（虽然现在文章少的一匹根本不用）。</li><li>文章页面改为只有目录。</li><li>添加了留言板界面。</li><li>添加了s ecurity 系统，但是好像没什么可加密的（</li><li>添加了文章多栏布局，应该是信封样式。</li><li>微调了页面的透明和模糊程度。</li><li>添加了标题小风车。</li><li><s>添加了 fps 帧率检测，但是不知道为什么部署上传以后跑顶部了，先注释了</s></li><li>添加了标签统计柱状图。</li><li>添加了分类统计雷达图（删去了饼图）。</li><li>添加了文章发布统计（删去了日历）。</li><li>修复了标签子页、分类子页、搜索界面夜晚模式透明度样式。</li><li>三栏文章改单栏。</li><li><s>添加了基于valine的评论系统（目前只能后台删除评论），后添加 waline ，成为双评论系统。</s></li><li>添加了 waline（客户端暂时无法显示）和 twikoo（支持 qq）双评论。</li><li>除了首页和文章以外其他页面隐藏卡片，并采用宽屏显示。</li><li>添加了隐藏的电子空调，夏天为你带来凉爽！</li><li>添加了右键自定义内容，可在右下角恢复默认。</li><li>fps 帧率好了，又是没加 css的锅。</li><li>添加了 APP，暂时不提供下载链接。</li><li>修改了 about 页面。</li><li>添加了数学公式兼容，直接找官方文档就可解决配置 katex，我就是个（寄）网上翻了半天。</li><li>小改了一下边框的角，现在不是那么圆润了。</li><li>添加了头像状态，现在在摸鱼捏。</li><li>添加了 Stellarium 页面嵌入，现在可以在线看星星了。</li></ul><h2 id="音乐播放器">音乐播放器</h2><ul><li>一开始因为证书问题时好时不好。</li><li>经过研究可能每天的 23 点左右会恢复一下？</li><li>emmm 魔改以后跑界面最下方下去了，先这样再说吧</li><li>音乐播放器好了，改用 meting-js 再开始使用 pug 后扒代码到 md 里面。</li><li>左下角的aplayer终于添加了，原来是因为 aplayer.css 没有引用，然而只能在 PC 端显示。</li><li>aplayer 的 api 回来了，但是我已经用了魔改的样式了。</li><li>音乐界面改为全屏。</li></ul></div></div>
+
+<div class="timenode"><div class="meta"><p>2023-01-21</p></div><div class="body"><ul><li>blog 正式搭建</li></ul></div></div>
+</div></div></div></main><footer id="footer"><div id="footer-bar"><div class="footer-bar-links"><div class="footer-bar-left"><div class="copyright">© 2022 - 2025 By&nbsp;<a class="footer-bar-link" href="/"><img class="author-avatar" src= "/img/loading.avif" data-lazy-src="/images/blog_logo.png">SoCoco</a></div></div><div class="footer-bar-right"><a class="footer-bar-link" target="_blank" rel="noopener" href="https://github.com/everfu/hexo-theme-solitude" alt="Theme">Theme</a></div></div></div></footer></div><!-- right_menu--><!-- inject body--><div><script src="/js/utils.js?v=2.1.15"></script><script src="/js/main.js?v=2.1.15"></script><script src="/js/third_party/waterfall.min.js?v=2.1.15"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.1/mermaid.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script><script src="/js/third_party/universe.min.js?v=2.1.15"></script><script>dark()
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/node-snackbar/0.1.16/snackbar.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/medium-zoom/1.1.0/medium-zoom.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script><script>var meting_api = 'https://meting.qjqq.cn/?server=:server&type=:type&id=:id&auth=:auth&r=:r';</script><script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/meting/2.0.1/Meting.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.6.0/color-thief.min.js"></script><script src="/js/covercolor/local.js?v=2.1.15"></script><script>window.paceOptions = {
+  restartOnPushState: false
+}
+
+utils.addGlobalFn('pjaxSend', () => {
+  Pace.restart()
+}, 'pace_restart')
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js"></script><script src="https://open.lightxi.com/unpkg/chinese-lunar@0.1.4/lib/chinese-lunar.js"></script><script src="/js/schedule.js"></script><div class="js-pjax"><script>mermaid.run();</script></div></div><!-- pjax--><script>const pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: ["title","#body-wrap","#site-config","meta[name=\"description\"]",".js-pjax","meta[property^=\"og:\"]","#config-diff",".rs_show",".rs_hide"],
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+})
+
+document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+})
+
+document.addEventListener('pjax:complete', () => {
+    window.refreshFn()
+
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+        const newScript = document.createElement('script')
+        const content = item.text || item.textContent || item.innerHTML || ""
+        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+        newScript.appendChild(document.createTextNode(content))
+        item.parentNode.replaceChild(newScript, item)
+    })
+
+    GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+    if (e.request.status === 404) {
+        pjax.loadUrl('/404.html')
+    }
+})</script><!-- google adsense--><!-- search--><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><button class="search-close-button"><i class="solitude fa-solid fa-xmark"></i></button></nav><div class="search-wrap"><div class="search-box"><input class="search-box-input" id="search-input" type="text" autocomplete="off" spellcheck="false" autocorrect="off" autocapitalize="off" placeholder="Enter keywords to search"></div><div id="search-results"><div id="search-hits"></div></div><div id="search-pagination"></div><div id="search-tips"></div></div></div><div id="search-mask"></div></div><script src="/js/search/local.js?v=2.1.15"></script><!-- Tianli-Talk--><!-- music--><div class="needEndHide" id="nav-music"><div id="nav-music-hoverTips" onclick="sco.musicToggle()">Paused</div><meting-js id="8093053263" server="netease" type="playlist" mutex="true" preload="none" theme="var(--efu-main)" data-lrctype="0" order="random" volume="0.8"></meting-js></div></body></html>
+        <script>
+            const posts = ["2025/01/27/2025-1-27_5ds_Yosei_history/","2025/01/27/2025-2-28_SelectMAP/","2025/01/23/2025-01-23_blog_init/","2025/01/01/2025-01-01/","2024/11/23/2024-11-23_Emerging_Engineering_Education/","2024/11/09/2024-11-09_courage/","2024/11/02/2024-11-02_emoj/","2024/10/20/2024-10-20/","2024/10/19/2024-10-19_AD_plug_in/","2024/10/16/2024-10-16_art/","2024/10/15/2024-10-15_Blog_react/","2024/10/02/2024-10-02/","2024/09/25/2024-09-25/","2024/08/29/2024-08-20_2024_NUEDC_AESDC/","2024/08/12/2024-08-13_Life_is_full_of_miracles/","2024/08/05/2024-08-05_2024_NUEDC/","2024/07/23/2024-07-23/","2024/07/19/2024-07-19_2024_ESDC/","2024/03/31/2024-03-31_FPGA_JEPG_DECODER/","2024/02/20/2024-02-20_FPGA_POSEDGE_TO_PULSE/","2024/01/20/2024-01-20_FPGA_UART/","2023/11/17/2023-11-17_Gowin_FPGA/","2023/08/21/2023-08-21_NFC_ADD/","2023/06/06/2023-06-06_FDAF_ACE/","2023/05/20/2023-05-20_DSP_3PROVE/","2023/04/01/2023-04-01_Dark Channel Prior/","2023/03/26/2023-03-26_Stellarium/","2023/02/20/2023-02-20_5ds_black_history/","2023/01/30/2023-01-30_Ideal/"];
+            function toRandomPost() {
+                const randomPost = posts[Math.floor(Math.random() * posts.length)];
+                pjax.loadUrl(GLOBAL_CONFIG.root + randomPost);
+            }
+        </script>
