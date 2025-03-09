@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</title>
+      <link href="/2025/02/27/2025-2-28_SelectMAP/"/>
+      <url>/2025/02/27/2025-2-28_SelectMAP/</url>
+      
+        <content type="html"><![CDATA[<h2 id="待更新">-待更新-</h2><h2 id="前言">前言</h2><p>为补全原理图所作工作，NI 家只开源了部分原理图。Xilinx 系列的配置方式较多，这里只进行主控 K7 的配置模式 Slave-SelectMAP 的完善。</p><h2 id="Slave-SelectMAP-配置连接方式">Slave-SelectMAP 配置连接方式</h2><p>如下图所示，上电后 Microprocessor/CPLD 从 Memory Source 中读取程序并通过一定的方式将其下载到 7 系列 FPGA 中。<br>其中 Memory Source 一般采用 NOR Flash，中间的 Microprocessor/CPLD 一般来说不限，只要能满足时序要求即可，考虑到 CPLD 引脚没那么多，笔者选择 另一块 FPGA 来连接，此时 NOR FLash 充当的角色为该 FGPA 外设。</p><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228194910.png" width = "90%" /></div><center>图1 Microprocessor/CPLD & 7 系列 FPGA 连接方式 </center><p>在这种配置方式下，引脚 M[2: 0] = 110，上下拉电阻参考手册，值得注意的是 JTAG 模式在任意条件下都可。</p><center>表1 配置模式一览 </center><table><thead><tr><th>Configuration Mode</th><th>M[2:0]</th><th>Bus Width</th><th>CCLK Direction</th></tr></thead><tbody><tr><td>Master Serial</td><td>000</td><td>x1</td><td>Output</td></tr><tr><td>Master SPI</td><td>001</td><td>x1, x2, x4</td><td>Output</td></tr><tr><td>Master BPI</td><td>010</td><td>x8, x16</td><td>Output</td></tr><tr><td>Master SelectMAP</td><td>100</td><td>x8, x16</td><td>Output</td></tr><tr><td>JTAG</td><td>101</td><td>x1</td><td>Not Applicable</td></tr><tr><td><strong>Slave SelectMAP</strong></td><td><strong>110</strong></td><td>x8, x16, x32(1)</td><td>Input</td></tr><tr><td>Slave Serial(2)</td><td>111</td><td>x1</td><td>Input</td></tr></tbody></table><!-- <div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228202445.png" width = "90%" /></div> --><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228202853.png" width = "90%" /></div><center>图2  Slave-SelectMAP 配置原理图-1</center><p>时序配置见参考。此外需注意高低电平要求。</p><h2 id="NOR-Flash-和-Microprocessor-CPLD-连接方式">NOR Flash 和 Microprocessor/CPLD 连接方式</h2><p>连接方式参考手册，满足读写要求即可，需注意高低电平要求。</p><h2 id="NOR-Flash-更新方式">NOR Flash 更新方式</h2><p>使用 JTAG Flash Programmer 利用JTAG接口和现有的各种仿真器来控制芯片，通过改变一组I/O状态，模拟总线时序来烧写。<br>支持 USB to JTAG interfaces based on FTDI FT2232 chip。</p><ul><li>暂未验证是否支持 Gowin</li></ul><h2 id="参考">参考</h2><h3 id="7-系列-FPGA-配置手册">7 系列 FPGA 配置手册</h3><ul><li>中文：<a href="https://gitcode.com/Open-source-documentation-tutorial/3399e/blob/main/UG470%E4%B8%AD%E6%96%87.pdf">https://gitcode.com/Open-source-documentation-tutorial/3399e/blob/main/UG470中文.pdf</a></li><li>英文：<a href="https://fpga.eetrend.com/files-eetrend-xilinx/download/201408/7594-13761-ug4707seriesconfig.pdf">https://fpga.eetrend.com/files-eetrend-xilinx/download/201408/7594-13761-ug4707seriesconfig.pdf</a></li></ul><h3 id="NOR-Flash-参考手册">NOR Flash 参考手册</h3><ul><li>IS29GL256 ：<a href="https://item.szlcsc.com/datasheet/IS29GL256-70FLET/1327426.html?spm=sc.it.xds.a___sc.gb.xh1.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D">https://item.szlcsc.com/datasheet/IS29GL256-70FLET/1327426.html?spm=sc.it.xds.a___sc.gb.xh1.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D</a></li><li>S29GL256P：<a href="https://item.szlcsc.com/datasheet/S29GL256P10TFI010/472067.html?spm=sc.it.xds.a___sc.gb.xh2.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D">https://item.szlcsc.com/datasheet/S29GL256P10TFI010/472067.html?spm=sc.it.xds.a___sc.gb.xh2.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D</a></li><li>PCB布局指南：<a href="https://www.infineon.com/dgdl/Infineon-AN216200_Infineon_Non-Burst-Mode_Parallel_NOR_Flash_Memory_Layout_Guide_for_PCBs-ApplicationNotes-v02_00-CN.pdf?fileId=8ac78c8c7cdc391c017d0d2cace86437">https://www.infineon.com/dgdl/Infineon-AN216200_Infineon_Non-Burst-Mode_Parallel_NOR_Flash_Memory_Layout_Guide_for_PCBs-ApplicationNotes-v02_00-CN.pdf?fileId=8ac78c8c7cdc391c017d0d2cace86437</a></li></ul><h3 id="其他相关">其他相关</h3><ul><li>时序配置参考 1：<a href="https://opencores.org/websvn/filedetails?repname=phr&amp;path=%2Fphr%2Ftrunk%2Fdoc%2Freferences%2Fxilinx%2Fapplication_notes%2Fxapp502.pdf&amp;rev=90">https://opencores.org/websvn/filedetails?repname=phr&amp;path=%2Fphr%2Ftrunk%2Fdoc%2Freferences%2Fxilinx%2Fapplication_notes%2Fxapp502.pdf&amp;rev=90</a></li><li>时序配置参考 2：<a href="https://blog.csdn.net/qq_40863150/article/details/132191283">https://blog.csdn.net/qq_40863150/article/details/132191283</a></li><li>BPI Flash 说明：<a href="https://blog.csdn.net/weixin_62432906/article/details/130348110">https://blog.csdn.net/weixin_62432906/article/details/130348110</a></li><li><strong>使用 JTAG Flash Programmer 烧写 Flash</strong>：<a href="https://blog.csdn.net/a1232345/article/details/41891669">https://blog.csdn.net/a1232345/article/details/41891669</a></li><li>TopJTAG Flash Programmer 官网：<a href="http://www.topjtag.com/flash-programmer/">http://www.topjtag.com/flash-programmer/</a></li><li>Device/Package xc7k410tffg900：<a href="https://china.xilinx.com/content/dam/xilinx/support/packagefiles/k7packages/xc7k410tffg900pkg.txt">https://china.xilinx.com/content/dam/xilinx/support/packagefiles/k7packages/xc7k410tffg900pkg.txt</a></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 学习 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> FPGA </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</title>
       <link href="/2025/01/27/2025-1-27_5ds_Yosei_history/"/>
       <url>/2025/01/27/2025-1-27_5ds_Yosei_history/</url>
@@ -23,31 +48,6 @@
             <tag> 游戏王 </tag>
             
             <tag> 5DS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</title>
-      <link href="/2025/01/27/2025-2-28_SelectMAP/"/>
-      <url>/2025/01/27/2025-2-28_SelectMAP/</url>
-      
-        <content type="html"><![CDATA[<h2 id="待更新">-待更新-</h2><h2 id="前言">前言</h2><p>为补全原理图所作工作，NI 家只开源了部分原理图。Xilinx 系列的配置方式较多，这里只进行主控 K7 的配置模式 Slave-SelectMAP 的完善。</p><h2 id="Slave-SelectMAP-配置连接方式">Slave-SelectMAP 配置连接方式</h2><p>如下图所示，上电后 Microprocessor/CPLD 从 Memory Source 中读取程序并通过一定的方式将其下载到 7 系列 FPGA 中。<br>其中 Memory Source 一般采用 NOR Flash，中间的 Microprocessor/CPLD 一般来说不限，只要能满足时序要求即可，考虑到 CPLD 引脚没那么多，笔者选择 另一块 FPGA 来连接，此时 NOR FLash 充当的角色为该 FGPA 外设。</p><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228194910.png" width = "90%" /></div><center>图1 Microprocessor/CPLD & 7 系列 FPGA 连接方式 </center><p>在这种配置方式下，引脚 M[2: 0] = 110，上下拉电阻参考手册，值得注意的是 JTAG 模式在任意条件下都可。</p><center>表1 配置模式一览 </center><table><thead><tr><th>Configuration Mode</th><th>M[2:0]</th><th>Bus Width</th><th>CCLK Direction</th></tr></thead><tbody><tr><td>Master Serial</td><td>000</td><td>x1</td><td>Output</td></tr><tr><td>Master SPI</td><td>001</td><td>x1, x2, x4</td><td>Output</td></tr><tr><td>Master BPI</td><td>010</td><td>x8, x16</td><td>Output</td></tr><tr><td>Master SelectMAP</td><td>100</td><td>x8, x16</td><td>Output</td></tr><tr><td>JTAG</td><td>101</td><td>x1</td><td>Not Applicable</td></tr><tr><td><strong>Slave SelectMAP</strong></td><td><strong>110</strong></td><td>x8, x16, x32(1)</td><td>Input</td></tr><tr><td>Slave Serial(2)</td><td>111</td><td>x1</td><td>Input</td></tr></tbody></table><!-- <div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228202445.png" width = "90%" /></div> --><div  align="center"> <img src="https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20250228202853.png" width = "90%" /></div><center>图2  Slave-SelectMAP 配置原理图-1</center><p>时序配置见参考。此外需注意高低电平要求。</p><h2 id="NOR-Flash-和-Microprocessor-CPLD-连接方式">NOR Flash 和 Microprocessor/CPLD 连接方式</h2><p>连接方式参考手册，满足读写要求即可，需注意高低电平要求。</p><h2 id="NOR-Flash-更新方式">NOR Flash 更新方式</h2><p>使用 JTAG Flash Programmer 利用JTAG接口和现有的各种仿真器来控制芯片，通过改变一组I/O状态，模拟总线时序来烧写。<br>支持 USB to JTAG interfaces based on FTDI FT2232 chip。</p><ul><li>暂未验证是否支持 Gowin</li></ul><h2 id="参考">参考</h2><h3 id="7-系列-FPGA-配置手册">7 系列 FPGA 配置手册</h3><ul><li>中文：<a href="https://gitcode.com/Open-source-documentation-tutorial/3399e/blob/main/UG470%E4%B8%AD%E6%96%87.pdf">https://gitcode.com/Open-source-documentation-tutorial/3399e/blob/main/UG470中文.pdf</a></li><li>英文：<a href="https://fpga.eetrend.com/files-eetrend-xilinx/download/201408/7594-13761-ug4707seriesconfig.pdf">https://fpga.eetrend.com/files-eetrend-xilinx/download/201408/7594-13761-ug4707seriesconfig.pdf</a></li></ul><h3 id="NOR-Flash-参考手册">NOR Flash 参考手册</h3><ul><li>IS29GL256 ：<a href="https://item.szlcsc.com/datasheet/IS29GL256-70FLET/1327426.html?spm=sc.it.xds.a___sc.gb.xh1.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D">https://item.szlcsc.com/datasheet/IS29GL256-70FLET/1327426.html?spm=sc.it.xds.a___sc.gb.xh1.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D</a></li><li>S29GL256P：<a href="https://item.szlcsc.com/datasheet/S29GL256P10TFI010/472067.html?spm=sc.it.xds.a___sc.gb.xh2.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D">https://item.szlcsc.com/datasheet/S29GL256P10TFI010/472067.html?spm=sc.it.xds.a___sc.gb.xh2.zy.n&amp;lcsc_vid=TgNcVlZWFgJYUVECTlIMBlZURAIKV1cAQllZBFcDRFIxVlNSR1ZaUVRRQVBaXzsOAxUeFF5JWAgaAglIBBsCBBcFWQIBCks%3D</a></li><li>PCB布局指南：<a href="https://www.infineon.com/dgdl/Infineon-AN216200_Infineon_Non-Burst-Mode_Parallel_NOR_Flash_Memory_Layout_Guide_for_PCBs-ApplicationNotes-v02_00-CN.pdf?fileId=8ac78c8c7cdc391c017d0d2cace86437">https://www.infineon.com/dgdl/Infineon-AN216200_Infineon_Non-Burst-Mode_Parallel_NOR_Flash_Memory_Layout_Guide_for_PCBs-ApplicationNotes-v02_00-CN.pdf?fileId=8ac78c8c7cdc391c017d0d2cace86437</a></li></ul><h3 id="其他相关">其他相关</h3><ul><li>时序配置参考 1：<a href="https://opencores.org/websvn/filedetails?repname=phr&amp;path=%2Fphr%2Ftrunk%2Fdoc%2Freferences%2Fxilinx%2Fapplication_notes%2Fxapp502.pdf&amp;rev=90">https://opencores.org/websvn/filedetails?repname=phr&amp;path=%2Fphr%2Ftrunk%2Fdoc%2Freferences%2Fxilinx%2Fapplication_notes%2Fxapp502.pdf&amp;rev=90</a></li><li>时序配置参考 2：<a href="https://blog.csdn.net/qq_40863150/article/details/132191283">https://blog.csdn.net/qq_40863150/article/details/132191283</a></li><li>BPI Flash 说明：<a href="https://blog.csdn.net/weixin_62432906/article/details/130348110">https://blog.csdn.net/weixin_62432906/article/details/130348110</a></li><li><strong>使用 JTAG Flash Programmer 烧写 Flash</strong>：<a href="https://blog.csdn.net/a1232345/article/details/41891669">https://blog.csdn.net/a1232345/article/details/41891669</a></li><li>TopJTAG Flash Programmer 官网：<a href="http://www.topjtag.com/flash-programmer/">http://www.topjtag.com/flash-programmer/</a></li><li>Device/Package xc7k410tffg900：<a href="https://china.xilinx.com/content/dam/xilinx/support/packagefiles/k7packages/xc7k410tffg900pkg.txt">https://china.xilinx.com/content/dam/xilinx/support/packagefiles/k7packages/xc7k410tffg900pkg.txt</a></li></ul>]]></content>
-      
-      
-      <categories>
-          
-          <category> 学习 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> FPGA </tag>
             
         </tags>
       
