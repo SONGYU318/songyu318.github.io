@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>SoCoco&#39;s Blog</title>
+    <link>https://songyu318.github.io/</link>
+    
+    <atom:link href="https://songyu318.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    
+    <description>All TRAGEDY ERASED, I SEE ONLY WONDER.</description>
+    <pubDate>Sun, 04 Jan 2026 07:30:00 GMT</pubDate>
+    <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>YGO_效果杂谈_二选一</title>
+      <link>https://songyu318.github.io/2026/01/04/2026-01-04-YGOZT1/</link>
+      <guid>https://songyu318.github.io/2026/01/04/2026-01-04-YGOZT1/</guid>
+      <pubDate>Sun, 04 Jan 2026 07:30:15 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;1304-新卡预告&quot;&gt;1304 新卡预告&lt;/h2&gt;
+&lt;div  align=&quot;center&quot;&gt; 
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20260104153513.png&quot;</description>
+        
+      
+      
+      
+      
+      
+      
+      <comments>https://songyu318.github.io/2026/01/04/2026-01-04-YGOZT1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>也许我们之间只差了一个数字</title>
+      <link>https://songyu318.github.io/2025/07/12/2025-07-12/</link>
+      <guid>https://songyu318.github.io/2025/07/12/2025-07-12/</guid>
+      <pubDate>Sat, 12 Jul 2025 14:11:17 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;strong&gt;——读《质数的孤独》所感&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;除了 1 和它自身外，不能被其他自然数整除的数叫做质数，在这群自然数里面，他们是那么的独特。有时候，你以为自己是一个能够整除对方的约数；有时候，你以为自己和对方之间什么都不相隔。但不是的。我们都是质数</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/">杂谈</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/07/12/2025-07-12/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>YGO_科研_闪刀名推理罪宝迪亚贝尔</title>
+      <link>https://songyu318.github.io/2025/06/27/2025-06-27_YGOKY/</link>
+      <guid>https://songyu318.github.io/2025/06/27/2025-06-27_YGOKY/</guid>
+      <pubDate>Fri, 27 Jun 2025 05:39:07 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近科研卡组的成果。名推理罪宝作为一副另类的魔陷类狱火机卡组，依靠大量堆墓带来的资源收益进行启动展开，相较于火机的怪兽上手卡手不同，罪宝的魔陷上手也可期待形成多卡联动不至于卡手致死。&lt;/p&gt;
+&lt;p&gt;旧版本的卡组构筑选择了 3 「列王」</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/06/27/2025-06-27_YGOKY/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>君に最後の口づけを</title>
+      <link>https://songyu318.github.io/2025/05/26/2025-05-14/</link>
+      <guid>https://songyu318.github.io/2025/05/26/2025-05-14/</guid>
+      <pubDate>Mon, 26 May 2025 12:51:17 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;&lt;meting-js server=&quot;netease&quot; type=&quot;song&quot; id=&quot;573528935&quot;&gt;&lt;/meting-js&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;消えそうな星を眺めて&lt;br&gt;
+【仰望着微弱的星光】&lt;br&gt;
+憂いを夜空に吐き出す&lt;br&gt;
+【把忧虑吐向夜空】&lt;br</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/music/">music</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/05/26/2025-05-14/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</title>
+      <link>https://songyu318.github.io/2025/02/27/2025-2-28_SelectMAP/</link>
+      <guid>https://songyu318.github.io/2025/02/27/2025-2-28_SelectMAP/</guid>
+      <pubDate>Thu, 27 Feb 2025 12:21:48 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;待更新&quot;&gt;-待更新-&lt;/h2&gt;
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;为补全原理图所作工作，NI 家只开源了部分原理图。Xilinx 系列的配置方式较多，这里只进行主控 K7 的配置模式 Slave-SelectMAP 的完善。&lt;/p&gt;
+&lt;h2 id=&quot;S</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/FPGA/">FPGA</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/02/27/2025-2-28_SelectMAP/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</title>
+      <link>https://songyu318.github.io/2025/01/27/2025-1-27_5ds_Yosei_history/</link>
+      <guid>https://songyu318.github.io/2025/01/27/2025-1-27_5ds_Yosei_history/</guid>
+      <pubDate>Mon, 27 Jan 2025 12:21:48 GMT</pubDate>
+      
+        
+        
+      <description>&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;2016 年的帖子还是对更旧的贴子（已经无了）搬运。怕哪天没了就丢过来了 orz。&lt;/p&gt;
+&lt;a class=&quot;tag-link&quot; href=&quot;https://tieba.baidu.com/p/4547688850&quot; target=</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E6%9D%82%E8%B0%88/">杂谈</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/">游戏王</category>
+      
+      <category domain="https://songyu318.github.io/tags/5DS/">5DS</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/01/27/2025-1-27_5ds_Yosei_history/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>hexo 搭建博客</title>
+      <link>https://songyu318.github.io/2025/01/23/2025-01-23_blog_init/</link>
+      <guid>https://songyu318.github.io/2025/01/23/2025-01-23_blog_init/</guid>
+      <pubDate>Thu, 23 Jan 2025 11:30:17 GMT</pubDate>
+      
+      <description>hexo 搭建博客</description>
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/hexo/">hexo</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/01/23/2025-01-23_blog_init/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>记 2024</title>
+      <link>https://songyu318.github.io/2025/01/01/2025-01-01/</link>
+      <guid>https://songyu318.github.io/2025/01/01/2025-01-01/</guid>
+      <pubDate>Wed, 01 Jan 2025 12:12:47 GMT</pubDate>
+      
+      <description>新的一年快乐</description>
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/">杂谈</category>
+      
+      
+      <comments>https://songyu318.github.io/2025/01/01/2025-01-01/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>记 2024_UESTC 新工科展</title>
+      <link>https://songyu318.github.io/2024/11/23/2024-11-23_Emerging_Engineering_Education/</link>
+      <guid>https://songyu318.github.io/2024/11/23/2024-11-23_Emerging_Engineering_Education/</guid>
+      <pubDate>Sat, 23 Nov 2024 06:23:15 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;2024 年工科展终于开始了，原时间预计在十月下旬，后一直延迟，最终时间定于 11.20，在时间广场摆了一个大圆。俯视来看还说的过去，就是不对称有点可惜。&lt;/p&gt;
+&lt;div  align=&quot;center&quot;&gt; 
+&lt;img src=&quot;https://cdn.jsdelivr.n</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/">学习</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/">杂谈</category>
+      
+      
+      <comments>https://songyu318.github.io/2024/11/23/2024-11-23_Emerging_Engineering_Education/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>在那一刻</title>
+      <link>https://songyu318.github.io/2024/11/09/2024-11-09_courage/</link>
+      <guid>https://songyu318.github.io/2024/11/09/2024-11-09_courage/</guid>
+      <pubDate>Sat, 09 Nov 2024 11:16:39 GMT</pubDate>
+      
+        
+        
+      <description>&lt;p&gt;当 下定决心去&lt;br&gt;
+鼓起勇气&lt;br&gt;
+去做一件&lt;br&gt;
+很重要的事情时&lt;br&gt;
+心会跳的很快&lt;br&gt;
+会犹豫&lt;br&gt;
+会迷茫&lt;br&gt;
+会想那份失败的&lt;br&gt;
+可能性和后果&lt;br&gt;
+可是知道&lt;br&gt;
+在那一刻&lt;br&gt;
+就被束缚住了&lt;br&gt;
+输了&lt;br&gt;
+在害怕&lt;br&gt;
+可</description>
+        
+      
+      
+      
+      
+      <category domain="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/">生活</category>
+      
+      
+      <category domain="https://songyu318.github.io/tags/%E5%9B%9E%E5%BF%86/">回忆</category>
+      
+      
+      <comments>https://songyu318.github.io/2024/11/09/2024-11-09_courage/#disqus_thread</comments>
+      
+    </item>
+    
+  </channel>
+</rss>
