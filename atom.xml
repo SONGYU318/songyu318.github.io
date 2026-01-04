@@ -1,0 +1,751 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>SoCoco&#39;s Blog</title>
+  
+  <subtitle>Record some useless things</subtitle>
+  <link href="https://songyu318.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://songyu318.github.io/"/>
+  <updated>2026-01-04T07:30:00.000Z</updated>
+  <id>https://songyu318.github.io/</id>
+  
+  <author>
+    <name>SoCoco</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>YGO_效果杂谈_二选一</title>
+    <link href="https://songyu318.github.io/2026/01/04/2026-01-04-YGOZT1/"/>
+    <id>https://songyu318.github.io/2026/01/04/2026-01-04-YGOZT1/</id>
+    <published>2026-01-04T07:30:15.000Z</published>
+    <updated>2026-01-04T07:30:00.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;1304-新卡预告&quot;&gt;1304 新卡预告&lt;/h2&gt;
+&lt;div  align=&quot;center&quot;&gt; 
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20260104153513.png&quot;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>也许我们之间只差了一个数字</title>
+    <link href="https://songyu318.github.io/2025/07/12/2025-07-12/"/>
+    <id>https://songyu318.github.io/2025/07/12/2025-07-12/</id>
+    <published>2025-07-12T14:11:17.000Z</published>
+    <updated>2025-07-17T08:58:39.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;strong&gt;——读《质数的孤独》所感&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;除了 1 和它自身外，不能被其他自然数整除的数叫做质数，在这群自然数里面，他们是那么的独特。有时候，你以为自己是一个能够整除对方的约数；有时候，你以为自己和对方之间什么都不相隔。但不是的。我们都是质数</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>YGO_科研_闪刀名推理罪宝迪亚贝尔</title>
+    <link href="https://songyu318.github.io/2025/06/27/2025-06-27_YGOKY/"/>
+    <id>https://songyu318.github.io/2025/06/27/2025-06-27_YGOKY/</id>
+    <published>2025-06-27T05:39:07.000Z</published>
+    <updated>2025-06-27T05:39:13.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近科研卡组的成果。名推理罪宝作为一副另类的魔陷类狱火机卡组，依靠大量堆墓带来的资源收益进行启动展开，相较于火机的怪兽上手卡手不同，罪宝的魔陷上手也可期待形成多卡联动不至于卡手致死。&lt;/p&gt;
+&lt;p&gt;旧版本的卡组构筑选择了 3 「列王」</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="游戏王" scheme="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>君に最後の口づけを</title>
+    <link href="https://songyu318.github.io/2025/05/26/2025-05-14/"/>
+    <id>https://songyu318.github.io/2025/05/26/2025-05-14/</id>
+    <published>2025-05-26T12:51:17.000Z</published>
+    <updated>2025-05-26T12:51:52.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;meting-js server=&quot;netease&quot; type=&quot;song&quot; id=&quot;573528935&quot;&gt;&lt;/meting-js&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;消えそうな星を眺めて&lt;br&gt;
+【仰望着微弱的星光】&lt;br&gt;
+憂いを夜空に吐き出す&lt;br&gt;
+【把忧虑吐向夜空】&lt;br</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="music" scheme="https://songyu318.github.io/tags/music/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Xilinx FPGA Slave-SelectMAP 配置说明及硬件 &amp; 驱动补全</title>
+    <link href="https://songyu318.github.io/2025/02/27/2025-2-28_SelectMAP/"/>
+    <id>https://songyu318.github.io/2025/02/27/2025-2-28_SelectMAP/</id>
+    <published>2025-02-27T12:21:48.000Z</published>
+    <updated>2025-02-27T12:23:10.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;待更新&quot;&gt;-待更新-&lt;/h2&gt;
+&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;为补全原理图所作工作，NI 家只开源了部分原理图。Xilinx 系列的配置方式较多，这里只进行主控 K7 的配置模式 Slave-SelectMAP 的完善。&lt;/p&gt;
+&lt;h2 id=&quot;S</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="FPGA" scheme="https://songyu318.github.io/tags/FPGA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>宇宙耀变龙以及世界线变动前蟹哥黑历史的由来</title>
+    <link href="https://songyu318.github.io/2025/01/27/2025-1-27_5ds_Yosei_history/"/>
+    <id>https://songyu318.github.io/2025/01/27/2025-1-27_5ds_Yosei_history/</id>
+    <published>2025-01-27T12:21:48.000Z</published>
+    <updated>2025-01-27T12:23:10.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;2016 年的帖子还是对更旧的贴子（已经无了）搬运。怕哪天没了就丢过来了 orz。&lt;/p&gt;
+&lt;a class=&quot;tag-link&quot; href=&quot;https://tieba.baidu.com/p/4547688850&quot; target=</summary>
+      
+    
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="游戏王" scheme="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/"/>
+    
+    <category term="5DS" scheme="https://songyu318.github.io/tags/5DS/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo 搭建博客</title>
+    <link href="https://songyu318.github.io/2025/01/23/2025-01-23_blog_init/"/>
+    <id>https://songyu318.github.io/2025/01/23/2025-01-23_blog_init/</id>
+    <published>2025-01-23T11:30:17.000Z</published>
+    <updated>2025-01-23T11:30:19.000Z</updated>
+    
+    
+    <summary type="html">hexo 搭建博客</summary>
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="hexo" scheme="https://songyu318.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记 2024</title>
+    <link href="https://songyu318.github.io/2025/01/01/2025-01-01/"/>
+    <id>https://songyu318.github.io/2025/01/01/2025-01-01/</id>
+    <published>2025-01-01T12:12:47.000Z</published>
+    <updated>2025-01-01T12:12:52.000Z</updated>
+    
+    
+    <summary type="html">新的一年快乐</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记 2024_UESTC 新工科展</title>
+    <link href="https://songyu318.github.io/2024/11/23/2024-11-23_Emerging_Engineering_Education/"/>
+    <id>https://songyu318.github.io/2024/11/23/2024-11-23_Emerging_Engineering_Education/</id>
+    <published>2024-11-23T06:23:15.000Z</published>
+    <updated>2024-11-23T07:38:21.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;2024 年工科展终于开始了，原时间预计在十月下旬，后一直延迟，最终时间定于 11.20，在时间广场摆了一个大圆。俯视来看还说的过去，就是不对称有点可惜。&lt;/p&gt;
+&lt;div  align=&quot;center&quot;&gt; 
+&lt;img src=&quot;https://cdn.jsdelivr.n</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在那一刻</title>
+    <link href="https://songyu318.github.io/2024/11/09/2024-11-09_courage/"/>
+    <id>https://songyu318.github.io/2024/11/09/2024-11-09_courage/</id>
+    <published>2024-11-09T11:16:39.000Z</published>
+    <updated>2024-11-09T11:34:07.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;当 下定决心去&lt;br&gt;
+鼓起勇气&lt;br&gt;
+去做一件&lt;br&gt;
+很重要的事情时&lt;br&gt;
+心会跳的很快&lt;br&gt;
+会犹豫&lt;br&gt;
+会迷茫&lt;br&gt;
+会想那份失败的&lt;br&gt;
+可能性和后果&lt;br&gt;
+可是知道&lt;br&gt;
+在那一刻&lt;br&gt;
+就被束缚住了&lt;br&gt;
+输了&lt;br&gt;
+在害怕&lt;br&gt;
+可</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="回忆" scheme="https://songyu318.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>当代网络聊天情感表达的困难</title>
+    <link href="https://songyu318.github.io/2024/11/02/2024-11-02_emoj/"/>
+    <id>https://songyu318.github.io/2024/11/02/2024-11-02_emoj/</id>
+    <published>2024-11-02T10:59:00.000Z</published>
+    <updated>2024-11-02T10:59:06.000Z</updated>
+    
+    
+    <summary type="html">一点点探讨</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="聊天" scheme="https://songyu318.github.io/tags/%E8%81%8A%E5%A4%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我为什么会生气</title>
+    <link href="https://songyu318.github.io/2024/10/20/2024-10-20/"/>
+    <id>https://songyu318.github.io/2024/10/20/2024-10-20/</id>
+    <published>2024-10-20T06:17:29.000Z</published>
+    <updated>2024-10-20T06:17:33.000Z</updated>
+    
+    
+    <summary type="html">——个人原则导致的情绪波动</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="原则" scheme="https://songyu318.github.io/tags/%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AD 插件使用教程 &amp; 立创导入 AD 封装</title>
+    <link href="https://songyu318.github.io/2024/10/19/2024-10-19_AD_plug_in/"/>
+    <id>https://songyu318.github.io/2024/10/19/2024-10-19_AD_plug_in/</id>
+    <published>2024-10-19T07:22:29.000Z</published>
+    <updated>2024-10-28T08:25:06.000Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;为了方便画板子找封装开的教程&quot;&gt;为了方便画板子找封装开的教程&lt;/h2&gt;
+&lt;p&gt;PCB 绘制不可避免遇到少库情况，为了避免造轮子，开此教程。&lt;/p&gt;
+&lt;h2 id=&quot;AD-插件使用教程&quot;&gt;AD 插件使用教程&lt;/h2&gt;
+&lt;h3 id=&quot;插件下载-Library-loa</summary>
+      
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="AD" scheme="https://songyu318.github.io/tags/AD/"/>
+    
+    <category term="PCB" scheme="https://songyu318.github.io/tags/PCB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>art&amp;design task</title>
+    <link href="https://songyu318.github.io/2024/10/16/2024-10-16_art/"/>
+    <id>https://songyu318.github.io/2024/10/16/2024-10-16_art/</id>
+    <published>2024-10-16T06:30:27.000Z</published>
+    <updated>2024-10-26T11:36:12.278Z</updated>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;task&quot;&gt;task&lt;/h2&gt;
+&lt;div  align=&quot;center&quot;&gt; 
+&lt;img src=&quot;https://cdn.jsdelivr.net/gh/SONGYU318/blog_img/images/20241016153308.png&quot; width = &quot;</summary>
+      
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Blog 重置</title>
+    <link href="https://songyu318.github.io/2024/10/15/2024-10-15_Blog_react/"/>
+    <id>https://songyu318.github.io/2024/10/15/2024-10-15_Blog_react/</id>
+    <published>2024-10-15T11:43:42.000Z</published>
+    <updated>2024-12-09T07:30:29.000Z</updated>
+    
+    
+    <summary type="html">主题翻新 + 魔改记录</summary>
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="hexo" scheme="https://songyu318.github.io/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风景旧曾谙</title>
+    <link href="https://songyu318.github.io/2024/10/02/2024-10-02/"/>
+    <id>https://songyu318.github.io/2024/10/02/2024-10-02/</id>
+    <published>2024-10-02T11:27:53.000Z</published>
+    <updated>2024-10-02T12:18:57.000Z</updated>
+    
+    
+    <summary type="html">如果可以</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="music" scheme="https://songyu318.github.io/tags/music/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024_NUEDC-模邀 记录</title>
+    <link href="https://songyu318.github.io/2024/08/29/2024-08-20_2024_NUEDC_AESDC/"/>
+    <id>https://songyu318.github.io/2024/08/29/2024-08-20_2024_NUEDC_AESDC/</id>
+    <published>2024-08-29T08:42:57.000Z</published>
+    <updated>2024-08-30T13:13:42.000Z</updated>
+    
+    
+    <summary type="html">2024 年全国大学生电子设计竞赛模拟电子系统设计专题赛（TI杯）国一</summary>
+    
+    
+    
+    <category term="竞赛" scheme="https://songyu318.github.io/categories/%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+    <category term="电子设计" scheme="https://songyu318.github.io/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="NUEDC" scheme="https://songyu318.github.io/tags/NUEDC/"/>
+    
+    <category term="TI" scheme="https://songyu318.github.io/tags/TI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>这世界多么小，我们总能相遇</title>
+    <link href="https://songyu318.github.io/2024/08/12/2024-08-13_Life_is_full_of_miracles/"/>
+    <id>https://songyu318.github.io/2024/08/12/2024-08-13_Life_is_full_of_miracles/</id>
+    <published>2024-08-11T16:00:00.000Z</published>
+    <updated>2024-08-13T06:35:04.000Z</updated>
+    
+    
+    <summary type="html">生活充满了奇迹。</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="回忆" scheme="https://songyu318.github.io/tags/%E5%9B%9E%E5%BF%86/"/>
+    
+    <category term="重逢" scheme="https://songyu318.github.io/tags/%E9%87%8D%E9%80%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024_NUEDC 专业陪跑</title>
+    <link href="https://songyu318.github.io/2024/08/05/2024-08-05_2024_NUEDC/"/>
+    <id>https://songyu318.github.io/2024/08/05/2024-08-05_2024_NUEDC/</id>
+    <published>2024-08-05T12:35:29.000Z</published>
+    <updated>2024-08-08T11:21:31.000Z</updated>
+    
+    
+    <summary type="html">2024 年全国大学生电子设计竞赛四川省赛区 C 题省一</summary>
+    
+    
+    
+    <category term="竞赛" scheme="https://songyu318.github.io/categories/%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+    <category term="电子设计" scheme="https://songyu318.github.io/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="NUEDC" scheme="https://songyu318.github.io/tags/NUEDC/"/>
+    
+    <category term="AM" scheme="https://songyu318.github.io/tags/AM/"/>
+    
+    <category term="多径信号" scheme="https://songyu318.github.io/tags/%E5%A4%9A%E5%BE%84%E4%BF%A1%E5%8F%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024-我大学生活的末法时代</title>
+    <link href="https://songyu318.github.io/2024/07/23/2024-07-23/"/>
+    <id>https://songyu318.github.io/2024/07/23/2024-07-23/</id>
+    <published>2024-07-23T07:29:16.000Z</published>
+    <updated>2024-07-23T07:29:19.000Z</updated>
+    
+    
+    <summary type="html">不是在抽象，就是在抽象的路上</summary>
+    
+    
+    
+    <category term="生活" scheme="https://songyu318.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024_ESDC 陪跑——关于我和intel杯的那些事</title>
+    <link href="https://songyu318.github.io/2024/07/19/2024-07-19_2024_ESDC/"/>
+    <id>https://songyu318.github.io/2024/07/19/2024-07-19_2024_ESDC/</id>
+    <published>2024-07-19T02:53:48.000Z</published>
+    <updated>2024-07-19T02:53:57.000Z</updated>
+    
+    
+    <summary type="html">2024 年大学生电子设计竞赛嵌入式系统专题邀请赛（英特尔杯）国一</summary>
+    
+    
+    
+    <category term="竞赛" scheme="https://songyu318.github.io/categories/%E7%AB%9E%E8%B5%9B/"/>
+    
+    
+    <category term="python" scheme="https://songyu318.github.io/tags/python/"/>
+    
+    <category term="电子设计" scheme="https://songyu318.github.io/tags/%E7%94%B5%E5%AD%90%E8%AE%BE%E8%AE%A1/"/>
+    
+    <category term="Agent" scheme="https://songyu318.github.io/tags/Agent/"/>
+    
+    <category term="语音识别" scheme="https://songyu318.github.io/tags/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/"/>
+    
+    <category term="手势识别" scheme="https://songyu318.github.io/tags/%E6%89%8B%E5%8A%BF%E8%AF%86%E5%88%AB/"/>
+    
+    <category term="竞赛" scheme="https://songyu318.github.io/tags/%E7%AB%9E%E8%B5%9B/"/>
+    
+    <category term="intel" scheme="https://songyu318.github.io/tags/intel/"/>
+    
+    <category term="嵌入式" scheme="https://songyu318.github.io/tags/%E5%B5%8C%E5%85%A5%E5%BC%8F/"/>
+    
+    <category term="ESDC" scheme="https://songyu318.github.io/tags/ESDC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog_JEPG_DECODER</title>
+    <link href="https://songyu318.github.io/2024/03/31/2024-03-31_FPGA_JEPG_DECODER/"/>
+    <id>https://songyu318.github.io/2024/03/31/2024-03-31_FPGA_JEPG_DECODER/</id>
+    <published>2024-03-30T16:00:00.000Z</published>
+    <updated>2024-05-25T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">一些必须去做的东西-基本完结</summary>
+    
+    
+    
+    <category term="技术" scheme="https://songyu318.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="FPGA" scheme="https://songyu318.github.io/tags/FPGA/"/>
+    
+    <category term="JPEG" scheme="https://songyu318.github.io/tags/JPEG/"/>
+    
+    <category term="DCT" scheme="https://songyu318.github.io/tags/DCT/"/>
+    
+    <category term="Huffman" scheme="https://songyu318.github.io/tags/Huffman/"/>
+    
+    <category term="熵编码" scheme="https://songyu318.github.io/tags/%E7%86%B5%E7%BC%96%E7%A0%81/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog_POSEDGE_TO_PULSE</title>
+    <link href="https://songyu318.github.io/2024/02/20/2024-02-20_FPGA_POSEDGE_TO_PULSE/"/>
+    <id>https://songyu318.github.io/2024/02/20/2024-02-20_FPGA_POSEDGE_TO_PULSE/</id>
+    <published>2024-02-19T16:00:00.000Z</published>
+    <updated>2024-02-19T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">由高低速数据流转换引发的问题</summary>
+    
+    
+    
+    <category term="技术" scheme="https://songyu318.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="FPGA" scheme="https://songyu318.github.io/tags/FPGA/"/>
+    
+    <category term="脉冲信号转换" scheme="https://songyu318.github.io/tags/%E8%84%89%E5%86%B2%E4%BF%A1%E5%8F%B7%E8%BD%AC%E6%8D%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Verilog_UART</title>
+    <link href="https://songyu318.github.io/2024/01/20/2024-01-20_FPGA_UART/"/>
+    <id>https://songyu318.github.io/2024/01/20/2024-01-20_FPGA_UART/</id>
+    <published>2024-01-19T16:00:00.000Z</published>
+    <updated>2024-01-19T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">没想到又开始碰FPGA了</summary>
+    
+    
+    
+    <category term="技术" scheme="https://songyu318.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="FPGA" scheme="https://songyu318.github.io/tags/FPGA/"/>
+    
+    <category term="UART" scheme="https://songyu318.github.io/tags/UART/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>国产Gowin家FPGA使用感受</title>
+    <link href="https://songyu318.github.io/2023/11/17/2023-11-17_Gowin_FPGA/"/>
+    <id>https://songyu318.github.io/2023/11/17/2023-11-17_Gowin_FPGA/</id>
+    <published>2023-11-16T16:00:00.000Z</published>
+    <updated>2023-12-03T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">一个月速成FPGA</summary>
+    
+    
+    
+    <category term="技术" scheme="https://songyu318.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="电子" scheme="https://songyu318.github.io/tags/%E7%94%B5%E5%AD%90/"/>
+    
+    <category term="FPGA" scheme="https://songyu318.github.io/tags/FPGA/"/>
+    
+    <category term="Gowin" scheme="https://songyu318.github.io/tags/Gowin/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开发NFC</title>
+    <link href="https://songyu318.github.io/2023/08/21/2023-08-21_NFC_ADD/"/>
+    <id>https://songyu318.github.io/2023/08/21/2023-08-21_NFC_ADD/</id>
+    <published>2023-08-20T16:00:00.000Z</published>
+    <updated>2023-08-20T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">没什么技术含量的东西</summary>
+    
+    
+    
+    <category term="技术" scheme="https://songyu318.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="电子" scheme="https://songyu318.github.io/tags/%E7%94%B5%E5%AD%90/"/>
+    
+    <category term="NFC" scheme="https://songyu318.github.io/tags/NFC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于FDAF的ACE实现</title>
+    <link href="https://songyu318.github.io/2023/06/06/2023-06-06_FDAF_ACE/"/>
+    <id>https://songyu318.github.io/2023/06/06/2023-06-06_FDAF_ACE/</id>
+    <published>2023-06-05T16:00:00.000Z</published>
+    <updated>2023-06-05T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">本就如此</summary>
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="FDAF" scheme="https://songyu318.github.io/tags/FDAF/"/>
+    
+    <category term="ACE" scheme="https://songyu318.github.io/tags/ACE/"/>
+    
+    <category term="matlab" scheme="https://songyu318.github.io/tags/matlab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DSP_抽取器级联优化证明</title>
+    <link href="https://songyu318.github.io/2023/05/20/2023-05-20_DSP_3PROVE/"/>
+    <id>https://songyu318.github.io/2023/05/20/2023-05-20_DSP_3PROVE/</id>
+    <published>2023-05-19T16:00:00.000Z</published>
+    <updated>2023-05-19T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">近来第一次推公式</summary>
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="DSP" scheme="https://songyu318.github.io/tags/DSP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>暗通道去雾</title>
+    <link href="https://songyu318.github.io/2023/04/01/2023-04-01_Dark%20Channel%20Prior/"/>
+    <id>https://songyu318.github.io/2023/04/01/2023-04-01_Dark%20Channel%20Prior/</id>
+    <published>2023-03-31T16:00:00.000Z</published>
+    <updated>2023-04-09T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">试图复现，早期的论文，现在效果也不是太好。</summary>
+    
+    
+    
+    <category term="学习" scheme="https://songyu318.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="去雾算法" scheme="https://songyu318.github.io/tags/%E5%8E%BB%E9%9B%BE%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="python" scheme="https://songyu318.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Stellarium</title>
+    <link href="https://songyu318.github.io/2023/03/26/2023-03-26_Stellarium/"/>
+    <id>https://songyu318.github.io/2023/03/26/2023-03-26_Stellarium/</id>
+    <published>2023-03-25T16:00:00.000Z</published>
+    <updated>2023-03-25T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">星屑的辉煌</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Stellarium" scheme="https://songyu318.github.io/tags/Stellarium/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5ds黑历史搬运</title>
+    <link href="https://songyu318.github.io/2023/02/20/2023-02-20_5ds_black_history/"/>
+    <id>https://songyu318.github.io/2023/02/20/2023-02-20_5ds_black_history/</id>
+    <published>2023-02-19T16:00:00.000Z</published>
+    <updated>2023-02-19T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">上古老贴，可惜少了一部分。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="游戏王" scheme="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B/"/>
+    
+    <category term="游戏王 5D&#39;s" scheme="https://songyu318.github.io/tags/%E6%B8%B8%E6%88%8F%E7%8E%8B-5D-s/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理想是每个人现实的共同映射</title>
+    <link href="https://songyu318.github.io/2023/01/30/2023-01-30_Ideal/"/>
+    <id>https://songyu318.github.io/2023/01/30/2023-01-30_Ideal/</id>
+    <published>2023-01-29T16:00:00.000Z</published>
+    <updated>2023-01-29T16:00:00.000Z</updated>
+    
+    
+    <summary type="html">几个月前的文章。</summary>
+    
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/categories/%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="杂谈" scheme="https://songyu318.github.io/tags/%E6%9D%82%E8%B0%88/"/>
+    
+  </entry>
+  
+</feed>
